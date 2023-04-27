@@ -16,3 +16,41 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/migrate', function () {
+    \Artisan::call('migrate');
+    dd('migrated!');
+});
+
+Route::get('/seed-init', function () {
+    \Artisan::call('db:seed');
+    dd('seeded!');
+});
+Route::get('/optimize', function () {
+    \Artisan::call('optimize');
+    \Artisan::call('cache:clear');
+    \Artisan::call('config:cache');
+
+    dd('optimizeed!');
+});
+Route::get('/clear', function () {
+    \Artisan::call('cache:clear');
+    \Artisan::call('config:cache');
+    \Artisan::call('config:clear');
+
+    dd('cleared');
+});
+// Route::get('/', function () {
+//     return redirect()->route('dashboard');
+// });
+
+//....LOGIN SECTION.............................................................
+Route::prefix('/login')->namespace('App\Http\Controllers')->group(function () {
+    Route::get('/', 'LoginController@login')->name('login');
+    Route::post('/', 'LoginController@login_submit')->name('login.submit');
+});
+Route::namespace ('App\Http\Controllers')->middleware('admin')->group(function () {
+    Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+    Route::get('/change-password', 'LoginController@change_password_view')->name('change_password_view');
+    Route::post('/change-password', 'LoginController@update_password')->name('update_password');
+});
+Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name('logout');
