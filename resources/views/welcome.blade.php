@@ -49,7 +49,7 @@
                             1 : !s("\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !s(
                                 "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
                                 "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
-                                );
+                            );
                     case "emoji":
                         return !s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff",
                             "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")
@@ -591,7 +591,7 @@
         content="Elementor 3.12.1; features: e_dom_optimization, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
     <meta name="generator"
         content="Powered by Slider Revolution 6.6.10 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
-    <script>
+    {{-- <script>
         function setREVStartSize(e) {
             //window.requestAnimationFrame(function() {
             window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
@@ -647,7 +647,7 @@
             }
             //});
         };
-    </script>
+    </script> --}}
     <style id="wp-custom-css">
         archive.post-type-archive-jobpost .site-content-wrap {
             padding: 40px 0;
@@ -869,10 +869,12 @@
                                             <ul id="cspt-top-menu" class="menu">
                                                 <li id="menu-item-190"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-190">
-                                                    <a href="http://lanternabroad.com/">Home</a> </li>
+                                                    <a href="http://lanternabroad.com/">Home</a>
+                                                </li>
                                                 <li id="menu-item-184"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184">
-                                                    <a href="http://lanternabroad.com/about-us-1/">About Us</a> </li>
+                                                    <a href="http://lanternabroad.com/about-us-1/">About Us</a>
+                                                </li>
                                                 <li id="menu-item-151"
                                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-151">
                                                     <a href="#">Services</a>
@@ -880,25 +882,30 @@
                                                         <li id="menu-item-152"
                                                             class="menu-item menu-item-type-post_type menu-item-object-cspt-service menu-item-152">
                                                             <a href="http://lanternabroad.com/service/hr-consulting/">CAP
-                                                                seat (Competency assessment programme)</a> </li>
+                                                                seat (Competency assessment programme)</a>
+                                                        </li>
                                                         <li id="menu-item-153"
                                                             class="menu-item menu-item-type-post_type menu-item-object-cspt-service menu-item-153">
                                                             <a
                                                                 href="http://lanternabroad.com/service/improving-resource/">NCNZ
-                                                                Criteria Assessment and Registration</a> </li>
+                                                                Criteria Assessment and Registration</a>
+                                                        </li>
                                                         <li id="menu-item-155"
                                                             class="menu-item menu-item-type-post_type menu-item-object-cspt-service menu-item-155">
                                                             <a
                                                                 href="http://lanternabroad.com/service/employee-training/">Staffing
-                                                                solutions</a> </li>
+                                                                solutions</a>
+                                                        </li>
                                                     </ul>
                                                 </li>
                                                 <li id="menu-item-167"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167">
-                                                    <a href="http://lanternabroad.com/blog-grid-view/">Blog</a> </li>
+                                                    <a href="http://lanternabroad.com/blog-grid-view/">Blog</a>
+                                                </li>
                                                 <li id="menu-item-168"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168">
-                                                    <a href="http://lanternabroad.com/contact-us/">Contact Us</a> </li>
+                                                    <a href="http://lanternabroad.com/contact-us/">Contact Us</a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </nav><!-- #site-navigation -->
@@ -1026,14 +1033,15 @@
                                                                 <div class="elementor-shortcode">
                                                                     <div class="forminator-ui forminator-custom-form forminator-custom-form-307 forminator-design--flat  forminator_ajax"
                                                                         data-forminator-render="0"
-                                                                        data-form="forminator-module-307"
-                                                                        data-uid="644a1de457452"><br /></div>
-                                                                    <form id="forminator-module-307"
+
+                                                                        ><br /></div>
+                                                                    <form
                                                                         class="forminator-ui forminator-custom-form forminator-custom-form-307 forminator-design--flat  forminator_ajax"
-                                                                        method="post" data-forminator-render="0"
-                                                                        data-form-id="307" data-design="flat"
-                                                                        data-grid="open" style="display: none;"
-                                                                        data-uid="644a1de457452">
+                                                                        method="post"
+                                                                        action="{{ route('register') }}"
+                                                                        data-design="flat" data-grid="open">
+                                                                        @csrf
+                                                                        @method('POST')
                                                                         <div class="forminator-response-message forminator-error"
                                                                             aria-hidden="true"></div>
                                                                         <div class="forminator-row">
@@ -1043,13 +1051,13 @@
                                                                                         for="forminator-field-name-1_644a1de457452"
                                                                                         class="forminator-label">Full
                                                                                         Name <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="text" name="name-1"
+                                                                                            class="forminator-">*</span></label><input
+                                                                                        type="text" name="fullname"
                                                                                         value=""
                                                                                         placeholder="E.g. John Doe"
                                                                                         id="forminator-field-name-1_644a1de457452"
                                                                                         class="forminator-input forminator-name--field"
-                                                                                        aria-required="true" /></div>
+                                                                                         /></div>
                                                                             </div>
                                                                             <div id="text-1"
                                                                                 class="forminator-col forminator-col-6 ">
@@ -1057,13 +1065,13 @@
                                                                                         for="forminator-field-text-1_644a1de457452"
                                                                                         class="forminator-label">Username
                                                                                         <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="text" name="text-1"
+                                                                                            class="forminator-">*</span></label><input
+                                                                                        type="text" name="username"
                                                                                         value=""
                                                                                         placeholder="Enter username"
                                                                                         id="forminator-field-text-1_644a1de457452"
                                                                                         class="forminator-input forminator-name--field"
-                                                                                        data-required="true" /></div>
+                                                                                        data-="true" /></div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="forminator-row">
@@ -1073,13 +1081,14 @@
                                                                                         for="forminator-field-text-2_644a1de457452"
                                                                                         class="forminator-label">Qualification
                                                                                         <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="text" name="text-2"
+                                                                                            class="forminator-">*</span></label><input
+                                                                                        type="text"
+                                                                                        name="qualification"
                                                                                         value=""
                                                                                         placeholder="E.g. MBA"
                                                                                         id="forminator-field-text-2_644a1de457452"
                                                                                         class="forminator-input forminator-name--field"
-                                                                                        data-required="1" /></div>
+                                                                                        data-="1" /></div>
                                                                             </div>
                                                                             <div id="text-3"
                                                                                 class="forminator-col forminator-col-6 ">
@@ -1087,13 +1096,14 @@
                                                                                         for="forminator-field-text-3_644a1de457452"
                                                                                         class="forminator-label">Experience
                                                                                         <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="text" name="text-3"
+                                                                                            class="forminator-">*</span></label><input
+                                                                                        type="text"
+                                                                                        name="experience"
                                                                                         value=""
                                                                                         placeholder="E.g. 2 year as Staff nurse in Melbourne"
                                                                                         id="forminator-field-text-3_644a1de457452"
                                                                                         class="forminator-input forminator-name--field"
-                                                                                        data-required="1" /></div>
+                                                                                        data-="1" /></div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="forminator-row">
@@ -1103,13 +1113,14 @@
                                                                                         for="forminator-field-text-4_644a1de457452"
                                                                                         class="forminator-label">OET or
                                                                                         IELTS Score <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="text" name="text-4"
+                                                                                            class="forminator-">*</span></label><input
+                                                                                        type="text"
+                                                                                        name="OET_or_IELTS_Score"
                                                                                         value=""
                                                                                         placeholder="Enter your score here"
                                                                                         id="forminator-field-text-4_644a1de457452"
                                                                                         class="forminator-input forminator-name--field"
-                                                                                        data-required="1" /></div>
+                                                                                        data-="1" /></div>
                                                                             </div>
                                                                             <div id="text-5"
                                                                                 class="forminator-col forminator-col-6 ">
@@ -1117,11 +1128,12 @@
                                                                                         for="forminator-field-text-5_644a1de457452"
                                                                                         class="forminator-label">CGFNS
                                                                                         status (optional)</label><input
-                                                                                        type="text" name="text-5"
+                                                                                        type="text"
+                                                                                        name="CGFNS_status"
                                                                                         value="" placeholder=""
                                                                                         id="forminator-field-text-5_644a1de457452"
                                                                                         class="forminator-input forminator-name--field"
-                                                                                        data-required="" /></div>
+                                                                                        data-="" /></div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="forminator-row">
@@ -1132,21 +1144,21 @@
                                                                                         class="forminator-label">New
                                                                                         Zealand nursing council decision
                                                                                         Letter <span
-                                                                                            class="forminator-required">*</span></label><select
+                                                                                            class="forminator-">*</span></label><select
                                                                                         id="forminator-form-307__field--select-1_644a1de457452"
                                                                                         class="forminator-select--field forminator-select2"
-                                                                                        data-required="1"
-                                                                                        name="select-1"
+                                                                                        data-="1"
+                                                                                        name="New_Zealand_nursing_council"
                                                                                         data-default-value=""
                                                                                         data-placeholder="Select"
                                                                                         data-search="false"
                                                                                         aria-describedby="forminator-form-307__field--select-1_644a1de457452-description">
                                                                                         <option value="">Select
                                                                                         </option>
-                                                                                        <option value="one"
+                                                                                        <option value="yes"
                                                                                             data-calculation="0">YES
                                                                                         </option>
-                                                                                        <option value="two"
+                                                                                        <option value="no"
                                                                                             data-calculation="0">NO
                                                                                         </option>
                                                                                     </select></div>
@@ -1157,1537 +1169,1368 @@
                                                                                         for="forminator-field-date-1-picker_644a1de457452"
                                                                                         class="forminator-label">Preferred
                                                                                         intake (filling space) <span
-                                                                                            class="forminator-required">*</span></label>
-                                                                                    <div
-                                                                                        class="forminator-input-with-icon">
-                                                                                        <label
-                                                                                            for="forminator-field-date-1-picker_644a1de457452"><span
-                                                                                                class="forminator-icon-calendar"
-                                                                                                aria-hidden="true"></span></label><input
-                                                                                            autocomplete="off"
-                                                                                            type="text"
-                                                                                            size="1"
-                                                                                            name="date-1"
-                                                                                            value=""
-                                                                                            placeholder="Choose Date"
-                                                                                            id="forminator-field-date-1-picker_644a1de457452"
-                                                                                            class="forminator-input forminator-datepicker"
-                                                                                            data-required="1"
-                                                                                            data-format="dd-mm-yy"
-                                                                                            data-restrict-type=""
-                                                                                            data-restrict=""
-                                                                                            data-start-year="1923"
-                                                                                            data-end-year="2123"
-                                                                                            data-past-dates="enable"
-                                                                                            data-start-of-week="1"
-                                                                                            data-start-date=""
-                                                                                            data-end-date=""
-                                                                                            data-start-field=""
-                                                                                            data-end-field=""
-                                                                                            data-start-offset=""
-                                                                                            data-end-offset=""
-                                                                                            data-disable-date=""
-                                                                                            data-disable-range="" />
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="select-2"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-form-307__field--select-2_644a1de457452-label"
-                                                                                        class="forminator-label">Northtec
-                                                                                        preferred Campus <span
-                                                                                            class="forminator-required">*</span></label><select
-                                                                                        id="forminator-form-307__field--select-2_644a1de457452"
-                                                                                        class="forminator-select--field forminator-select2"
-                                                                                        data-required="1"
-                                                                                        name="select-2"
-                                                                                        data-default-value=""
-                                                                                        data-placeholder="Select"
-                                                                                        data-search="false"
-                                                                                        aria-describedby="forminator-form-307__field--select-2_644a1de457452-description">
-                                                                                        <option value="">Select
-                                                                                        </option>
-                                                                                        <option value="one"
-                                                                                            data-calculation="0">
-                                                                                            Whangarei</option>
-                                                                                        <option value="two"
-                                                                                            data-calculation="0">
-                                                                                            Auckland</option>
-                                                                                    </select></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="text-6"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-field-text-6_644a1de457452"
-                                                                                        class="forminator-label">How
-                                                                                        did you know about Lantern
-                                                                                        Abroad? <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="text" name="text-6"
+                                                                                            class="forminator-">*</span></label>
+                                                                                    <input autocomplete="off"
+                                                                                        type="date"
+                                                                                        name="Preferred_intake"
                                                                                         value=""
-                                                                                        placeholder="E.g. From a friend"
-                                                                                        id="forminator-field-text-6_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
-                                                                                        data-required="1" /></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="select-3"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-form-307__field--select-3_644a1de457452-label"
-                                                                                        class="forminator-label">Any
-                                                                                        Friends, Family or other living
-                                                                                        NZ ? <span
-                                                                                            class="forminator-required">*</span></label><select
-                                                                                        id="forminator-form-307__field--select-3_644a1de457452"
-                                                                                        class="forminator-select--field forminator-select2"
-                                                                                        data-required="1"
-                                                                                        name="select-3"
-                                                                                        data-default-value=""
-                                                                                        data-placeholder="Select"
-                                                                                        data-search="false"
-                                                                                        aria-describedby="forminator-form-307__field--select-3_644a1de457452-description">
-                                                                                        <option value="">Select
-                                                                                        </option>
-                                                                                        <option value="one"
-                                                                                            data-calculation="0">YES
-                                                                                        </option>
-                                                                                        <option value="two"
-                                                                                            data-calculation="0">NO
-                                                                                        </option>
-                                                                                    </select></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="text-7"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-field-text-7_644a1de457452"
-                                                                                        class="forminator-label">If
-                                                                                        Yes, Please Specify the
-                                                                                        Details</label><input
-                                                                                        type="text" name="text-7"
-                                                                                        value=""
-                                                                                        placeholder="E.g. My friend John is the there in NZ. He is a Medical doctor"
-                                                                                        id="forminator-field-text-7_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
-                                                                                        data-required="" /></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="textarea-1"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-field-textarea-1_644a1de457452"
-                                                                                        class="forminator-label">11.
-                                                                                        Cover letter</label>
-                                                                                    <textarea name="textarea-1" placeholder="E.g. Write to us" id="forminator-field-textarea-1_644a1de457452"
-                                                                                        class="forminator-textarea" rows="6" style="min-height:140px;"></textarea>
+                                                                                        placeholder="Choose Date"
+                                                                                        class="forminator-input forminator"
+                                                                                        data-="1"
+                                                                                        data-format="dd-mm-yy" />
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="email-1"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-field-email-1_644a1de457452"
-                                                                                        class="forminator-label">Email
-                                                                                        <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="email" name="email-1"
-                                                                                        value=""
-                                                                                        placeholder="E.g. john@doe.com"
-                                                                                        id="forminator-field-email-1_644a1de457452"
-                                                                                        class="forminator-input forminator-email--field"
-                                                                                        data-required="true"
-                                                                                        aria-required="true" /></div>
-                                                                            </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="select-1"
+                                                                    class="forminator-col forminator-col-6 ">
+                                                                        <div class="forminator-field"><label
+                                                                                class="forminator-label">Northtec
+                                                                                preferred Campus <span
+                                                                                    class="forminator">*</span></label>
+                                                                                <select name="preferred_Campus">
+                                                                                <option value="">Select
+                                                                                </option>
+                                                                                <option value="Whangarei">
+                                                                                    Whangarei</option>
+                                                                                <option value="Auckland">
+                                                                                    Auckland</option>
+                                                                            </select>
+
                                                                         </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="phone-1"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-field-phone-1_644a1de457452"
-                                                                                        class="forminator-label">Phone
-                                                                                        <span
-                                                                                            class="forminator-required">*</span></label><input
-                                                                                        type="text" name="phone-1"
-                                                                                        value=""
-                                                                                        placeholder="E.g. +1 300 400 5000"
-                                                                                        id="forminator-field-phone-1_644a1de457452"
-                                                                                        class="forminator-input forminator-field--phone"
-                                                                                        data-required="1"
-                                                                                        aria-required="true"
-                                                                                        autocomplete="off"
-                                                                                        data-national_mode="disabled"
-                                                                                        data-country="AF"
-                                                                                        data-validation="international" />
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="address-1"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-row">
-                                                                                    <div id="address-1-street_address"
-                                                                                        class="forminator-col">
-                                                                                        <div class="forminator-field">
-                                                                                            <label
-                                                                                                for="forminator-field-street_address-address-1_644a1de457452"
-                                                                                                class="forminator-label">Street
-                                                                                                Address <span
-                                                                                                    class="forminator-required">*</span></label><input
-                                                                                                type="text"
-                                                                                                name="address-1-street_address"
-                                                                                                placeholder="E.g. 42 Wallaby Way"
-                                                                                                id="forminator-field-street_address-address-1_644a1de457452"
-                                                                                                class="forminator-input"
-                                                                                                data-required="1"
-                                                                                                aria-required="true"
-                                                                                                value="" /></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="forminator-row">
-                                                                                    <div id="address-1-address_line"
-                                                                                        class="forminator-col">
-                                                                                        <div class="forminator-field">
-                                                                                            <label
-                                                                                                for="forminator-field-address_line-address-1_644a1de457452"
-                                                                                                class="forminator-label">Apartment,
-                                                                                                suite, etc</label><input
-                                                                                                type="text"
-                                                                                                name="address-1-address_line"
-                                                                                                placeholder=""
-                                                                                                id="forminator-field-address_line-address-1_644a1de457452"
-                                                                                                class="forminator-input"
-                                                                                                data-required=""
-                                                                                                aria-required="false"
-                                                                                                value="" /></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="forminator-row"
-                                                                                    data-multiple="true">
-                                                                                    <div id="address-1-city"
-                                                                                        class="forminator-col forminator-col-6">
-                                                                                        <div class="forminator-field">
-                                                                                            <label
-                                                                                                for="forminator-field-city-address-1_644a1de457452"
-                                                                                                class="forminator-label">City</label><input
-                                                                                                type="text"
-                                                                                                name="address-1-city"
-                                                                                                placeholder="E.g. Sydney"
-                                                                                                id="forminator-field-city-address-1_644a1de457452"
-                                                                                                class="forminator-input"
-                                                                                                data-required=""
-                                                                                                aria-required="false"
-                                                                                                value="" /></div>
-                                                                                    </div>
-                                                                                    <div id="address-1-state"
-                                                                                        class="forminator-col forminator-col-6">
-                                                                                        <div class="forminator-field">
-                                                                                            <label
-                                                                                                for="forminator-field-state-address-1_644a1de457452"
-                                                                                                class="forminator-label">State/Province</label><input
-                                                                                                type="text"
-                                                                                                name="address-1-state"
-                                                                                                placeholder="E.g. New South Wales"
-                                                                                                id="forminator-field-state-address-1_644a1de457452"
-                                                                                                class="forminator-input"
-                                                                                                data-required=""
-                                                                                                aria-required="false"
-                                                                                                value="" /></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="forminator-row"
-                                                                                    data-multiple="true">
-                                                                                    <div id="address-1-zip"
-                                                                                        class="forminator-col forminator-col-6">
-                                                                                        <div class="forminator-field">
-                                                                                            <label
-                                                                                                for="forminator-field-zip-address-1_644a1de457452"
-                                                                                                class="forminator-label">ZIP
-                                                                                                / Postal
-                                                                                                Code</label><input
-                                                                                                type="text"
-                                                                                                name="address-1-zip"
-                                                                                                placeholder="E.g. 2000"
-                                                                                                id="forminator-field-zip-address-1_644a1de457452"
-                                                                                                class="forminator-input"
-                                                                                                value="" /></div>
-                                                                                    </div>
-                                                                                    <div id="address-1-country"
-                                                                                        class="forminator-col forminator-col-6">
-                                                                                        <div class="forminator-field">
-                                                                                            <label
-                                                                                                for="forminator-form-307__field--address-1_644a1de457452"
-                                                                                                class="forminator-label">Country
-                                                                                            </label><select
-                                                                                                name="address-1-country"
-                                                                                                id="forminator-form-307__field--address-1_644a1de457452"
-                                                                                                class="forminator-select2"
-                                                                                                data-search="true"
-                                                                                                data-placeholder="Select country"
-                                                                                                data-default-value="">
-                                                                                                <option value=""
-                                                                                                    data-country-code=""
-                                                                                                    selected="selected">
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Afghanistan"
-                                                                                                    data-country-code="AF">
-                                                                                                    Afghanistan</option>
-                                                                                                <option value="Albania"
-                                                                                                    data-country-code="AL">
-                                                                                                    Albania</option>
-                                                                                                <option value="Algeria"
-                                                                                                    data-country-code="DZ">
-                                                                                                    Algeria</option>
-                                                                                                <option
-                                                                                                    value="American Samoa"
-                                                                                                    data-country-code="AS">
-                                                                                                    American Samoa
-                                                                                                </option>
-                                                                                                <option value="Andorra"
-                                                                                                    data-country-code="AD">
-                                                                                                    Andorra</option>
-                                                                                                <option value="Angola"
-                                                                                                    data-country-code="AO">
-                                                                                                    Angola</option>
-                                                                                                <option
-                                                                                                    value="Anguilla"
-                                                                                                    data-country-code="AI">
-                                                                                                    Anguilla</option>
-                                                                                                <option
-                                                                                                    value="Antarctica"
-                                                                                                    data-country-code="AQ">
-                                                                                                    Antarctica</option>
-                                                                                                <option
-                                                                                                    value="Antigua and Barbuda"
-                                                                                                    data-country-code="AG">
-                                                                                                    Antigua and Barbuda
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Argentina"
-                                                                                                    data-country-code="AR">
-                                                                                                    Argentina</option>
-                                                                                                <option value="Armenia"
-                                                                                                    data-country-code="AM">
-                                                                                                    Armenia</option>
-                                                                                                <option
-                                                                                                    value="Australia"
-                                                                                                    data-country-code="AU">
-                                                                                                    Australia</option>
-                                                                                                <option value="Aruba"
-                                                                                                    data-country-code="AW">
-                                                                                                    Aruba</option>
-                                                                                                <option value="Austria"
-                                                                                                    data-country-code="AT">
-                                                                                                    Austria</option>
-                                                                                                <option
-                                                                                                    value="Azerbaijan"
-                                                                                                    data-country-code="AZ">
-                                                                                                    Azerbaijan</option>
-                                                                                                <option value="Bahamas"
-                                                                                                    data-country-code="BS">
-                                                                                                    Bahamas</option>
-                                                                                                <option value="Bahrain"
-                                                                                                    data-country-code="BH">
-                                                                                                    Bahrain</option>
-                                                                                                <option
-                                                                                                    value="Bangladesh"
-                                                                                                    data-country-code="BD">
-                                                                                                    Bangladesh</option>
-                                                                                                <option
-                                                                                                    value="Barbados"
-                                                                                                    data-country-code="BB">
-                                                                                                    Barbados</option>
-                                                                                                <option value="Belarus"
-                                                                                                    data-country-code="BY">
-                                                                                                    Belarus</option>
-                                                                                                <option value="Belgium"
-                                                                                                    data-country-code="BE">
-                                                                                                    Belgium</option>
-                                                                                                <option value="Belize"
-                                                                                                    data-country-code="BZ">
-                                                                                                    Belize</option>
-                                                                                                <option value="Benin"
-                                                                                                    data-country-code="BJ">
-                                                                                                    Benin</option>
-                                                                                                <option value="Bermuda"
-                                                                                                    data-country-code="BM">
-                                                                                                    Bermuda</option>
-                                                                                                <option value="Bhutan"
-                                                                                                    data-country-code="BT">
-                                                                                                    Bhutan</option>
-                                                                                                <option value="Bolivia"
-                                                                                                    data-country-code="BO">
-                                                                                                    Bolivia</option>
-                                                                                                <option
-                                                                                                    value="Bosnia and Herzegovina"
-                                                                                                    data-country-code="BA">
-                                                                                                    Bosnia and
-                                                                                                    Herzegovina</option>
-                                                                                                <option
-                                                                                                    value="Botswana"
-                                                                                                    data-country-code="BW">
-                                                                                                    Botswana</option>
-                                                                                                <option
-                                                                                                    value="Bouvet Island"
-                                                                                                    data-country-code="BV">
-                                                                                                    Bouvet Island
-                                                                                                </option>
-                                                                                                <option value="Brazil"
-                                                                                                    data-country-code="BR">
-                                                                                                    Brazil</option>
-                                                                                                <option
-                                                                                                    value="British Indian Ocean Territory"
-                                                                                                    data-country-code="IO">
-                                                                                                    British Indian Ocean
-                                                                                                    Territory</option>
-                                                                                                <option value="Brunei"
-                                                                                                    data-country-code="BN">
-                                                                                                    Brunei</option>
-                                                                                                <option
-                                                                                                    value="Bulgaria"
-                                                                                                    data-country-code="BG">
-                                                                                                    Bulgaria</option>
-                                                                                                <option
-                                                                                                    value="Burkina Faso"
-                                                                                                    data-country-code="BF">
-                                                                                                    Burkina Faso
-                                                                                                </option>
-                                                                                                <option value="Burundi"
-                                                                                                    data-country-code="BI">
-                                                                                                    Burundi</option>
-                                                                                                <option
-                                                                                                    value="Cambodia"
-                                                                                                    data-country-code="KH">
-                                                                                                    Cambodia</option>
-                                                                                                <option
-                                                                                                    value="Cameroon"
-                                                                                                    data-country-code="CM">
-                                                                                                    Cameroon</option>
-                                                                                                <option value="Canada"
-                                                                                                    data-country-code="CA">
-                                                                                                    Canada</option>
-                                                                                                <option
-                                                                                                    value="Cabo Verde"
-                                                                                                    data-country-code="CV">
-                                                                                                    Cabo Verde</option>
-                                                                                                <option
-                                                                                                    value="Cayman Islands"
-                                                                                                    data-country-code="KY">
-                                                                                                    Cayman Islands
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Central African Republic"
-                                                                                                    data-country-code="CF">
-                                                                                                    Central African
-                                                                                                    Republic</option>
-                                                                                                <option value="Chad"
-                                                                                                    data-country-code="TD">
-                                                                                                    Chad</option>
-                                                                                                <option value="Chile"
-                                                                                                    data-country-code="CL">
-                                                                                                    Chile</option>
-                                                                                                <option
-                                                                                                    value="China, People's Republic of"
-                                                                                                    data-country-code="CN">
-                                                                                                    China, People's
-                                                                                                    Republic of</option>
-                                                                                                <option
-                                                                                                    value="Christmas Island"
-                                                                                                    data-country-code="CX">
-                                                                                                    Christmas Island
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Cocos Islands"
-                                                                                                    data-country-code="CC">
-                                                                                                    Cocos Islands
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Colombia"
-                                                                                                    data-country-code="CO">
-                                                                                                    Colombia</option>
-                                                                                                <option value="Comoros"
-                                                                                                    data-country-code="KM">
-                                                                                                    Comoros</option>
-                                                                                                <option
-                                                                                                    value="Congo, Democratic Republic of the"
-                                                                                                    data-country-code="CD">
-                                                                                                    Congo, Democratic
-                                                                                                    Republic of the
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Congo, Republic of the"
-                                                                                                    data-country-code="CG">
-                                                                                                    Congo, Republic of
-                                                                                                    the</option>
-                                                                                                <option
-                                                                                                    value="Cook Islands"
-                                                                                                    data-country-code="CK">
-                                                                                                    Cook Islands
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Costa Rica"
-                                                                                                    data-country-code="CR">
-                                                                                                    Costa Rica</option>
-                                                                                                <option
-                                                                                                    value="Côte d'Ivoire"
-                                                                                                    data-country-code="CI">
-                                                                                                    Côte d'Ivoire
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Croatia"
-                                                                                                    data-country-code="HR">
-                                                                                                    Croatia</option>
-                                                                                                <option value="Cuba"
-                                                                                                    data-country-code="CU">
-                                                                                                    Cuba</option>
-                                                                                                <option
-                                                                                                    value="Curaçao"
-                                                                                                    data-country-code="CW">
-                                                                                                    Curaçao</option>
-                                                                                                <option value="Cyprus"
-                                                                                                    data-country-code="CY">
-                                                                                                    Cyprus</option>
-                                                                                                <option
-                                                                                                    value="Czech Republic"
-                                                                                                    data-country-code="CZ">
-                                                                                                    Czech Republic
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Denmark"
-                                                                                                    data-country-code="DK">
-                                                                                                    Denmark</option>
-                                                                                                <option
-                                                                                                    value="Djibouti"
-                                                                                                    data-country-code="DJ">
-                                                                                                    Djibouti</option>
-                                                                                                <option
-                                                                                                    value="Dominica"
-                                                                                                    data-country-code="DM">
-                                                                                                    Dominica</option>
-                                                                                                <option
-                                                                                                    value="Dominican Republic"
-                                                                                                    data-country-code="DO">
-                                                                                                    Dominican Republic
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="East Timor"
-                                                                                                    data-country-code="TL">
-                                                                                                    East Timor</option>
-                                                                                                <option
-                                                                                                    value="Ecuador"
-                                                                                                    data-country-code="EC">
-                                                                                                    Ecuador</option>
-                                                                                                <option value="Egypt"
-                                                                                                    data-country-code="EG">
-                                                                                                    Egypt</option>
-                                                                                                <option
-                                                                                                    value="El Salvador"
-                                                                                                    data-country-code="SV">
-                                                                                                    El Salvador</option>
-                                                                                                <option
-                                                                                                    value="Equatorial Guinea"
-                                                                                                    data-country-code="GQ">
-                                                                                                    Equatorial Guinea
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Eritrea"
-                                                                                                    data-country-code="ER">
-                                                                                                    Eritrea</option>
-                                                                                                <option
-                                                                                                    value="Estonia"
-                                                                                                    data-country-code="EE">
-                                                                                                    Estonia</option>
-                                                                                                <option
-                                                                                                    value="Ethiopia"
-                                                                                                    data-country-code="ET">
-                                                                                                    Ethiopia</option>
-                                                                                                <option
-                                                                                                    value="Falkland Islands"
-                                                                                                    data-country-code="FK">
-                                                                                                    Falkland Islands
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Faroe Islands"
-                                                                                                    data-country-code="FO">
-                                                                                                    Faroe Islands
-                                                                                                </option>
-                                                                                                <option value="Fiji"
-                                                                                                    data-country-code="FJ">
-                                                                                                    Fiji</option>
-                                                                                                <option
-                                                                                                    value="Finland"
-                                                                                                    data-country-code="FI">
-                                                                                                    Finland</option>
-                                                                                                <option value="France"
-                                                                                                    data-country-code="FR">
-                                                                                                    France</option>
-                                                                                                <option
-                                                                                                    value="France, Metropolitan"
-                                                                                                    data-country-code="FX">
-                                                                                                    France, Metropolitan
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="French Guiana"
-                                                                                                    data-country-code="GF">
-                                                                                                    French Guiana
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="French Polynesia"
-                                                                                                    data-country-code="PF">
-                                                                                                    French Polynesia
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="French South Territories"
-                                                                                                    data-country-code="TF">
-                                                                                                    French South
-                                                                                                    Territories</option>
-                                                                                                <option value="Gabon"
-                                                                                                    data-country-code="GA">
-                                                                                                    Gabon</option>
-                                                                                                <option value="Gambia"
-                                                                                                    data-country-code="GM">
-                                                                                                    Gambia</option>
-                                                                                                <option
-                                                                                                    value="Georgia"
-                                                                                                    data-country-code="GE">
-                                                                                                    Georgia</option>
-                                                                                                <option
-                                                                                                    value="Germany"
-                                                                                                    data-country-code="DE">
-                                                                                                    Germany</option>
-                                                                                                <option
-                                                                                                    value="Guernsey"
-                                                                                                    data-country-code="GG">
-                                                                                                    Guernsey</option>
-                                                                                                <option value="Ghana"
-                                                                                                    data-country-code="GH">
-                                                                                                    Ghana</option>
-                                                                                                <option
-                                                                                                    value="Gibraltar"
-                                                                                                    data-country-code="GI">
-                                                                                                    Gibraltar</option>
-                                                                                                <option value="Greece"
-                                                                                                    data-country-code="GR">
-                                                                                                    Greece</option>
-                                                                                                <option
-                                                                                                    value="Greenland"
-                                                                                                    data-country-code="GL">
-                                                                                                    Greenland</option>
-                                                                                                <option
-                                                                                                    value="Grenada"
-                                                                                                    data-country-code="GD">
-                                                                                                    Grenada</option>
-                                                                                                <option
-                                                                                                    value="Guadeloupe"
-                                                                                                    data-country-code="GP">
-                                                                                                    Guadeloupe</option>
-                                                                                                <option value="Guam"
-                                                                                                    data-country-code="GU">
-                                                                                                    Guam</option>
-                                                                                                <option
-                                                                                                    value="Guatemala"
-                                                                                                    data-country-code="GT">
-                                                                                                    Guatemala</option>
-                                                                                                <option value="Guinea"
-                                                                                                    data-country-code="GN">
-                                                                                                    Guinea</option>
-                                                                                                <option
-                                                                                                    value="Guinea-Bissau"
-                                                                                                    data-country-code="GW">
-                                                                                                    Guinea-Bissau
-                                                                                                </option>
-                                                                                                <option value="Guyana"
-                                                                                                    data-country-code="GY">
-                                                                                                    Guyana</option>
-                                                                                                <option value="Haiti"
-                                                                                                    data-country-code="HT">
-                                                                                                    Haiti</option>
-                                                                                                <option
-                                                                                                    value="Heard Island And Mcdonald Island"
-                                                                                                    data-country-code="HM">
-                                                                                                    Heard Island And
-                                                                                                    Mcdonald Island
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Honduras"
-                                                                                                    data-country-code="HN">
-                                                                                                    Honduras</option>
-                                                                                                <option
-                                                                                                    value="Hong Kong"
-                                                                                                    data-country-code="HK">
-                                                                                                    Hong Kong</option>
-                                                                                                <option
-                                                                                                    value="Hungary"
-                                                                                                    data-country-code="HU">
-                                                                                                    Hungary</option>
-                                                                                                <option
-                                                                                                    value="Iceland"
-                                                                                                    data-country-code="IS">
-                                                                                                    Iceland</option>
-                                                                                                <option value="India"
-                                                                                                    data-country-code="IN">
-                                                                                                    India</option>
-                                                                                                <option
-                                                                                                    value="Indonesia"
-                                                                                                    data-country-code="ID">
-                                                                                                    Indonesia</option>
-                                                                                                <option value="Iran"
-                                                                                                    data-country-code="IR">
-                                                                                                    Iran</option>
-                                                                                                <option value="Iraq"
-                                                                                                    data-country-code="IQ">
-                                                                                                    Iraq</option>
-                                                                                                <option
-                                                                                                    value="Ireland"
-                                                                                                    data-country-code="IE">
-                                                                                                    Ireland</option>
-                                                                                                <option value="Israel"
-                                                                                                    data-country-code="IL">
-                                                                                                    Israel</option>
-                                                                                                <option value="Italy"
-                                                                                                    data-country-code="IT">
-                                                                                                    Italy</option>
-                                                                                                <option
-                                                                                                    value="Jamaica"
-                                                                                                    data-country-code="JM">
-                                                                                                    Jamaica</option>
-                                                                                                <option value="Japan"
-                                                                                                    data-country-code="JP">
-                                                                                                    Japan</option>
-                                                                                                <option value="Jersey"
-                                                                                                    data-country-code="JE">
-                                                                                                    Jersey</option>
-                                                                                                <option
-                                                                                                    value="Johnston Island"
-                                                                                                    data-country-code="JT">
-                                                                                                    Johnston Island
-                                                                                                </option>
-                                                                                                <option value="Jordan"
-                                                                                                    data-country-code="JO">
-                                                                                                    Jordan</option>
-                                                                                                <option
-                                                                                                    value="Kazakhstan"
-                                                                                                    data-country-code="KZ">
-                                                                                                    Kazakhstan</option>
-                                                                                                <option value="Kenya"
-                                                                                                    data-country-code="KE">
-                                                                                                    Kenya</option>
-                                                                                                <option
-                                                                                                    value="Kiribati"
-                                                                                                    data-country-code="KI">
-                                                                                                    Kiribati</option>
-                                                                                                <option
-                                                                                                    value="Korea, Democratic People's Republic of"
-                                                                                                    data-country-code="KP">
-                                                                                                    Korea, Democratic
-                                                                                                    People's Republic of
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Korea, Republic of"
-                                                                                                    data-country-code="KR">
-                                                                                                    Korea, Republic of
-                                                                                                </option>
-                                                                                                <option value="Kosovo"
-                                                                                                    data-country-code="XK">
-                                                                                                    Kosovo</option>
-                                                                                                <option value="Kuwait"
-                                                                                                    data-country-code="KW">
-                                                                                                    Kuwait</option>
-                                                                                                <option
-                                                                                                    value="Kyrgyzstan"
-                                                                                                    data-country-code="KG">
-                                                                                                    Kyrgyzstan</option>
-                                                                                                <option
-                                                                                                    value="Lao People's Democratic Republic"
-                                                                                                    data-country-code="LA">
-                                                                                                    Lao People's
-                                                                                                    Democratic Republic
-                                                                                                </option>
-                                                                                                <option value="Latvia"
-                                                                                                    data-country-code="LV">
-                                                                                                    Latvia</option>
-                                                                                                <option
-                                                                                                    value="Lebanon"
-                                                                                                    data-country-code="LB">
-                                                                                                    Lebanon</option>
-                                                                                                <option
-                                                                                                    value="Lesotho"
-                                                                                                    data-country-code="LS">
-                                                                                                    Lesotho</option>
-                                                                                                <option
-                                                                                                    value="Liberia"
-                                                                                                    data-country-code="LR">
-                                                                                                    Liberia</option>
-                                                                                                <option value="Libya"
-                                                                                                    data-country-code="LY">
-                                                                                                    Libya</option>
-                                                                                                <option
-                                                                                                    value="Liechtenstein"
-                                                                                                    data-country-code="LI">
-                                                                                                    Liechtenstein
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Lithuania"
-                                                                                                    data-country-code="LT">
-                                                                                                    Lithuania</option>
-                                                                                                <option
-                                                                                                    value="Luxembourg"
-                                                                                                    data-country-code="LU">
-                                                                                                    Luxembourg</option>
-                                                                                                <option value="Macau"
-                                                                                                    data-country-code="MO">
-                                                                                                    Macau</option>
-                                                                                                <option
-                                                                                                    value="North Macedonia"
-                                                                                                    data-country-code="MK">
-                                                                                                    North Macedonia
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Madagascar"
-                                                                                                    data-country-code="MG">
-                                                                                                    Madagascar</option>
-                                                                                                <option value="Malawi"
-                                                                                                    data-country-code="MW">
-                                                                                                    Malawi</option>
-                                                                                                <option
-                                                                                                    value="Malaysia"
-                                                                                                    data-country-code="MY">
-                                                                                                    Malaysia</option>
-                                                                                                <option
-                                                                                                    value="Maldives"
-                                                                                                    data-country-code="MV">
-                                                                                                    Maldives</option>
-                                                                                                <option value="Mali"
-                                                                                                    data-country-code="ML">
-                                                                                                    Mali</option>
-                                                                                                <option value="Malta"
-                                                                                                    data-country-code="MT">
-                                                                                                    Malta</option>
-                                                                                                <option
-                                                                                                    value="Marshall Islands"
-                                                                                                    data-country-code="MH">
-                                                                                                    Marshall Islands
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Martinique"
-                                                                                                    data-country-code="MQ">
-                                                                                                    Martinique</option>
-                                                                                                <option
-                                                                                                    value="Mauritania"
-                                                                                                    data-country-code="MR">
-                                                                                                    Mauritania</option>
-                                                                                                <option
-                                                                                                    value="Mauritius"
-                                                                                                    data-country-code="MU">
-                                                                                                    Mauritius</option>
-                                                                                                <option
-                                                                                                    value="Mayotte"
-                                                                                                    data-country-code="YT">
-                                                                                                    Mayotte</option>
-                                                                                                <option value="Mexico"
-                                                                                                    data-country-code="MX">
-                                                                                                    Mexico</option>
-                                                                                                <option
-                                                                                                    value="Micronesia"
-                                                                                                    data-country-code="FM">
-                                                                                                    Micronesia</option>
-                                                                                                <option
-                                                                                                    value="Moldova"
-                                                                                                    data-country-code="MD">
-                                                                                                    Moldova</option>
-                                                                                                <option value="Monaco"
-                                                                                                    data-country-code="MC">
-                                                                                                    Monaco</option>
-                                                                                                <option
-                                                                                                    value="Mongolia"
-                                                                                                    data-country-code="MN">
-                                                                                                    Mongolia</option>
-                                                                                                <option
-                                                                                                    value="Montserrat"
-                                                                                                    data-country-code="MS">
-                                                                                                    Montserrat</option>
-                                                                                                <option
-                                                                                                    value="Montenegro"
-                                                                                                    data-country-code="ME">
-                                                                                                    Montenegro</option>
-                                                                                                <option
-                                                                                                    value="Morocco"
-                                                                                                    data-country-code="MA">
-                                                                                                    Morocco</option>
-                                                                                                <option
-                                                                                                    value="Mozambique"
-                                                                                                    data-country-code="MZ">
-                                                                                                    Mozambique</option>
-                                                                                                <option
-                                                                                                    value="Myanmar"
-                                                                                                    data-country-code="MM">
-                                                                                                    Myanmar</option>
-                                                                                                <option
-                                                                                                    value="Namibia"
-                                                                                                    data-country-code="NA">
-                                                                                                    Namibia</option>
-                                                                                                <option value="Nauru"
-                                                                                                    data-country-code="NR">
-                                                                                                    Nauru</option>
-                                                                                                <option value="Nepal"
-                                                                                                    data-country-code="NP">
-                                                                                                    Nepal</option>
-                                                                                                <option
-                                                                                                    value="Netherlands"
-                                                                                                    data-country-code="NL">
-                                                                                                    Netherlands</option>
-                                                                                                <option
-                                                                                                    value="Netherlands Antilles"
-                                                                                                    data-country-code="AN">
-                                                                                                    Netherlands Antilles
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="New Caledonia"
-                                                                                                    data-country-code="NC">
-                                                                                                    New Caledonia
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="New Zealand"
-                                                                                                    data-country-code="NZ">
-                                                                                                    New Zealand</option>
-                                                                                                <option
-                                                                                                    value="Nicaragua"
-                                                                                                    data-country-code="NI">
-                                                                                                    Nicaragua</option>
-                                                                                                <option value="Niger"
-                                                                                                    data-country-code="NE">
-                                                                                                    Niger</option>
-                                                                                                <option
-                                                                                                    value="Nigeria"
-                                                                                                    data-country-code="NG">
-                                                                                                    Nigeria</option>
-                                                                                                <option value="Niue"
-                                                                                                    data-country-code="NU">
-                                                                                                    Niue</option>
-                                                                                                <option
-                                                                                                    value="Norfolk Island"
-                                                                                                    data-country-code="NF">
-                                                                                                    Norfolk Island
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Northern Mariana Islands"
-                                                                                                    data-country-code="MP">
-                                                                                                    Northern Mariana
-                                                                                                    Islands</option>
-                                                                                                <option value="Norway"
-                                                                                                    data-country-code="NO">
-                                                                                                    Norway</option>
-                                                                                                <option value="Oman"
-                                                                                                    data-country-code="OM">
-                                                                                                    Oman</option>
-                                                                                                <option
-                                                                                                    value="Pakistan"
-                                                                                                    data-country-code="PK">
-                                                                                                    Pakistan</option>
-                                                                                                <option value="Palau"
-                                                                                                    data-country-code="PW">
-                                                                                                    Palau</option>
-                                                                                                <option
-                                                                                                    value="Palestine, State of"
-                                                                                                    data-country-code="PS">
-                                                                                                    Palestine, State of
-                                                                                                </option>
-                                                                                                <option value="Panama"
-                                                                                                    data-country-code="PA">
-                                                                                                    Panama</option>
-                                                                                                <option
-                                                                                                    value="Papua New Guinea"
-                                                                                                    data-country-code="PG">
-                                                                                                    Papua New Guinea
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Paraguay"
-                                                                                                    data-country-code="PY">
-                                                                                                    Paraguay</option>
-                                                                                                <option value="Peru"
-                                                                                                    data-country-code="PE">
-                                                                                                    Peru</option>
-                                                                                                <option
-                                                                                                    value="Philippines"
-                                                                                                    data-country-code="PH">
-                                                                                                    Philippines</option>
-                                                                                                <option
-                                                                                                    value="Pitcairn Islands"
-                                                                                                    data-country-code="PN">
-                                                                                                    Pitcairn Islands
-                                                                                                </option>
-                                                                                                <option value="Poland"
-                                                                                                    data-country-code="PL">
-                                                                                                    Poland</option>
-                                                                                                <option
-                                                                                                    value="Portugal"
-                                                                                                    data-country-code="PT">
-                                                                                                    Portugal</option>
-                                                                                                <option
-                                                                                                    value="Puerto Rico"
-                                                                                                    data-country-code="PR">
-                                                                                                    Puerto Rico</option>
-                                                                                                <option value="Qatar"
-                                                                                                    data-country-code="QA">
-                                                                                                    Qatar</option>
-                                                                                                <option
-                                                                                                    value="Reunion Island"
-                                                                                                    data-country-code="RE">
-                                                                                                    Reunion Island
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Romania"
-                                                                                                    data-country-code="RO">
-                                                                                                    Romania</option>
-                                                                                                <option value="Russia"
-                                                                                                    data-country-code="RU">
-                                                                                                    Russia</option>
-                                                                                                <option value="Rwanda"
-                                                                                                    data-country-code="RW">
-                                                                                                    Rwanda</option>
-                                                                                                <option
-                                                                                                    value="Saint Kitts and Nevis"
-                                                                                                    data-country-code="KN">
-                                                                                                    Saint Kitts and
-                                                                                                    Nevis</option>
-                                                                                                <option
-                                                                                                    value="Saint Lucia"
-                                                                                                    data-country-code="LC">
-                                                                                                    Saint Lucia</option>
-                                                                                                <option
-                                                                                                    value="Saint Vincent and the Grenadines"
-                                                                                                    data-country-code="VC">
-                                                                                                    Saint Vincent and
-                                                                                                    the Grenadines
-                                                                                                </option>
-                                                                                                <option value="Samoa"
-                                                                                                    data-country-code="WS">
-                                                                                                    Samoa</option>
-                                                                                                <option
-                                                                                                    value="Saint Helena"
-                                                                                                    data-country-code="SH">
-                                                                                                    Saint Helena
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Saint Pierre & Miquelon"
-                                                                                                    data-country-code="PM">
-                                                                                                    Saint Pierre &
-                                                                                                    Miquelon</option>
-                                                                                                <option
-                                                                                                    value="San Marino"
-                                                                                                    data-country-code="SM">
-                                                                                                    San Marino</option>
-                                                                                                <option
-                                                                                                    value="Sao Tome and Principe"
-                                                                                                    data-country-code="ST">
-                                                                                                    Sao Tome and
-                                                                                                    Principe</option>
-                                                                                                <option
-                                                                                                    value="Saudi Arabia"
-                                                                                                    data-country-code="SA">
-                                                                                                    Saudi Arabia
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Senegal"
-                                                                                                    data-country-code="SN">
-                                                                                                    Senegal</option>
-                                                                                                <option value="Serbia"
-                                                                                                    data-country-code="RS">
-                                                                                                    Serbia</option>
-                                                                                                <option
-                                                                                                    value="Seychelles"
-                                                                                                    data-country-code="SC">
-                                                                                                    Seychelles</option>
-                                                                                                <option
-                                                                                                    value="Sierra Leone"
-                                                                                                    data-country-code="SL">
-                                                                                                    Sierra Leone
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Singapore"
-                                                                                                    data-country-code="SG">
-                                                                                                    Singapore</option>
-                                                                                                <option
-                                                                                                    value="Sint Maarten"
-                                                                                                    data-country-code="MF">
-                                                                                                    Sint Maarten
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Slovakia"
-                                                                                                    data-country-code="SK">
-                                                                                                    Slovakia</option>
-                                                                                                <option
-                                                                                                    value="Slovenia"
-                                                                                                    data-country-code="SI">
-                                                                                                    Slovenia</option>
-                                                                                                <option
-                                                                                                    value="Solomon Islands"
-                                                                                                    data-country-code="SB">
-                                                                                                    Solomon Islands
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Somalia"
-                                                                                                    data-country-code="SO">
-                                                                                                    Somalia</option>
-                                                                                                <option
-                                                                                                    value="South Africa"
-                                                                                                    data-country-code="ZA">
-                                                                                                    South Africa
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="South Georgia and South Sandwich"
-                                                                                                    data-country-code="GS">
-                                                                                                    South Georgia and
-                                                                                                    South Sandwich
-                                                                                                </option>
-                                                                                                <option value="Spain"
-                                                                                                    data-country-code="ES">
-                                                                                                    Spain</option>
-                                                                                                <option
-                                                                                                    value="Sri Lanka"
-                                                                                                    data-country-code="LK">
-                                                                                                    Sri Lanka</option>
-                                                                                                <option
-                                                                                                    value="Stateless Persons"
-                                                                                                    data-country-code="XX">
-                                                                                                    Stateless Persons
-                                                                                                </option>
-                                                                                                <option value="Sudan"
-                                                                                                    data-country-code="SD">
-                                                                                                    Sudan</option>
-                                                                                                <option
-                                                                                                    value="Sudan, South"
-                                                                                                    data-country-code="SS">
-                                                                                                    Sudan, South
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Suriname"
-                                                                                                    data-country-code="SR">
-                                                                                                    Suriname</option>
-                                                                                                <option
-                                                                                                    value="Svalbard and Jan Mayen"
-                                                                                                    data-country-code="SJ">
-                                                                                                    Svalbard and Jan
-                                                                                                    Mayen</option>
-                                                                                                <option
-                                                                                                    value="Swaziland"
-                                                                                                    data-country-code="SZ">
-                                                                                                    Swaziland</option>
-                                                                                                <option value="Sweden"
-                                                                                                    data-country-code="SE">
-                                                                                                    Sweden</option>
-                                                                                                <option
-                                                                                                    value="Switzerland"
-                                                                                                    data-country-code="CH">
-                                                                                                    Switzerland</option>
-                                                                                                <option value="Syria"
-                                                                                                    data-country-code="SY">
-                                                                                                    Syria</option>
-                                                                                                <option
-                                                                                                    value="Taiwan, Republic of China"
-                                                                                                    data-country-code="TW">
-                                                                                                    Taiwan, Republic of
-                                                                                                    China</option>
-                                                                                                <option
-                                                                                                    value="Tajikistan"
-                                                                                                    data-country-code="TJ">
-                                                                                                    Tajikistan</option>
-                                                                                                <option
-                                                                                                    value="Tanzania"
-                                                                                                    data-country-code="TZ">
-                                                                                                    Tanzania</option>
-                                                                                                <option
-                                                                                                    value="Thailand"
-                                                                                                    data-country-code="TH">
-                                                                                                    Thailand</option>
-                                                                                                <option value="Togo"
-                                                                                                    data-country-code="TG">
-                                                                                                    Togo</option>
-                                                                                                <option
-                                                                                                    value="Tokelau"
-                                                                                                    data-country-code="TK">
-                                                                                                    Tokelau</option>
-                                                                                                <option value="Tonga"
-                                                                                                    data-country-code="TO">
-                                                                                                    Tonga</option>
-                                                                                                <option
-                                                                                                    value="Trinidad and Tobago"
-                                                                                                    data-country-code="TT">
-                                                                                                    Trinidad and Tobago
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Tunisia"
-                                                                                                    data-country-code="TN">
-                                                                                                    Tunisia</option>
-                                                                                                <option value="Turkey"
-                                                                                                    data-country-code="TR">
-                                                                                                    Turkey</option>
-                                                                                                <option
-                                                                                                    value="Turkmenistan"
-                                                                                                    data-country-code="TM">
-                                                                                                    Turkmenistan
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Turks And Caicos Islands"
-                                                                                                    data-country-code="TC">
-                                                                                                    Turks And Caicos
-                                                                                                    Islands</option>
-                                                                                                <option value="Tuvalu"
-                                                                                                    data-country-code="TV">
-                                                                                                    Tuvalu</option>
-                                                                                                <option value="Uganda"
-                                                                                                    data-country-code="UG">
-                                                                                                    Uganda</option>
-                                                                                                <option
-                                                                                                    value="Ukraine"
-                                                                                                    data-country-code="UA">
-                                                                                                    Ukraine</option>
-                                                                                                <option
-                                                                                                    value="United Arab Emirates"
-                                                                                                    data-country-code="AE">
-                                                                                                    United Arab Emirates
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="United Kingdom"
-                                                                                                    data-country-code="GB">
-                                                                                                    United Kingdom
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="US Minor Outlying Islands"
-                                                                                                    data-country-code="UM">
-                                                                                                    US Minor Outlying
-                                                                                                    Islands</option>
-                                                                                                <option
-                                                                                                    value="United States of America (USA)"
-                                                                                                    data-country-code="US">
-                                                                                                    United States of
-                                                                                                    America (USA)
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Uruguay"
-                                                                                                    data-country-code="UY">
-                                                                                                    Uruguay</option>
-                                                                                                <option
-                                                                                                    value="Uzbekistan"
-                                                                                                    data-country-code="UZ">
-                                                                                                    Uzbekistan</option>
-                                                                                                <option
-                                                                                                    value="Vanuatu"
-                                                                                                    data-country-code="VU">
-                                                                                                    Vanuatu</option>
-                                                                                                <option
-                                                                                                    value="Vatican City"
-                                                                                                    data-country-code="VA">
-                                                                                                    Vatican City
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Venezuela"
-                                                                                                    data-country-code="VE">
-                                                                                                    Venezuela</option>
-                                                                                                <option
-                                                                                                    value="Vietnam"
-                                                                                                    data-country-code="VN">
-                                                                                                    Vietnam</option>
-                                                                                                <option
-                                                                                                    value="Virgin Islands, British"
-                                                                                                    data-country-code="VG">
-                                                                                                    Virgin Islands,
-                                                                                                    British</option>
-                                                                                                <option
-                                                                                                    value="Virgin Islands, U.S."
-                                                                                                    data-country-code="VI">
-                                                                                                    Virgin Islands, U.S.
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Wallis And Futuna Islands"
-                                                                                                    data-country-code="WF">
-                                                                                                    Wallis And Futuna
-                                                                                                    Islands</option>
-                                                                                                <option
-                                                                                                    value="Western Sahara"
-                                                                                                    data-country-code="EH">
-                                                                                                    Western Sahara
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Yemen Arab Rep."
-                                                                                                    data-country-code="YE">
-                                                                                                    Yemen Arab Rep.
-                                                                                                </option>
-                                                                                                <option
-                                                                                                    value="Yemen Democratic"
-                                                                                                    data-country-code="YD">
-                                                                                                    Yemen Democratic
-                                                                                                </option>
-                                                                                                <option value="Zambia"
-                                                                                                    data-country-code="ZM">
-                                                                                                    Zambia</option>
-                                                                                                <option
-                                                                                                    value="Zimbabwe"
-                                                                                                    data-country-code="ZW">
-                                                                                                    Zimbabwe</option>
-                                                                                            </select></div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="select-4"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-form-307__field--select-4_644a1de457452-label"
-                                                                                        class="forminator-label">Are
-                                                                                        you Working? <span
-                                                                                            class="forminator-required">*</span></label><select
-                                                                                        id="forminator-form-307__field--select-4_644a1de457452"
-                                                                                        class="forminator-select--field forminator-select2"
-                                                                                        data-required="1"
-                                                                                        name="select-4"
-                                                                                        data-default-value=""
-                                                                                        data-placeholder="Select"
-                                                                                        data-search="false"
-                                                                                        aria-describedby="forminator-form-307__field--select-4_644a1de457452-description">
-                                                                                        <option value="">Select
-                                                                                        </option>
-                                                                                        <option value="one"
-                                                                                            data-calculation="0">YES
-                                                                                        </option>
-                                                                                        <option value="two"
-                                                                                            data-calculation="0">NO
-                                                                                        </option>
-                                                                                    </select></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row">
-                                                                            <div id="text-8"
-                                                                                class="forminator-col forminator-col-12 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-field-text-8_644a1de457452"
-                                                                                        class="forminator-label">Current
-                                                                                        working location In India or
-                                                                                        abroad?</label><input
-                                                                                        type="text"
-                                                                                        name="text-8"
-                                                                                        value=""
-                                                                                        placeholder="E.g. Mumbai, India"
-                                                                                        id="forminator-field-text-8_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
-                                                                                        data-required="" /></div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="forminator-row forminator-hidden">
-                                                                            <input type="hidden"
-                                                                                id="hidden-1_644a1de457452"
-                                                                                name="hidden-1"
-                                                                                value="submission_id" /></div><input
-                                                                            type="hidden" name="referer_url"
-                                                                            value="" />
-                                                                        <div
-                                                                            class="forminator-row forminator-row-last">
-                                                                            <div class="forminator-col">
-                                                                                <div class="forminator-field"><button
-                                                                                        class="forminator-button forminator-button-submit">Register</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div><input type="hidden"
-                                                                            id="forminator_nonce"
-                                                                            name="forminator_nonce"
-                                                                            value="2988ceb1ba" /><input
-                                                                            type="hidden" name="_wp_http_referer"
-                                                                            value="/registration/" /><input
-                                                                            type="hidden" name="form_id"
-                                                                            value="307"><input type="hidden"
-                                                                            name="page_id" value="305"><input
-                                                                            type="hidden" name="form_type"
-                                                                            value="registration"><input
-                                                                            type="hidden" name="current_url"
-                                                                            value="http://lanternabroad.com/registration/"><input
-                                                                            type="hidden" name="render_id"
-                                                                            value="0"><input type="hidden"
-                                                                            name="action"
-                                                                            value="forminator_submit_form_custom-forms">
-                                                                    </form>
+                                                                    </div>
                                                                 </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="text-6"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-field-text-6_644a1de457452"
+                                                                                class="forminator-label">How
+                                                                                did you know about Lantern
+                                                                                Abroad? <span
+                                                                                    class="forminator-">*</span></label><input
+                                                                                type="text" name="refereal_method"
+                                                                                value=""
+                                                                                placeholder="E.g. From a friend"
+                                                                                id="forminator-field-text-6_644a1de457452"
+                                                                                class="forminator-input forminator-name--field"
+                                                                                data-="1" /></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="select-3"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-form-307__field--select-3_644a1de457452-label"
+                                                                                class="forminator-label">Any
+                                                                                Friends, Family or other living
+                                                                                NZ ? <span
+                                                                                    class="forminator-">*</span></label><select
+                                                                                id="forminator-form-307__field--select-3_644a1de457452"
+                                                                                data-="1"
+                                                                                name="Friends_Family_NZ_status"
+                                                                                data-default-value=""
+                                                                                data-placeholder="Select"
+                                                                                data-search="false"
+                                                                                aria-describedby="forminator-form-307__field--select-3_644a1de457452-description">
+                                                                                <option value="">Select
+                                                                                </option>
+                                                                                <option value="yes"
+                                                                                    data-calculation="0">YES
+                                                                                </option>
+                                                                                <option value="no"
+                                                                                    data-calculation="0">NO
+                                                                                </option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="text-7"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-field-text-7_644a1de457452"
+                                                                                class="forminator-label">If
+                                                                                Yes, Please Specify the
+                                                                                Details</label><input type="text"
+                                                                                name="Friends_Family_NZ"
+                                                                                value=""
+                                                                                placeholder="E.g. My friend John is the there in NZ. He is a Medical doctor"
+                                                                                id="forminator-field-text-7_644a1de457452"
+                                                                                class="forminator-input forminator-name--field"
+                                                                                data-="" /></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="textarea-1"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-field-textarea-1_644a1de457452"
+                                                                                class="forminator-label">11.
+                                                                                Cover letter</label>
+                                                                            <textarea name="Cover_letter" placeholder="E.g. Write to us" id="forminator-field-textarea-1_644a1de457452"
+                                                                                class="forminator-textarea" rows="6" style="min-height:140px;"></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="email-1"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-field-email-1_644a1de457452"
+                                                                                class="forminator-label">Email
+                                                                                <span
+                                                                                    class="forminator-">*</span></label><input
+                                                                                type="email" name="email"
+                                                                                value=""
+                                                                                placeholder="E.g. john@doe.com"
+                                                                                id="forminator-field-email-1_644a1de457452"
+                                                                                class="forminator-input forminator-email--field"
+                                                                                data-="true"  /></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="phone-1"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-field-phone-1_644a1de457452"
+                                                                                class="forminator-label">Phone
+                                                                                <span
+                                                                                    class="forminator-">*</span></label><input
+                                                                                type="text" name="phone"
+                                                                                value=""
+                                                                                placeholder="E.g. +1 300 400 5000"
+                                                                                id="forminator-field-phone-1_644a1de457452"
+                                                                                class="forminator-input forminator-field--phone"
+                                                                                data-="1"
+                                                                                autocomplete="off"
+                                                                                data-national_mode="disabled"
+                                                                                data-country="AF"
+                                                                                data-validation="international" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="address-1"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-row">
+                                                                            <div id="address-1-street_address"
+                                                                                class="forminator-col">
+                                                                                <div class="forminator-field">
+                                                                                    <label
+                                                                                        for="forminator-field-street_address-address-1_644a1de457452"
+                                                                                        class="forminator-label">Street
+                                                                                        Address <span
+                                                                                            class="forminator-">*</span></label><input
+                                                                                        type="text"
+                                                                                        name="street_address"
+                                                                                        placeholder="E.g. 42 Wallaby Way"
+                                                                                        id="forminator-field-street_address-address-1_644a1de457452"
+                                                                                        class="forminator-input"
+                                                                                        data-="1"
+                                                                                        value="" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="address-1-address_line"
+                                                                                class="forminator-col">
+                                                                                <div class="forminator-field">
+                                                                                    <label
+                                                                                        for="forminator-field-address_line-address-1_644a1de457452"
+                                                                                        class="forminator-label">Apartment,
+                                                                                        suite, etc</label><input
+                                                                                        type="text"
+                                                                                        name="address_line"
+                                                                                        placeholder=""
+                                                                                        id="forminator-field-address_line-address-1_644a1de457452"
+                                                                                        class="forminator-input"
+                                                                                        data-=""
+                                                                                        aria-="false"
+                                                                                        value="" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row"
+                                                                            data-multiple="true">
+                                                                            <div id="address-1-city"
+                                                                                class="forminator-col forminator-col-6">
+                                                                                <div class="forminator-field">
+                                                                                    <label
+                                                                                        for="forminator-field-city-address-1_644a1de457452"
+                                                                                        class="forminator-label">City</label><input
+                                                                                        type="text"
+                                                                                        name="address_city"
+                                                                                        placeholder="E.g. Sydney"
+                                                                                        id="forminator-field-city-address-1_644a1de457452"
+                                                                                        class="forminator-input"
+                                                                                        data-=""
+                                                                                        aria-="false"
+                                                                                        value="" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="address-1-state"
+                                                                                class="forminator-col forminator-col-6">
+                                                                                <div class="forminator-field">
+                                                                                    <label
+                                                                                        for="forminator-field-state-address-1_644a1de457452"
+                                                                                        class="forminator-label">State/Province</label><input
+                                                                                        type="text"
+                                                                                        name="address_state"
+                                                                                        placeholder="E.g. New South Wales"
+                                                                                        id="forminator-field-state-address-1_644a1de457452"
+                                                                                        class="forminator-input"
+                                                                                        data-=""
+                                                                                        aria-="false"
+                                                                                        value="" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row"
+                                                                            data-multiple="true">
+                                                                            <div id="address-1-zip"
+                                                                                class="forminator-col forminator-col-6">
+                                                                                <div class="forminator-field">
+                                                                                    <label
+                                                                                        for="forminator-field-zip-address-1_644a1de457452"
+                                                                                        class="forminator-label">ZIP
+                                                                                        / Postal
+                                                                                        Code</label><input
+                                                                                        type="text"
+                                                                                        name="address_zip"
+                                                                                        placeholder="E.g. 2000"
+                                                                                        id="forminator-field-zip-address-1_644a1de457452"
+                                                                                        class="forminator-input"
+                                                                                        value="" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="address-1-country"
+                                                                                class="forminator-col forminator-col-6">
+                                                                                <div class="forminator-field">
+                                                                                    <label
+                                                                                        for="forminator-form-307__field--address-1_644a1de457452"
+                                                                                        class="forminator-label">Country
+                                                                                    </label><select
+                                                                                        name="address_country"
+                                                                                        id="forminator-form-307__field--address-1_644a1de457452"
+                                                                                        class="forminator-select2"
+                                                                                        data-search="true"
+                                                                                        data-placeholder="Select country"
+                                                                                        data-default-value="">
+                                                                                        <option value=""
+                                                                                            data-country-code=""
+                                                                                            selected="selected">
+                                                                                        </option>
+                                                                                        <option value="Afghanistan"
+                                                                                            data-country-code="AF">
+                                                                                            Afghanistan</option>
+                                                                                        <option value="Albania"
+                                                                                            data-country-code="AL">
+                                                                                            Albania</option>
+                                                                                        <option value="Algeria"
+                                                                                            data-country-code="DZ">
+                                                                                            Algeria</option>
+                                                                                        <option value="American Samoa"
+                                                                                            data-country-code="AS">
+                                                                                            American Samoa
+                                                                                        </option>
+                                                                                        <option value="Andorra"
+                                                                                            data-country-code="AD">
+                                                                                            Andorra</option>
+                                                                                        <option value="Angola"
+                                                                                            data-country-code="AO">
+                                                                                            Angola</option>
+                                                                                        <option value="Anguilla"
+                                                                                            data-country-code="AI">
+                                                                                            Anguilla</option>
+                                                                                        <option value="Antarctica"
+                                                                                            data-country-code="AQ">
+                                                                                            Antarctica</option>
+                                                                                        <option
+                                                                                            value="Antigua and Barbuda"
+                                                                                            data-country-code="AG">
+                                                                                            Antigua and Barbuda
+                                                                                        </option>
+                                                                                        <option value="Argentina"
+                                                                                            data-country-code="AR">
+                                                                                            Argentina</option>
+                                                                                        <option value="Armenia"
+                                                                                            data-country-code="AM">
+                                                                                            Armenia</option>
+                                                                                        <option value="Australia"
+                                                                                            data-country-code="AU">
+                                                                                            Australia</option>
+                                                                                        <option value="Aruba"
+                                                                                            data-country-code="AW">
+                                                                                            Aruba</option>
+                                                                                        <option value="Austria"
+                                                                                            data-country-code="AT">
+                                                                                            Austria</option>
+                                                                                        <option value="Azerbaijan"
+                                                                                            data-country-code="AZ">
+                                                                                            Azerbaijan</option>
+                                                                                        <option value="Bahamas"
+                                                                                            data-country-code="BS">
+                                                                                            Bahamas</option>
+                                                                                        <option value="Bahrain"
+                                                                                            data-country-code="BH">
+                                                                                            Bahrain</option>
+                                                                                        <option value="Bangladesh"
+                                                                                            data-country-code="BD">
+                                                                                            Bangladesh</option>
+                                                                                        <option value="Barbados"
+                                                                                            data-country-code="BB">
+                                                                                            Barbados</option>
+                                                                                        <option value="Belarus"
+                                                                                            data-country-code="BY">
+                                                                                            Belarus</option>
+                                                                                        <option value="Belgium"
+                                                                                            data-country-code="BE">
+                                                                                            Belgium</option>
+                                                                                        <option value="Belize"
+                                                                                            data-country-code="BZ">
+                                                                                            Belize</option>
+                                                                                        <option value="Benin"
+                                                                                            data-country-code="BJ">
+                                                                                            Benin</option>
+                                                                                        <option value="Bermuda"
+                                                                                            data-country-code="BM">
+                                                                                            Bermuda</option>
+                                                                                        <option value="Bhutan"
+                                                                                            data-country-code="BT">
+                                                                                            Bhutan</option>
+                                                                                        <option value="Bolivia"
+                                                                                            data-country-code="BO">
+                                                                                            Bolivia</option>
+                                                                                        <option
+                                                                                            value="Bosnia and Herzegovina"
+                                                                                            data-country-code="BA">
+                                                                                            Bosnia and
+                                                                                            Herzegovina</option>
+                                                                                        <option value="Botswana"
+                                                                                            data-country-code="BW">
+                                                                                            Botswana</option>
+                                                                                        <option value="Bouvet Island"
+                                                                                            data-country-code="BV">
+                                                                                            Bouvet Island
+                                                                                        </option>
+                                                                                        <option value="Brazil"
+                                                                                            data-country-code="BR">
+                                                                                            Brazil</option>
+                                                                                        <option
+                                                                                            value="British Indian Ocean Territory"
+                                                                                            data-country-code="IO">
+                                                                                            British Indian Ocean
+                                                                                            Territory</option>
+                                                                                        <option value="Brunei"
+                                                                                            data-country-code="BN">
+                                                                                            Brunei</option>
+                                                                                        <option value="Bulgaria"
+                                                                                            data-country-code="BG">
+                                                                                            Bulgaria</option>
+                                                                                        <option value="Burkina Faso"
+                                                                                            data-country-code="BF">
+                                                                                            Burkina Faso
+                                                                                        </option>
+                                                                                        <option value="Burundi"
+                                                                                            data-country-code="BI">
+                                                                                            Burundi</option>
+                                                                                        <option value="Cambodia"
+                                                                                            data-country-code="KH">
+                                                                                            Cambodia</option>
+                                                                                        <option value="Cameroon"
+                                                                                            data-country-code="CM">
+                                                                                            Cameroon</option>
+                                                                                        <option value="Canada"
+                                                                                            data-country-code="CA">
+                                                                                            Canada</option>
+                                                                                        <option value="Cabo Verde"
+                                                                                            data-country-code="CV">
+                                                                                            Cabo Verde</option>
+                                                                                        <option value="Cayman Islands"
+                                                                                            data-country-code="KY">
+                                                                                            Cayman Islands
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Central African Republic"
+                                                                                            data-country-code="CF">
+                                                                                            Central African
+                                                                                            Republic</option>
+                                                                                        <option value="Chad"
+                                                                                            data-country-code="TD">
+                                                                                            Chad</option>
+                                                                                        <option value="Chile"
+                                                                                            data-country-code="CL">
+                                                                                            Chile</option>
+                                                                                        <option
+                                                                                            value="China, People's Republic of"
+                                                                                            data-country-code="CN">
+                                                                                            China, People's
+                                                                                            Republic of</option>
+                                                                                        <option
+                                                                                            value="Christmas Island"
+                                                                                            data-country-code="CX">
+                                                                                            Christmas Island
+                                                                                        </option>
+                                                                                        <option value="Cocos Islands"
+                                                                                            data-country-code="CC">
+                                                                                            Cocos Islands
+                                                                                        </option>
+                                                                                        <option value="Colombia"
+                                                                                            data-country-code="CO">
+                                                                                            Colombia</option>
+                                                                                        <option value="Comoros"
+                                                                                            data-country-code="KM">
+                                                                                            Comoros</option>
+                                                                                        <option
+                                                                                            value="Congo, Democratic Republic of the"
+                                                                                            data-country-code="CD">
+                                                                                            Congo, Democratic
+                                                                                            Republic of the
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Congo, Republic of the"
+                                                                                            data-country-code="CG">
+                                                                                            Congo, Republic of
+                                                                                            the</option>
+                                                                                        <option value="Cook Islands"
+                                                                                            data-country-code="CK">
+                                                                                            Cook Islands
+                                                                                        </option>
+                                                                                        <option value="Costa Rica"
+                                                                                            data-country-code="CR">
+                                                                                            Costa Rica</option>
+                                                                                        <option value="Côte d'Ivoire"
+                                                                                            data-country-code="CI">
+                                                                                            Côte d'Ivoire
+                                                                                        </option>
+                                                                                        <option value="Croatia"
+                                                                                            data-country-code="HR">
+                                                                                            Croatia</option>
+                                                                                        <option value="Cuba"
+                                                                                            data-country-code="CU">
+                                                                                            Cuba</option>
+                                                                                        <option value="Curaçao"
+                                                                                            data-country-code="CW">
+                                                                                            Curaçao</option>
+                                                                                        <option value="Cyprus"
+                                                                                            data-country-code="CY">
+                                                                                            Cyprus</option>
+                                                                                        <option value="Czech Republic"
+                                                                                            data-country-code="CZ">
+                                                                                            Czech Republic
+                                                                                        </option>
+                                                                                        <option value="Denmark"
+                                                                                            data-country-code="DK">
+                                                                                            Denmark</option>
+                                                                                        <option value="Djibouti"
+                                                                                            data-country-code="DJ">
+                                                                                            Djibouti</option>
+                                                                                        <option value="Dominica"
+                                                                                            data-country-code="DM">
+                                                                                            Dominica</option>
+                                                                                        <option
+                                                                                            value="Dominican Republic"
+                                                                                            data-country-code="DO">
+                                                                                            Dominican Republic
+                                                                                        </option>
+                                                                                        <option value="East Timor"
+                                                                                            data-country-code="TL">
+                                                                                            East Timor</option>
+                                                                                        <option value="Ecuador"
+                                                                                            data-country-code="EC">
+                                                                                            Ecuador</option>
+                                                                                        <option value="Egypt"
+                                                                                            data-country-code="EG">
+                                                                                            Egypt</option>
+                                                                                        <option value="El Salvador"
+                                                                                            data-country-code="SV">
+                                                                                            El Salvador</option>
+                                                                                        <option
+                                                                                            value="Equatorial Guinea"
+                                                                                            data-country-code="GQ">
+                                                                                            Equatorial Guinea
+                                                                                        </option>
+                                                                                        <option value="Eritrea"
+                                                                                            data-country-code="ER">
+                                                                                            Eritrea</option>
+                                                                                        <option value="Estonia"
+                                                                                            data-country-code="EE">
+                                                                                            Estonia</option>
+                                                                                        <option value="Ethiopia"
+                                                                                            data-country-code="ET">
+                                                                                            Ethiopia</option>
+                                                                                        <option
+                                                                                            value="Falkland Islands"
+                                                                                            data-country-code="FK">
+                                                                                            Falkland Islands
+                                                                                        </option>
+                                                                                        <option value="Faroe Islands"
+                                                                                            data-country-code="FO">
+                                                                                            Faroe Islands
+                                                                                        </option>
+                                                                                        <option value="Fiji"
+                                                                                            data-country-code="FJ">
+                                                                                            Fiji</option>
+                                                                                        <option value="Finland"
+                                                                                            data-country-code="FI">
+                                                                                            Finland</option>
+                                                                                        <option value="France"
+                                                                                            data-country-code="FR">
+                                                                                            France</option>
+                                                                                        <option
+                                                                                            value="France, Metropolitan"
+                                                                                            data-country-code="FX">
+                                                                                            France, Metropolitan
+                                                                                        </option>
+                                                                                        <option value="French Guiana"
+                                                                                            data-country-code="GF">
+                                                                                            French Guiana
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="French Polynesia"
+                                                                                            data-country-code="PF">
+                                                                                            French Polynesia
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="French South Territories"
+                                                                                            data-country-code="TF">
+                                                                                            French South
+                                                                                            Territories</option>
+                                                                                        <option value="Gabon"
+                                                                                            data-country-code="GA">
+                                                                                            Gabon</option>
+                                                                                        <option value="Gambia"
+                                                                                            data-country-code="GM">
+                                                                                            Gambia</option>
+                                                                                        <option value="Georgia"
+                                                                                            data-country-code="GE">
+                                                                                            Georgia</option>
+                                                                                        <option value="Germany"
+                                                                                            data-country-code="DE">
+                                                                                            Germany</option>
+                                                                                        <option value="Guernsey"
+                                                                                            data-country-code="GG">
+                                                                                            Guernsey</option>
+                                                                                        <option value="Ghana"
+                                                                                            data-country-code="GH">
+                                                                                            Ghana</option>
+                                                                                        <option value="Gibraltar"
+                                                                                            data-country-code="GI">
+                                                                                            Gibraltar</option>
+                                                                                        <option value="Greece"
+                                                                                            data-country-code="GR">
+                                                                                            Greece</option>
+                                                                                        <option value="Greenland"
+                                                                                            data-country-code="GL">
+                                                                                            Greenland</option>
+                                                                                        <option value="Grenada"
+                                                                                            data-country-code="GD">
+                                                                                            Grenada</option>
+                                                                                        <option value="Guadeloupe"
+                                                                                            data-country-code="GP">
+                                                                                            Guadeloupe</option>
+                                                                                        <option value="Guam"
+                                                                                            data-country-code="GU">
+                                                                                            Guam</option>
+                                                                                        <option value="Guatemala"
+                                                                                            data-country-code="GT">
+                                                                                            Guatemala</option>
+                                                                                        <option value="Guinea"
+                                                                                            data-country-code="GN">
+                                                                                            Guinea</option>
+                                                                                        <option value="Guinea-Bissau"
+                                                                                            data-country-code="GW">
+                                                                                            Guinea-Bissau
+                                                                                        </option>
+                                                                                        <option value="Guyana"
+                                                                                            data-country-code="GY">
+                                                                                            Guyana</option>
+                                                                                        <option value="Haiti"
+                                                                                            data-country-code="HT">
+                                                                                            Haiti</option>
+                                                                                        <option
+                                                                                            value="Heard Island And Mcdonald Island"
+                                                                                            data-country-code="HM">
+                                                                                            Heard Island And
+                                                                                            Mcdonald Island
+                                                                                        </option>
+                                                                                        <option value="Honduras"
+                                                                                            data-country-code="HN">
+                                                                                            Honduras</option>
+                                                                                        <option value="Hong Kong"
+                                                                                            data-country-code="HK">
+                                                                                            Hong Kong</option>
+                                                                                        <option value="Hungary"
+                                                                                            data-country-code="HU">
+                                                                                            Hungary</option>
+                                                                                        <option value="Iceland"
+                                                                                            data-country-code="IS">
+                                                                                            Iceland</option>
+                                                                                        <option value="India"
+                                                                                            data-country-code="IN">
+                                                                                            India</option>
+                                                                                        <option value="Indonesia"
+                                                                                            data-country-code="ID">
+                                                                                            Indonesia</option>
+                                                                                        <option value="Iran"
+                                                                                            data-country-code="IR">
+                                                                                            Iran</option>
+                                                                                        <option value="Iraq"
+                                                                                            data-country-code="IQ">
+                                                                                            Iraq</option>
+                                                                                        <option value="Ireland"
+                                                                                            data-country-code="IE">
+                                                                                            Ireland</option>
+                                                                                        <option value="Israel"
+                                                                                            data-country-code="IL">
+                                                                                            Israel</option>
+                                                                                        <option value="Italy"
+                                                                                            data-country-code="IT">
+                                                                                            Italy</option>
+                                                                                        <option value="Jamaica"
+                                                                                            data-country-code="JM">
+                                                                                            Jamaica</option>
+                                                                                        <option value="Japan"
+                                                                                            data-country-code="JP">
+                                                                                            Japan</option>
+                                                                                        <option value="Jersey"
+                                                                                            data-country-code="JE">
+                                                                                            Jersey</option>
+                                                                                        <option
+                                                                                            value="Johnston Island"
+                                                                                            data-country-code="JT">
+                                                                                            Johnston Island
+                                                                                        </option>
+                                                                                        <option value="Jordan"
+                                                                                            data-country-code="JO">
+                                                                                            Jordan</option>
+                                                                                        <option value="Kazakhstan"
+                                                                                            data-country-code="KZ">
+                                                                                            Kazakhstan</option>
+                                                                                        <option value="Kenya"
+                                                                                            data-country-code="KE">
+                                                                                            Kenya</option>
+                                                                                        <option value="Kiribati"
+                                                                                            data-country-code="KI">
+                                                                                            Kiribati</option>
+                                                                                        <option
+                                                                                            value="Korea, Democratic People's Republic of"
+                                                                                            data-country-code="KP">
+                                                                                            Korea, Democratic
+                                                                                            People's Republic of
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Korea, Republic of"
+                                                                                            data-country-code="KR">
+                                                                                            Korea, Republic of
+                                                                                        </option>
+                                                                                        <option value="Kosovo"
+                                                                                            data-country-code="XK">
+                                                                                            Kosovo</option>
+                                                                                        <option value="Kuwait"
+                                                                                            data-country-code="KW">
+                                                                                            Kuwait</option>
+                                                                                        <option value="Kyrgyzstan"
+                                                                                            data-country-code="KG">
+                                                                                            Kyrgyzstan</option>
+                                                                                        <option
+                                                                                            value="Lao People's Democratic Republic"
+                                                                                            data-country-code="LA">
+                                                                                            Lao People's
+                                                                                            Democratic Republic
+                                                                                        </option>
+                                                                                        <option value="Latvia"
+                                                                                            data-country-code="LV">
+                                                                                            Latvia</option>
+                                                                                        <option value="Lebanon"
+                                                                                            data-country-code="LB">
+                                                                                            Lebanon</option>
+                                                                                        <option value="Lesotho"
+                                                                                            data-country-code="LS">
+                                                                                            Lesotho</option>
+                                                                                        <option value="Liberia"
+                                                                                            data-country-code="LR">
+                                                                                            Liberia</option>
+                                                                                        <option value="Libya"
+                                                                                            data-country-code="LY">
+                                                                                            Libya</option>
+                                                                                        <option value="Liechtenstein"
+                                                                                            data-country-code="LI">
+                                                                                            Liechtenstein
+                                                                                        </option>
+                                                                                        <option value="Lithuania"
+                                                                                            data-country-code="LT">
+                                                                                            Lithuania</option>
+                                                                                        <option value="Luxembourg"
+                                                                                            data-country-code="LU">
+                                                                                            Luxembourg</option>
+                                                                                        <option value="Macau"
+                                                                                            data-country-code="MO">
+                                                                                            Macau</option>
+                                                                                        <option
+                                                                                            value="North Macedonia"
+                                                                                            data-country-code="MK">
+                                                                                            North Macedonia
+                                                                                        </option>
+                                                                                        <option value="Madagascar"
+                                                                                            data-country-code="MG">
+                                                                                            Madagascar</option>
+                                                                                        <option value="Malawi"
+                                                                                            data-country-code="MW">
+                                                                                            Malawi</option>
+                                                                                        <option value="Malaysia"
+                                                                                            data-country-code="MY">
+                                                                                            Malaysia</option>
+                                                                                        <option value="Maldives"
+                                                                                            data-country-code="MV">
+                                                                                            Maldives</option>
+                                                                                        <option value="Mali"
+                                                                                            data-country-code="ML">
+                                                                                            Mali</option>
+                                                                                        <option value="Malta"
+                                                                                            data-country-code="MT">
+                                                                                            Malta</option>
+                                                                                        <option
+                                                                                            value="Marshall Islands"
+                                                                                            data-country-code="MH">
+                                                                                            Marshall Islands
+                                                                                        </option>
+                                                                                        <option value="Martinique"
+                                                                                            data-country-code="MQ">
+                                                                                            Martinique</option>
+                                                                                        <option value="Mauritania"
+                                                                                            data-country-code="MR">
+                                                                                            Mauritania</option>
+                                                                                        <option value="Mauritius"
+                                                                                            data-country-code="MU">
+                                                                                            Mauritius</option>
+                                                                                        <option value="Mayotte"
+                                                                                            data-country-code="YT">
+                                                                                            Mayotte</option>
+                                                                                        <option value="Mexico"
+                                                                                            data-country-code="MX">
+                                                                                            Mexico</option>
+                                                                                        <option value="Micronesia"
+                                                                                            data-country-code="FM">
+                                                                                            Micronesia</option>
+                                                                                        <option value="Moldova"
+                                                                                            data-country-code="MD">
+                                                                                            Moldova</option>
+                                                                                        <option value="Monaco"
+                                                                                            data-country-code="MC">
+                                                                                            Monaco</option>
+                                                                                        <option value="Mongolia"
+                                                                                            data-country-code="MN">
+                                                                                            Mongolia</option>
+                                                                                        <option value="Montserrat"
+                                                                                            data-country-code="MS">
+                                                                                            Montserrat</option>
+                                                                                        <option value="Montenegro"
+                                                                                            data-country-code="ME">
+                                                                                            Montenegro</option>
+                                                                                        <option value="Morocco"
+                                                                                            data-country-code="MA">
+                                                                                            Morocco</option>
+                                                                                        <option value="Mozambique"
+                                                                                            data-country-code="MZ">
+                                                                                            Mozambique</option>
+                                                                                        <option value="Myanmar"
+                                                                                            data-country-code="MM">
+                                                                                            Myanmar</option>
+                                                                                        <option value="Namibia"
+                                                                                            data-country-code="NA">
+                                                                                            Namibia</option>
+                                                                                        <option value="Nauru"
+                                                                                            data-country-code="NR">
+                                                                                            Nauru</option>
+                                                                                        <option value="Nepal"
+                                                                                            data-country-code="NP">
+                                                                                            Nepal</option>
+                                                                                        <option value="Netherlands"
+                                                                                            data-country-code="NL">
+                                                                                            Netherlands</option>
+                                                                                        <option
+                                                                                            value="Netherlands Antilles"
+                                                                                            data-country-code="AN">
+                                                                                            Netherlands Antilles
+                                                                                        </option>
+                                                                                        <option value="New Caledonia"
+                                                                                            data-country-code="NC">
+                                                                                            New Caledonia
+                                                                                        </option>
+                                                                                        <option value="New Zealand"
+                                                                                            data-country-code="NZ">
+                                                                                            New Zealand</option>
+                                                                                        <option value="Nicaragua"
+                                                                                            data-country-code="NI">
+                                                                                            Nicaragua</option>
+                                                                                        <option value="Niger"
+                                                                                            data-country-code="NE">
+                                                                                            Niger</option>
+                                                                                        <option value="Nigeria"
+                                                                                            data-country-code="NG">
+                                                                                            Nigeria</option>
+                                                                                        <option value="Niue"
+                                                                                            data-country-code="NU">
+                                                                                            Niue</option>
+                                                                                        <option value="Norfolk Island"
+                                                                                            data-country-code="NF">
+                                                                                            Norfolk Island
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Northern Mariana Islands"
+                                                                                            data-country-code="MP">
+                                                                                            Northern Mariana
+                                                                                            Islands</option>
+                                                                                        <option value="Norway"
+                                                                                            data-country-code="NO">
+                                                                                            Norway</option>
+                                                                                        <option value="Oman"
+                                                                                            data-country-code="OM">
+                                                                                            Oman</option>
+                                                                                        <option value="Pakistan"
+                                                                                            data-country-code="PK">
+                                                                                            Pakistan</option>
+                                                                                        <option value="Palau"
+                                                                                            data-country-code="PW">
+                                                                                            Palau</option>
+                                                                                        <option
+                                                                                            value="Palestine, State of"
+                                                                                            data-country-code="PS">
+                                                                                            Palestine, State of
+                                                                                        </option>
+                                                                                        <option value="Panama"
+                                                                                            data-country-code="PA">
+                                                                                            Panama</option>
+                                                                                        <option
+                                                                                            value="Papua New Guinea"
+                                                                                            data-country-code="PG">
+                                                                                            Papua New Guinea
+                                                                                        </option>
+                                                                                        <option value="Paraguay"
+                                                                                            data-country-code="PY">
+                                                                                            Paraguay</option>
+                                                                                        <option value="Peru"
+                                                                                            data-country-code="PE">
+                                                                                            Peru</option>
+                                                                                        <option value="Philippines"
+                                                                                            data-country-code="PH">
+                                                                                            Philippines</option>
+                                                                                        <option
+                                                                                            value="Pitcairn Islands"
+                                                                                            data-country-code="PN">
+                                                                                            Pitcairn Islands
+                                                                                        </option>
+                                                                                        <option value="Poland"
+                                                                                            data-country-code="PL">
+                                                                                            Poland</option>
+                                                                                        <option value="Portugal"
+                                                                                            data-country-code="PT">
+                                                                                            Portugal</option>
+                                                                                        <option value="Puerto Rico"
+                                                                                            data-country-code="PR">
+                                                                                            Puerto Rico</option>
+                                                                                        <option value="Qatar"
+                                                                                            data-country-code="QA">
+                                                                                            Qatar</option>
+                                                                                        <option value="Reunion Island"
+                                                                                            data-country-code="RE">
+                                                                                            Reunion Island
+                                                                                        </option>
+                                                                                        <option value="Romania"
+                                                                                            data-country-code="RO">
+                                                                                            Romania</option>
+                                                                                        <option value="Russia"
+                                                                                            data-country-code="RU">
+                                                                                            Russia</option>
+                                                                                        <option value="Rwanda"
+                                                                                            data-country-code="RW">
+                                                                                            Rwanda</option>
+                                                                                        <option
+                                                                                            value="Saint Kitts and Nevis"
+                                                                                            data-country-code="KN">
+                                                                                            Saint Kitts and
+                                                                                            Nevis</option>
+                                                                                        <option value="Saint Lucia"
+                                                                                            data-country-code="LC">
+                                                                                            Saint Lucia</option>
+                                                                                        <option
+                                                                                            value="Saint Vincent and the Grenadines"
+                                                                                            data-country-code="VC">
+                                                                                            Saint Vincent and
+                                                                                            the Grenadines
+                                                                                        </option>
+                                                                                        <option value="Samoa"
+                                                                                            data-country-code="WS">
+                                                                                            Samoa</option>
+                                                                                        <option value="Saint Helena"
+                                                                                            data-country-code="SH">
+                                                                                            Saint Helena
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Saint Pierre & Miquelon"
+                                                                                            data-country-code="PM">
+                                                                                            Saint Pierre &
+                                                                                            Miquelon</option>
+                                                                                        <option value="San Marino"
+                                                                                            data-country-code="SM">
+                                                                                            San Marino</option>
+                                                                                        <option
+                                                                                            value="Sao Tome and Principe"
+                                                                                            data-country-code="ST">
+                                                                                            Sao Tome and
+                                                                                            Principe</option>
+                                                                                        <option value="Saudi Arabia"
+                                                                                            data-country-code="SA">
+                                                                                            Saudi Arabia
+                                                                                        </option>
+                                                                                        <option value="Senegal"
+                                                                                            data-country-code="SN">
+                                                                                            Senegal</option>
+                                                                                        <option value="Serbia"
+                                                                                            data-country-code="RS">
+                                                                                            Serbia</option>
+                                                                                        <option value="Seychelles"
+                                                                                            data-country-code="SC">
+                                                                                            Seychelles</option>
+                                                                                        <option value="Sierra Leone"
+                                                                                            data-country-code="SL">
+                                                                                            Sierra Leone
+                                                                                        </option>
+                                                                                        <option value="Singapore"
+                                                                                            data-country-code="SG">
+                                                                                            Singapore</option>
+                                                                                        <option value="Sint Maarten"
+                                                                                            data-country-code="MF">
+                                                                                            Sint Maarten
+                                                                                        </option>
+                                                                                        <option value="Slovakia"
+                                                                                            data-country-code="SK">
+                                                                                            Slovakia</option>
+                                                                                        <option value="Slovenia"
+                                                                                            data-country-code="SI">
+                                                                                            Slovenia</option>
+                                                                                        <option
+                                                                                            value="Solomon Islands"
+                                                                                            data-country-code="SB">
+                                                                                            Solomon Islands
+                                                                                        </option>
+                                                                                        <option value="Somalia"
+                                                                                            data-country-code="SO">
+                                                                                            Somalia</option>
+                                                                                        <option value="South Africa"
+                                                                                            data-country-code="ZA">
+                                                                                            South Africa
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="South Georgia and South Sandwich"
+                                                                                            data-country-code="GS">
+                                                                                            South Georgia and
+                                                                                            South Sandwich
+                                                                                        </option>
+                                                                                        <option value="Spain"
+                                                                                            data-country-code="ES">
+                                                                                            Spain</option>
+                                                                                        <option value="Sri Lanka"
+                                                                                            data-country-code="LK">
+                                                                                            Sri Lanka</option>
+                                                                                        <option
+                                                                                            value="Stateless Persons"
+                                                                                            data-country-code="XX">
+                                                                                            Stateless Persons
+                                                                                        </option>
+                                                                                        <option value="Sudan"
+                                                                                            data-country-code="SD">
+                                                                                            Sudan</option>
+                                                                                        <option value="Sudan, South"
+                                                                                            data-country-code="SS">
+                                                                                            Sudan, South
+                                                                                        </option>
+                                                                                        <option value="Suriname"
+                                                                                            data-country-code="SR">
+                                                                                            Suriname</option>
+                                                                                        <option
+                                                                                            value="Svalbard and Jan Mayen"
+                                                                                            data-country-code="SJ">
+                                                                                            Svalbard and Jan
+                                                                                            Mayen</option>
+                                                                                        <option value="Swaziland"
+                                                                                            data-country-code="SZ">
+                                                                                            Swaziland</option>
+                                                                                        <option value="Sweden"
+                                                                                            data-country-code="SE">
+                                                                                            Sweden</option>
+                                                                                        <option value="Switzerland"
+                                                                                            data-country-code="CH">
+                                                                                            Switzerland</option>
+                                                                                        <option value="Syria"
+                                                                                            data-country-code="SY">
+                                                                                            Syria</option>
+                                                                                        <option
+                                                                                            value="Taiwan, Republic of China"
+                                                                                            data-country-code="TW">
+                                                                                            Taiwan, Republic of
+                                                                                            China</option>
+                                                                                        <option value="Tajikistan"
+                                                                                            data-country-code="TJ">
+                                                                                            Tajikistan</option>
+                                                                                        <option value="Tanzania"
+                                                                                            data-country-code="TZ">
+                                                                                            Tanzania</option>
+                                                                                        <option value="Thailand"
+                                                                                            data-country-code="TH">
+                                                                                            Thailand</option>
+                                                                                        <option value="Togo"
+                                                                                            data-country-code="TG">
+                                                                                            Togo</option>
+                                                                                        <option value="Tokelau"
+                                                                                            data-country-code="TK">
+                                                                                            Tokelau</option>
+                                                                                        <option value="Tonga"
+                                                                                            data-country-code="TO">
+                                                                                            Tonga</option>
+                                                                                        <option
+                                                                                            value="Trinidad and Tobago"
+                                                                                            data-country-code="TT">
+                                                                                            Trinidad and Tobago
+                                                                                        </option>
+                                                                                        <option value="Tunisia"
+                                                                                            data-country-code="TN">
+                                                                                            Tunisia</option>
+                                                                                        <option value="Turkey"
+                                                                                            data-country-code="TR">
+                                                                                            Turkey</option>
+                                                                                        <option value="Turkmenistan"
+                                                                                            data-country-code="TM">
+                                                                                            Turkmenistan
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Turks And Caicos Islands"
+                                                                                            data-country-code="TC">
+                                                                                            Turks And Caicos
+                                                                                            Islands</option>
+                                                                                        <option value="Tuvalu"
+                                                                                            data-country-code="TV">
+                                                                                            Tuvalu</option>
+                                                                                        <option value="Uganda"
+                                                                                            data-country-code="UG">
+                                                                                            Uganda</option>
+                                                                                        <option value="Ukraine"
+                                                                                            data-country-code="UA">
+                                                                                            Ukraine</option>
+                                                                                        <option
+                                                                                            value="United Arab Emirates"
+                                                                                            data-country-code="AE">
+                                                                                            United Arab Emirates
+                                                                                        </option>
+                                                                                        <option value="United Kingdom"
+                                                                                            data-country-code="GB">
+                                                                                            United Kingdom
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="US Minor Outlying Islands"
+                                                                                            data-country-code="UM">
+                                                                                            US Minor Outlying
+                                                                                            Islands</option>
+                                                                                        <option
+                                                                                            value="United States of America (USA)"
+                                                                                            data-country-code="US">
+                                                                                            United States of
+                                                                                            America (USA)
+                                                                                        </option>
+                                                                                        <option value="Uruguay"
+                                                                                            data-country-code="UY">
+                                                                                            Uruguay</option>
+                                                                                        <option value="Uzbekistan"
+                                                                                            data-country-code="UZ">
+                                                                                            Uzbekistan</option>
+                                                                                        <option value="Vanuatu"
+                                                                                            data-country-code="VU">
+                                                                                            Vanuatu</option>
+                                                                                        <option value="Vatican City"
+                                                                                            data-country-code="VA">
+                                                                                            Vatican City
+                                                                                        </option>
+                                                                                        <option value="Venezuela"
+                                                                                            data-country-code="VE">
+                                                                                            Venezuela</option>
+                                                                                        <option value="Vietnam"
+                                                                                            data-country-code="VN">
+                                                                                            Vietnam</option>
+                                                                                        <option
+                                                                                            value="Virgin Islands, British"
+                                                                                            data-country-code="VG">
+                                                                                            Virgin Islands,
+                                                                                            British</option>
+                                                                                        <option
+                                                                                            value="Virgin Islands, U.S."
+                                                                                            data-country-code="VI">
+                                                                                            Virgin Islands, U.S.
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Wallis And Futuna Islands"
+                                                                                            data-country-code="WF">
+                                                                                            Wallis And Futuna
+                                                                                            Islands</option>
+                                                                                        <option value="Western Sahara"
+                                                                                            data-country-code="EH">
+                                                                                            Western Sahara
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Yemen Arab Rep."
+                                                                                            data-country-code="YE">
+                                                                                            Yemen Arab Rep.
+                                                                                        </option>
+                                                                                        <option
+                                                                                            value="Yemen Democratic"
+                                                                                            data-country-code="YD">
+                                                                                            Yemen Democratic
+                                                                                        </option>
+                                                                                        <option value="Zambia"
+                                                                                            data-country-code="ZM">
+                                                                                            Zambia</option>
+                                                                                        <option value="Zimbabwe"
+                                                                                            data-country-code="ZW">
+                                                                                            Zimbabwe</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="select-4"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-form-307__field--select-4_644a1de457452-label"
+                                                                                class="forminator-label">Are
+                                                                                you Working? <span
+                                                                                    class="forminator-">*</span></label><select
+                                                                                id="forminator-form-307__field--select-4_644a1de457452"
+                                                                                class="forminator-select--field forminator-select2"
+                                                                                data-="1" name="working"
+                                                                                data-default-value=""
+                                                                                data-placeholder="Select"
+                                                                                data-search="false"
+                                                                                aria-describedby="forminator-form-307__field--select-4_644a1de457452-description">
+                                                                                <option value="">Select
+                                                                                </option>
+                                                                                <option value="yes"
+                                                                                    data-calculation="0">YES
+                                                                                </option>
+                                                                                <option value="no"
+                                                                                    data-calculation="0">NO
+                                                                                </option>
+                                                                            </select></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="forminator-row">
+                                                                    <div id="text-8"
+                                                                        class="forminator-col forminator-col-12 ">
+                                                                        <div class="forminator-field"><label
+                                                                                for="forminator-field-text-8_644a1de457452"
+                                                                                class="forminator-label">Current
+                                                                                working location In India or
+                                                                                abroad?</label><input type="text"
+                                                                                name="working_address_india"
+                                                                                value=""
+                                                                                placeholder="E.g. Mumbai, India"
+                                                                                id="forminator-field-text-8_644a1de457452"
+                                                                                class="forminator-input forminator-name--field"
+                                                                                data-="" /></div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="forminator-row forminator-row-last">
+                                                                    <div class="forminator-col">
+                                                                        <div class="forminator-field"><button
+                                                                                type="submit"
+                                                                                class="forminator-button mt-2"
+                                                                                style="background-color:#0693e3;">Register</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </form>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
                                     </div>
-                                    <h3 class="cspt-hide">Registration</h3>
-                                </div><!-- .entry-content -->
-                            </article><!-- #post-## -->
-                        </main><!-- #main -->
-                    </div><!-- #primary -->
-
-                </div><!-- .site-content-wrap -->
-                <footer id="colophon"
-                    class="site-footer cspt-footer-style-1 cspt-color-blackish cspt-bg-color-light cspt-footer-menu-yes cspt-footer-widget-yes">
-                    <div class="cspt-footer-big-area-wrapper cspt-bg-color-gradientcolor">
-                        <div class="footer-wrap cspt-footer-big-area">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="cspt-footer-big-left">
-                                        <h3 class="cspt-footer-big-title">Call Our Adviser for Immigration Advice</h3>
-                                    </div>
-                                    <div class="cspt-footer-big-right">
-                                        <div class="vc_btn3-container vc_btn3-right"><button
-                                                class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-color-white"><span>Call
-                                                    Now</span></button></div>
-                                    </div>
+                                    </section>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-wrap cspt-footer-widget-area  cspt-bg-color-transparent">
+                                <h3 class="cspt-hide">Registration</h3>
+                    </div><!-- .entry-content -->
+                    </article><!-- #post-## -->
+                    </main><!-- #main -->
+                </div><!-- #primary -->
+
+            </div><!-- .site-content-wrap -->
+            <footer id="colophon"
+                class="site-footer cspt-footer-style-1 cspt-color-blackish cspt-bg-color-light cspt-footer-menu-yes cspt-footer-widget-yes">
+                <div class="cspt-footer-big-area-wrapper cspt-bg-color-gradientcolor">
+                    <div class="footer-wrap cspt-footer-big-area">
                         <div class="container">
                             <div class="row">
-                                <div class="cspt-footer-widget cspt-footer-widget-col-1 col-md-6 col-lg-3">
-                                    <aside id="text-3"
-                                        class="widget widget_text emphires_widget  emphires_widget_count_1">
-                                        <div class="textwidget">
-                                            <p><img decoding="async" loading="lazy"
-                                                    class="alignnone size-medium wp-image-9"
-                                                    src="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png"
-                                                    alt="" width="300" height="117"
-                                                    srcset="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png 300w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-1024x400.png 1024w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-768x300.png 768w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-770x301.png 770w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2.png 1417w"
-                                                    sizes="(max-width: 300px) 100vw, 300px" /></p>
-                                            <p>Lantern Abroad limited is a New Zealand registered company providing
-                                                guidance and support for the qualified and eligible nurses from other
-                                                countries to become registered nurses in New Zealand.</p>
-                                        </div>
-                                    </aside>
-                                    <aside id="emphires_contact_widget-1"
-                                        class="widget emphires_contact_widget emphires_widget  emphires_widget_count_2">
-                                        <h2 class="widget-title">ADDRESS</h2>
-                                        <div class="cspt-contact-widget-lines">
-                                            <div class="cspt-contact-widget-line cspt-contact-widget-address">North
-                                                Island<br />
-                                                New Zealand,</div>
-                                            <div class="cspt-contact-widget-line cspt-contact-widget-phone"><span>Talk
-                                                    To Our Support </span> +64 21 107 8682</div>
-                                        </div>
-                                    </aside>
-                                </div><!-- .cspt-footer-widget -->
-                                <div class="cspt-footer-widget cspt-footer-widget-col-2 col-md-6 col-lg-3">
-                                    <aside id="nav_menu-1"
-                                        class="widget widget_nav_menu emphires_widget  emphires_widget_count_3">
-                                        <h2 class="widget-title">Menu</h2>
-                                        <div class="menu-menu-container">
-                                            <ul id="menu-menu" class="menu">
-                                                <li id="menu-item-201"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201">
-                                                    <a href="#">Home</a> </li>
-                                                <li id="menu-item-195"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195">
-                                                    <a href="#">About Us</a> </li>
-                                                <li id="menu-item-196"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-196">
-                                                    <a href="#">Services</a> </li>
-                                                <li id="menu-item-197"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-197">
-                                                    <a href="#">Blogs</a> </li>
-                                                <li id="menu-item-198"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198">
-                                                    <a href="#">Contact</a> </li>
-                                            </ul>
-                                        </div>
-                                    </aside>
-                                </div><!-- .cspt-footer-widget -->
-                                <div class="cspt-footer-widget cspt-footer-widget-col-3 col-md-6 col-lg-3">
-                                    <aside id="emphires_recent_posts_widget-2"
-                                        class="widget emphires_recent_posts_widget emphires_widget  emphires_widget_count_4">
-                                        <h2 class="widget-title">Latest News</h2>
-                                    </aside>
-                                </div><!-- .cspt-footer-widget -->
-                                <div class="cspt-footer-widget cspt-footer-widget-col-4 col-md-6 col-lg-3">
-                                    <aside id="text-4"
-                                        class="widget widget_text emphires_widget  emphires_widget_count_5">
-                                        <h2 class="widget-title">ADDRESS</h2>
-                                        <div class="textwidget">
-                                            <p><strong>Lantern Abroad</strong><br />
-                                                Mookkkannnoor (near Angamaly)<br />
-                                                Ernakulam<br />
-                                                Kerala</p>
-                                            <p>&nbsp;</p>
-                                        </div>
-                                    </aside>
-                                    <aside id="text-5"
-                                        class="widget widget_text emphires_widget  emphires_widget_count_6">
-                                        <h2 class="widget-title">Follow Us On</h2>
-                                        <div class="textwidget">
-                                            <ul class="cspt-social-links">
-                                                <li class="cspt-social-li cspt-social-facebook "><a href="#"
-                                                        target="_blank" rel="noopener"><span><i
-                                                                class="cspt-base-icon-facebook-squared"></i></span></a>
-                                                </li>
-                                                <li class="cspt-social-li cspt-social-twitter "><a href="#"
-                                                        target="_blank" rel="noopener"><span><i
-                                                                class="cspt-base-icon-twitter"></i></span></a></li>
-                                                <li class="cspt-social-li cspt-social-linkedin "><a href="#"
-                                                        target="_blank" rel="noopener"><span><i
-                                                                class="cspt-base-icon-linkedin-squared"></i></span></a>
-                                                </li>
-                                                <li class="cspt-social-li cspt-social-instagram "><a href="#"
-                                                        target="_blank" rel="noopener"><span><i
-                                                                class="cspt-base-icon-instagram"></i></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </aside>
-                                </div><!-- .cspt-footer-widget -->
-                            </div><!-- .row -->
-                        </div>
-                    </div>
-
-                    <div class="cspt-footer-text-area  cspt-bg-color-transparent">
-                        <div class="container">
-                            <div class="cspt-footer-text-inner">
-                                <div class="row">
-
-                                    <div class="cspt-footer-copyright col-md-6">
-
-
-                                        <div class="cspt-footer-copyright-text-area">
-                                            Copyright © 2023 <a href="http://mitzonesoft.com/">Mitzonesoft</a> All
-                                            Rights Reserved. </div>
-                                    </div>
-                                    <div class="cspt-footer-menu-area col-md-6">
-                                        <div class="menu-footer-menu-container">
-                                            <ul class="cspt-footer-menu">
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192">
-                                                    <a href="#">Privacy &#038; Policy</a> </li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-193">
-                                                    <a href="#">Conditions</a> </li>
-                                                <li
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
-                                                    <a href="#">Refund Policy</a> </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
+                                <div class="cspt-footer-big-left">
+                                    <h3 class="cspt-footer-big-title">Call Our Adviser for Immigration Advice</h3>
                                 </div>
-                                <a href="#" class="scroll-to-top"><i
-                                        class="cspt-base-icon-arrow-right"></i><span class="cspt-hide">Back to
-                                        top</span></a>
+                                <div class="cspt-footer-big-right">
+                                    <div class="vc_btn3-container vc_btn3-right"><button
+                                            class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-color-white"><span>Call
+                                                Now</span></button></div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
-                </footer><!-- #colophon -->
-            </div><!-- .site-content-contain -->
-        </div><!-- #page -->
+                </div>
+                <div class="footer-wrap cspt-footer-widget-area  cspt-bg-color-transparent">
+                    <div class="container">
+                        <div class="row">
+                            <div class="cspt-footer-widget cspt-footer-widget-col-1 col-md-6 col-lg-3">
+                                <aside id="text-3"
+                                    class="widget widget_text emphires_widget  emphires_widget_count_1">
+                                    <div class="textwidget">
+                                        <p><img decoding="async" loading="lazy"
+                                                class="alignnone size-medium wp-image-9"
+                                                src="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png"
+                                                alt="" width="300" height="117"
+                                                srcset="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png 300w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-1024x400.png 1024w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-768x300.png 768w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-770x301.png 770w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2.png 1417w"
+                                                sizes="(max-width: 300px) 100vw, 300px" /></p>
+                                        <p>Lantern Abroad limited is a New Zealand registered company providing
+                                            guidance and support for the qualified and eligible nurses from other
+                                            countries to become registered nurses in New Zealand.</p>
+                                    </div>
+                                </aside>
+                                <aside id="emphires_contact_widget-1"
+                                    class="widget emphires_contact_widget emphires_widget  emphires_widget_count_2">
+                                    <h2 class="widget-title">ADDRESS</h2>
+                                    <div class="cspt-contact-widget-lines">
+                                        <div class="cspt-contact-widget-line cspt-contact-widget-address">North
+                                            Island<br />
+                                            New Zealand,</div>
+                                        <div class="cspt-contact-widget-line cspt-contact-widget-phone"><span>Talk
+                                                To Our Support </span> +64 21 107 8682</div>
+                                    </div>
+                                </aside>
+                            </div><!-- .cspt-footer-widget -->
+                            <div class="cspt-footer-widget cspt-footer-widget-col-2 col-md-6 col-lg-3">
+                                <aside id="nav_menu-1"
+                                    class="widget widget_nav_menu emphires_widget  emphires_widget_count_3">
+                                    <h2 class="widget-title">Menu</h2>
+                                    <div class="menu-menu-container">
+                                        <ul id="menu-menu" class="menu">
+                                            <li id="menu-item-201"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201">
+                                                <a href="#">Home</a>
+                                            </li>
+                                            <li id="menu-item-195"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195">
+                                                <a href="#">About Us</a>
+                                            </li>
+                                            <li id="menu-item-196"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-196">
+                                                <a href="#">Services</a>
+                                            </li>
+                                            <li id="menu-item-197"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-197">
+                                                <a href="#">Blogs</a>
+                                            </li>
+                                            <li id="menu-item-198"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198">
+                                                <a href="#">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                            </div><!-- .cspt-footer-widget -->
+                            <div class="cspt-footer-widget cspt-footer-widget-col-3 col-md-6 col-lg-3">
+                                <aside id="emphires_recent_posts_widget-2"
+                                    class="widget emphires_recent_posts_widget emphires_widget  emphires_widget_count_4">
+                                    <h2 class="widget-title">Latest News</h2>
+                                </aside>
+                            </div><!-- .cspt-footer-widget -->
+                            <div class="cspt-footer-widget cspt-footer-widget-col-4 col-md-6 col-lg-3">
+                                <aside id="text-4"
+                                    class="widget widget_text emphires_widget  emphires_widget_count_5">
+                                    <h2 class="widget-title">ADDRESS</h2>
+                                    <div class="textwidget">
+                                        <p><strong>Lantern Abroad</strong><br />
+                                            Mookkkannnoor (near Angamaly)<br />
+                                            Ernakulam<br />
+                                            Kerala</p>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                </aside>
+                                <aside id="text-5"
+                                    class="widget widget_text emphires_widget  emphires_widget_count_6">
+                                    <h2 class="widget-title">Follow Us On</h2>
+                                    <div class="textwidget">
+                                        <ul class="cspt-social-links">
+                                            <li class="cspt-social-li cspt-social-facebook "><a href="#"
+                                                    target="_blank" rel="noopener"><span><i
+                                                            class="cspt-base-icon-facebook-squared"></i></span></a>
+                                            </li>
+                                            <li class="cspt-social-li cspt-social-twitter "><a href="#"
+                                                    target="_blank" rel="noopener"><span><i
+                                                            class="cspt-base-icon-twitter"></i></span></a></li>
+                                            <li class="cspt-social-li cspt-social-linkedin "><a href="#"
+                                                    target="_blank" rel="noopener"><span><i
+                                                            class="cspt-base-icon-linkedin-squared"></i></span></a>
+                                            </li>
+                                            <li class="cspt-social-li cspt-social-instagram "><a href="#"
+                                                    target="_blank" rel="noopener"><span><i
+                                                            class="cspt-base-icon-instagram"></i></span></a></li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                            </div><!-- .cspt-footer-widget -->
+                        </div><!-- .row -->
+                    </div>
+                </div>
+
+                <div class="cspt-footer-text-area  cspt-bg-color-transparent">
+                    <div class="container">
+                        <div class="cspt-footer-text-inner">
+                            <div class="row">
+
+                                <div class="cspt-footer-copyright col-md-6">
+
+
+                                    <div class="cspt-footer-copyright-text-area">
+                                        Copyright © 2023 <a href="http://mitzonesoft.com/">Mitzonesoft</a> All
+                                        Rights Reserved. </div>
+                                </div>
+                                <div class="cspt-footer-menu-area col-md-6">
+                                    <div class="menu-footer-menu-container">
+                                        <ul class="cspt-footer-menu">
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192">
+                                                <a href="#">Privacy &#038; Policy</a>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-193">
+                                                <a href="#">Conditions</a>
+                                            </li>
+                                            <li
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
+                                                <a href="#">Refund Policy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <a href="#" class="scroll-to-top"><i
+                                    class="cspt-base-icon-arrow-right"></i><span class="cspt-hide">Back to
+                                    top</span></a>
+                        </div>
+                    </div>
+
+                </div>
+            </footer><!-- #colophon -->
+        </div><!-- .site-content-contain -->
+    </div><!-- #page -->
     </div>
 
     <script>
@@ -2733,402 +2576,9 @@
     <style id='rs-plugin-settings-inline-css'>
         #rs-demo-id {}
     </style>
-    <script src='http://lanternabroad.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.5.1'
-        id='swv-js'></script>
-    <script id='contact-form-7-js-extra'>
-        /* <![CDATA[ */
-        var wpcf7 = {
-            "api": {
-                "root": "http:\/\/lanternabroad.com\/wp-json\/",
-                "namespace": "contact-form-7\/v1"
-            }
-        };
-        /* ]]> */
-    </script>
-    <script src='http://lanternabroad.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.5.1'
-        id='contact-form-7-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.10' defer
-        async id='tp-tools-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.10' defer async
-        id='revmin-js'></script>
-    <script
-        src='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/js/select2.full.min.js?ver=1.23.3'
-        id='forminator-select2-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/forminator/assets/js/library/jquery.validate.min.js?ver=1.23.3'
-        id='forminator-jquery-validate-js'></script>
-    <script
-        src='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/js/forminator-form.min.js?ver=1.23.3'
-        id='forminator-form-js'></script>
-    <script id='forminator-front-scripts-js-extra'>
-        /* <![CDATA[ */
-        var ForminatorFront = {
-            "ajaxUrl": "http:\/\/lanternabroad.com\/wp-admin\/admin-ajax.php",
-            "cform": {
-                "processing": "Submitting form, please wait",
-                "error": "An error occurred while processing the form. Please try again",
-                "upload_error": "An upload error occurred while processing the form. Please try again",
-                "pagination_prev": "Previous",
-                "pagination_next": "Next",
-                "pagination_go": "Submit",
-                "gateway": {
-                    "processing": "Processing payment, please wait",
-                    "paid": "Success! Payment confirmed. Submitting form, please wait",
-                    "error": "Error! Something went wrong when verifying the payment"
-                },
-                "captcha_error": "Invalid CAPTCHA",
-                "no_file_chosen": "No file chosen",
-                "intlTelInput_utils_script": "http:\/\/lanternabroad.com\/wp-content\/plugins\/forminator\/assets\/js\/library\/intlTelInputUtils.js",
-                "process_error": "Please try again"
-            },
-            "poll": {
-                "processing": "Submitting vote, please wait",
-                "error": "An error occurred saving the vote. Please try again"
-            },
-            "quiz": {
-                "view_results": "View Results"
-            },
-            "select2": {
-                "load_more": "Loading more results\u2026",
-                "no_result_found": "No results found",
-                "searching": "Searching\u2026",
-                "loaded_error": "The results could not be loaded."
-            }
-        };
-        var datepickerLang = {
-            "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-                "October", "November", "December"
-            ],
-            "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-            "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
-            "dateFormat": "MM d, yy",
-            "firstDay": "1",
-            "isRTL": ""
-        };
-        /* ]]> */
-    </script>
-    <script src='http://lanternabroad.com/wp-content/plugins/forminator/build/front/front.multi.min.js?ver=1.23.3'
-        id='forminator-front-scripts-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/forminator/assets/js/library/intlTelInput.min.js?ver=1.23.3'
-        id='forminator-intlTelInput-js'></script>
-    <script src='http://lanternabroad.com/wp-includes/js/dist/vendor/moment.min.js?ver=2.29.4' id='moment-js'></script>
-    <script id='moment-js-after'>
-        moment.updateLocale('en_US', {
-            "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-                "October", "November", "December"
-            ],
-            "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            "weekdays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "weekdaysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-            "week": {
-                "dow": 1
-            },
-            "longDateFormat": {
-                "LT": "g:i a",
-                "LTS": null,
-                "L": null,
-                "LL": "F j, Y",
-                "LLL": "F j, Y g:i a",
-                "LLLL": null
-            }
-        });
-    </script>
-    <script src='http://lanternabroad.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js'></script>
-    <script src='http://lanternabroad.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2'
-        id='jquery-ui-datepicker-js'></script>
-    <script id='jquery-ui-datepicker-js-after'>
-        jQuery(function(jQuery) {
-            jQuery.datepicker.setDefaults({
-                "closeText": "Close",
-                "currentText": "Today",
-                "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August",
-                    "September", "October", "November", "December"
-                ],
-                "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
-                    "Nov", "Dec"
-                ],
-                "nextText": "Next",
-                "prevText": "Previous",
-                "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-                "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-                "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
-                "dateFormat": "MM d, yy",
-                "firstDay": 1,
-                "isRTL": false
-            });
-        });
-    </script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.12.1'
-        id='elementor-webpack-runtime-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.12.1'
-        id='elementor-frontend-modules-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
-        id='elementor-waypoints-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'
-        id='swiper-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.12.1'
-        id='share-link-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0'
-        id='elementor-dialog-js'></script>
-    <script id='elementor-frontend-js-before'>
-        var elementorFrontendConfig = {
-            "environmentMode": {
-                "edit": false,
-                "wpPreview": false,
-                "isScriptDebug": false
-            },
-            "i18n": {
-                "shareOnFacebook": "Share on Facebook",
-                "shareOnTwitter": "Share on Twitter",
-                "pinIt": "Pin it",
-                "download": "Download",
-                "downloadImage": "Download image",
-                "fullscreen": "Fullscreen",
-                "zoom": "Zoom",
-                "share": "Share",
-                "playVideo": "Play Video",
-                "previous": "Previous",
-                "next": "Next",
-                "close": "Close"
-            },
-            "is_rtl": false,
-            "breakpoints": {
-                "xs": 0,
-                "sm": 480,
-                "md": 768,
-                "lg": 1025,
-                "xl": 1440,
-                "xxl": 1600
-            },
-            "responsive": {
-                "breakpoints": {
-                    "mobile": {
-                        "label": "Mobile Portrait",
-                        "value": 767,
-                        "default_value": 767,
-                        "direction": "max",
-                        "is_enabled": true
-                    },
-                    "mobile_extra": {
-                        "label": "Mobile Landscape",
-                        "value": 880,
-                        "default_value": 880,
-                        "direction": "max",
-                        "is_enabled": false
-                    },
-                    "tablet": {
-                        "label": "Tablet Portrait",
-                        "value": 1024,
-                        "default_value": 1024,
-                        "direction": "max",
-                        "is_enabled": true
-                    },
-                    "tablet_extra": {
-                        "label": "Tablet Landscape",
-                        "value": 1200,
-                        "default_value": 1200,
-                        "direction": "max",
-                        "is_enabled": false
-                    },
-                    "laptop": {
-                        "label": "Laptop",
-                        "value": 1366,
-                        "default_value": 1366,
-                        "direction": "max",
-                        "is_enabled": false
-                    },
-                    "widescreen": {
-                        "label": "Widescreen",
-                        "value": 2400,
-                        "default_value": 2400,
-                        "direction": "min",
-                        "is_enabled": false
-                    }
-                }
-            },
-            "version": "3.12.1",
-            "is_static": false,
-            "experimentalFeatures": {
-                "e_dom_optimization": true,
-                "additional_custom_breakpoints": true,
-                "landing-pages": true
-            },
-            "urls": {
-                "assets": "http:\/\/lanternabroad.com\/wp-content\/plugins\/elementor\/assets\/"
-            },
-            "swiperClass": "swiper-container",
-            "settings": {
-                "page": [],
-                "editorPreferences": []
-            },
-            "kit": {
-                "active_breakpoints": ["viewport_mobile", "viewport_tablet"],
-                "global_image_lightbox": "yes",
-                "lightbox_enable_counter": "yes",
-                "lightbox_enable_fullscreen": "yes",
-                "lightbox_enable_zoom": "yes",
-                "lightbox_enable_share": "yes",
-                "lightbox_title_src": "title",
-                "lightbox_description_src": "description"
-            },
-            "post": {
-                "id": 305,
-                "title": "Registration%20%E2%80%93%20Lantern%20Abroad",
-                "excerpt": "",
-                "featuredImage": false
-            }
-        };
-    </script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.12.1'
-        id='elementor-frontend-js'></script>
-    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.12.1'
-        id='preloaded-modules-js'></script>
-    <script src='http://lanternabroad.com/wp-includes/js/underscore.min.js?ver=1.13.4' id='underscore-js'></script>
-    <script id='wp-util-js-extra'>
-        /* <![CDATA[ */
-        var _wpUtilSettings = {
-            "ajax": {
-                "url": "\/wp-admin\/admin-ajax.php"
-            }
-        };
-        /* ]]> */
-    </script>
-    <script src='http://lanternabroad.com/wp-includes/js/wp-util.min.js?ver=6.2' id='wp-util-js'></script>
-    <script id='wpforms-elementor-js-extra'>
-        /* <![CDATA[ */
-        var wpformsElementorVars = {
-            "captcha_provider": "recaptcha",
-            "recaptcha_type": "v2"
-        };
-        /* ]]> */
-    </script>
-    <script
-        src='http://lanternabroad.com/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.8.1.2'
-        id='wpforms-elementor-js'></script>
-    <script>
-        jQuery(function() {
-            jQuery.ajax({
-                url: 'http://lanternabroad.com/wp-admin/admin-ajax.php',
-                type: "POST",
-                data: {
-                    action: "forminator_get_nonce",
-                },
-                success: function(response) {
-                    jQuery('#forminator-module-307 #forminator_nonce').val(response.data);
-                }
-            });
-        })
-    </script>
-    <script>
-        jQuery(function() {
-            window.Forminator_Cform_Paginations = window.Forminator_Cform_Paginations || [];
-            window.Forminator_Cform_Paginations[307] = {
-                "has-pagination": false,
-                "pagination-header-design": "show",
-                "pagination-header": "nav",
-                "last-steps": "Finish",
-                "last-previous": "Previous",
-                "pagination-labels": "default",
-                "has-paypal": false
-            };
 
-            var runForminatorFront = function() {
-                jQuery('#forminator-module-307[data-forminator-render="0"]')
-                    .forminatorFront({
-                        "form_type": "custom-form",
-                        "inline_validation": true,
-                        "print_value": false,
-                        "rules": "\"name-1\": \"required\",\"name-1\": \"trim\",\"text-1\": {\"required\": true,},\"text-2\": {\"required\": true,},\"text-3\": {\"required\": true,},\"text-4\": {\"required\": true,},\"select-1\": \"required\",\"date-1\": {\n\"required\": true,\"dateformat\": \"dd-mm-yy\",},\n\"select-2\": \"required\",\"text-6\": {\"required\": true,},\"select-3\": \"required\",\"email-1\": {\n\"required\": true,\"emailWP\": true,},\n\"phone-1\": {\"required\": true,\"trim\": true,\"forminatorPhoneInternational\": true,},\"address-1-street_address\": \"trim\",\"address-1-street_address\": \"required\",\"select-4\": \"required\",",
-                        "messages": "\"name-1\": \"Name is required.\",\n\"text-1\": {\"required\": \"This field is required. Please enter text.\",\n},\"text-2\": {\"required\": \"This field is required. Please enter text.\",\n},\"text-3\": {\"required\": \"This field is required. Please enter text.\",\n},\"text-4\": {\"required\": \"This field is required. Please enter text.\",\n},\"select-1\": \"This field is required. Please select a value.\",\n\"date-1\": {\n\"required\": \"This field is required.\",\n\"dateformat\": \"Not valid date\",\n},\n\"select-2\": \"This field is required. Please select a value.\",\n\"text-6\": {\"required\": \"This field is required. Please enter text.\",\n},\"select-3\": \"This field is required. Please select a value.\",\n\"email-1\": {\n\"required\": \"This field is required. Please enter email.\",\n\"emailWP\": \"This is not a valid email.\",\n\"email\": \"This is not a valid email.\",\n},\n\"phone-1\": {\n\"required\": \"This field is required. Please input a phone number.\",\n\"trim\": \"This field is required. Please input a phone number.\",\n\"forminatorPhoneInternational\": \"Please input a valid international phone number.\",\n\"phone\": \"Please input a valid international phone number.\",\n},\n\"address-1-street_address\": \"This field is required. Please enter the street address.\",\n\"select-4\": \"This field is required. Please select a value.\",\n",
-                        "conditions": {
-                            "fields": [],
-                            "relations": {
-                                "name-1": [],
-                                "text-1": [],
-                                "text-2": [],
-                                "text-3": [],
-                                "text-4": [],
-                                "text-5": [],
-                                "select-1": [],
-                                "date-1": [],
-                                "select-2": [],
-                                "text-6": [],
-                                "select-3": [],
-                                "text-7": [],
-                                "textarea-1": [],
-                                "email-1": [],
-                                "phone-1": [],
-                                "address-1": [],
-                                "select-4": [],
-                                "text-8": [],
-                                "hidden-1": [],
-                                "submit": []
-                            }
-                        },
-                        "calendar": "{\"days\":[\"Su\",\"Mo\",\"Tu\",\"We\",\"Th\",\"Fr\",\"Sa\"],\"months\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"]}",
-                        "paypal_config": {
-                            "live_id": "",
-                            "sandbox_id": "",
-                            "redirect_url": "http:\/\/lanternabroad.com\/registration",
-                            "form_id": 307
-                        },
-                        "forminator_fields": ["address", "calculation", "captcha", "consent", "currency",
-                            "custom", "date", "email", "gdprcheckbox", "group", "hidden", "html",
-                            "checkbox", "name", "number", "page-break", "password", "paypal", "phone",
-                            "postdata", "radio", "section", "select", "stripe", "text", "textarea",
-                            "time", "upload", "url"
-                        ],
-                        "general_messages": {
-                            "calculation_error": "Failed to calculate field.",
-                            "payment_require_ssl_error": "SSL required to submit this form, please check your URL.",
-                            "payment_require_amount_error": "PayPal amount must be greater than 0.",
-                            "form_has_error": "Please correct the errors before submission."
-                        },
-                        "payment_require_ssl": false,
-                        "has_loader": true,
-                        "loader_label": "Submitting...",
-                        "calcs_memoize_time": 300,
-                        "is_reset_enabled": true,
-                        "has_stripe": false,
-                        "has_paypal": false,
-                        "submit_button_class": ""
-                    });
-            }
 
-            if (window.elementorFrontend) {
-                if (typeof elementorFrontend.hooks !== "undefined") {
-                    elementorFrontend.hooks.addAction('frontend/element_ready/global', function() {
-                        runForminatorFront();
-                    });
-                }
-            } else {
-                runForminatorFront();
-            }
 
-            if (typeof ForminatorValidationErrors !== 'undefined') {
-                var forminatorFrontSubmit = jQuery(ForminatorValidationErrors.selector).data(
-                    'forminatorFrontSubmit');
-                if (typeof forminatorFrontSubmit !== 'undefined') {
-                    forminatorFrontSubmit.show_messages(ForminatorValidationErrors.errors);
-                }
-            }
-            if (typeof ForminatorFormHider !== 'undefined') {
-                var forminatorFront = jQuery(ForminatorFormHider.selector).data('forminatorFront');
-                if (typeof forminatorFront !== 'undefined') {
-                    jQuery(forminatorFront.forminator_selector).find('.forminator-row').hide();
-                    jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-steps').hide();
-                    jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-footer').hide();
-                }
-            }
-            if (typeof ForminatorFormNewTabRedirect !== 'undefined') {
-                var forminatorFront = ForminatorFormNewTabRedirect.url;
-                if (typeof forminatorFront !== 'undefined') {
-                    window.open(ForminatorFormNewTabRedirect.url, '_blank');
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

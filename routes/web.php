@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Route::get('/migrate', function () {
     \Artisan::call('migrate');
     dd('migrated!');
@@ -42,14 +40,17 @@ Route::get('/clear', function () {
 // Route::get('/', function () {
 //     return redirect()->route('dashboard');
 // });
-
+Route::get('/', function () {
+    return view('welcome');
+});
 //....LOGIN SECTION.............................................................
 Route::prefix('/login')->namespace('App\Http\Controllers')->group(function () {
+    Route::post('/register', 'HomeController@register')->name('register');
     Route::get('/', 'LoginController@login')->name('login');
     Route::post('/', 'LoginController@login_submit')->name('login.submit');
 });
 Route::namespace ('App\Http\Controllers')->middleware('admin')->group(function () {
-    Route::get('/dashboard', 'AdminController@dashboard')->name('dashboard');
+    Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
     Route::get('/change-password', 'LoginController@change_password_view')->name('change_password_view');
     Route::post('/change-password', 'LoginController@update_password')->name('update_password');
 });
