@@ -1061,7 +1061,7 @@
                                                                                         for="forminator-field-name-1_644a1de457452"
                                                                                         class="forminator-label">Full
                                                                                         Name <span
-                                                                                            class="forminator-">*</span></label><input
+                                                                                            class="forminator-">*</span></label><input required
                                                                                         type="text" name="fullname"
                                                                                         value=""
                                                                                         placeholder="E.g. John Doe"
@@ -1075,7 +1075,7 @@
                                                                                         for="forminator-field-text-1_644a1de457452"
                                                                                         class="forminator-label">Username
                                                                                         <span
-                                                                                            class="forminator-">*</span></label><input
+                                                                                            class="forminator-">*</span></label><input required
                                                                                         type="text" name="username"
                                                                                         value=""
                                                                                         placeholder="Enter username"
@@ -1091,7 +1091,7 @@
                                                                                         for="forminator-field-text-2_644a1de457452"
                                                                                         class="forminator-label">Qualification
                                                                                         <span
-                                                                                            class="forminator-">*</span></label><input
+                                                                                            class="forminator-">*</span></label><input required
                                                                                         type="text"
                                                                                         name="qualification"
                                                                                         value=""
@@ -1106,7 +1106,7 @@
                                                                                         for="forminator-field-text-3_644a1de457452"
                                                                                         class="forminator-label">Experience
                                                                                         <span
-                                                                                            class="forminator-">*</span></label><input
+                                                                                            class="forminator-">*</span></label><input required
                                                                                         type="text"
                                                                                         name="experience"
                                                                                         value=""
@@ -1123,7 +1123,7 @@
                                                                                         for="forminator-field-text-4_644a1de457452"
                                                                                         class="forminator-label">OET or
                                                                                         IELTS Score <span
-                                                                                            class="forminator-">*</span></label><input
+                                                                                            class="forminator-">*</span></label><input required
                                                                                         type="text"
                                                                                         name="OET_or_IELTS_Score"
                                                                                         value=""
@@ -1154,7 +1154,7 @@
                                                                                         class="forminator-label">New
                                                                                         Zealand nursing council decision
                                                                                         Letter <span
-                                                                                            class="forminator-">*</span></label><select
+                                                                                            class="forminator-">*</span></label><select required
                                                                                         id="forminator-form-307__field--select-1_644a1de457452"
                                                                                         class="forminator-select--field forminator-select2"
                                                                                         data-="1"
@@ -1180,7 +1180,7 @@
                                                                                         class="forminator-label">Preferred
                                                                                         intake (filling space) <span
                                                                                             class="forminator-">*</span></label>
-                                                                                    <input autocomplete="off"
+                                                                                    <input autocomplete="off" required
                                                                                         type="date"
                                                                                         name="Preferred_intake"
                                                                                         value=""
@@ -1198,7 +1198,7 @@
                                                                                 class="forminator-label">Northtec
                                                                                 preferred Campus <span
                                                                                     class="forminator">*</span></label>
-                                                                                <select name="preferred_Campus">
+                                                                                <select name="preferred_Campus" required>
                                                                                 <option value="">Select
                                                                                 </option>
                                                                                 <option value="Whangarei">
@@ -1218,7 +1218,7 @@
                                                                                 class="forminator-label">How
                                                                                 did you know about Lantern
                                                                                 Abroad? <span
-                                                                                    class="forminator-">*</span></label><input
+                                                                                    class="forminator-">*</span></label><input required
                                                                                 type="text" name="refereal_method"
                                                                                 value=""
                                                                                 placeholder="E.g. From a friend"
@@ -1242,7 +1242,7 @@
                                                                                 data-default-value=""
                                                                                 data-placeholder="Select"
                                                                                 data-search="false"
-                                                                                aria-describedby="forminator-form-307__field--select-3_644a1de457452-description">
+                                                                                aria-describedby="forminator-form-307__field--select-3_644a1de457452-description" required>
                                                                                 <option value="">Select
                                                                                 </option>
                                                                                 <option value="Yes"
@@ -1278,7 +1278,7 @@
                                                                                 class="forminator-label">11.
                                                                                 Cover letter</label>
                                                                             <textarea name="Cover_letter" placeholder="E.g. Write to us" id="forminator-field-textarea-1_644a1de457452"
-                                                                                class="forminator-textarea" rows="6" style="min-height:140px;"></textarea>
+                                                                                class="forminator-textarea" rows="6" style="min-height:140px;" required></textarea>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1290,7 +1290,7 @@
                                                                                 class="forminator-label">Email
                                                                                 <span
                                                                                     class="forminator-">*</span></label><input
-                                                                                type="email" name="email"
+                                                                                type="email" name="email" required
                                                                                 value=""
                                                                                 placeholder="E.g. john@doe.com"
                                                                                 id="forminator-field-email-1_644a1de457452"
@@ -1305,7 +1305,7 @@
                                                                                 for="forminator-field-phone-1_644a1de457452"
                                                                                 class="forminator-label">Phone
                                                                                 <span
-                                                                                    class="forminator-">*</span></label><input
+                                                                                    class="forminator-">*</span></label><input required
                                                                                 type="text" name="phone"
                                                                                 value=""
                                                                                 placeholder="E.g. +1 300 400 5000"
@@ -1330,7 +1330,7 @@
                                                                                         for="forminator-field-street_address-address-1_644a1de457452"
                                                                                         class="forminator-label">Street
                                                                                         Address <span
-                                                                                            class="forminator-">*</span></label><input
+                                                                                            class="forminator-">*</span></label><input required
                                                                                         type="text"
                                                                                         name="street_address"
                                                                                         placeholder="E.g. 42 Wallaby Way"
@@ -1348,7 +1348,7 @@
                                                                                     <label
                                                                                         for="forminator-field-address_line-address-1_644a1de457452"
                                                                                         class="forminator-label">Apartment,
-                                                                                        suite, etc</label><input
+                                                                                        suite, etc</label><input required
                                                                                         type="text"
                                                                                         name="address_line"
                                                                                         placeholder=""
@@ -1367,7 +1367,7 @@
                                                                                 <div class="forminator-field">
                                                                                     <label
                                                                                         for="forminator-field-city-address-1_644a1de457452"
-                                                                                        class="forminator-label">City</label><input
+                                                                                        class="forminator-label">City</label><input required
                                                                                         type="text"
                                                                                         name="address_city"
                                                                                         placeholder="E.g. Sydney"
@@ -1383,7 +1383,7 @@
                                                                                 <div class="forminator-field">
                                                                                     <label
                                                                                         for="forminator-field-state-address-1_644a1de457452"
-                                                                                        class="forminator-label">State/Province</label><input
+                                                                                        class="forminator-label">State/Province</label><input required
                                                                                         type="text"
                                                                                         name="address_state"
                                                                                         placeholder="E.g. New South Wales"
@@ -1404,7 +1404,7 @@
                                                                                         for="forminator-field-zip-address-1_644a1de457452"
                                                                                         class="forminator-label">ZIP
                                                                                         / Postal
-                                                                                        Code</label><input
+                                                                                        Code</label><input required
                                                                                         type="text"
                                                                                         name="address_zip"
                                                                                         placeholder="E.g. 2000"
@@ -1419,7 +1419,7 @@
                                                                                     <label
                                                                                         for="forminator-form-307__field--address-1_644a1de457452"
                                                                                         class="forminator-label">Country
-                                                                                    </label><select
+                                                                                    </label><select required
                                                                                         name="address_country"
                                                                                         id="forminator-form-307__field--address-1_644a1de457452"
                                                                                         class="forminator-select2"
@@ -2321,7 +2321,7 @@
                                                                                 data-="1" name="working"
                                                                                 data-default-value=""
                                                                                 data-placeholder="Select"
-                                                                                data-search="false"
+                                                                                data-search="false" required
                                                                                 aria-describedby="forminator-form-307__field--select-4_644a1de457452-description">
                                                                                 <option value="">Select
                                                                                 </option>
@@ -2341,7 +2341,7 @@
                                                                                 for="forminator-field-text-8_644a1de457452"
                                                                                 class="forminator-label">Current
                                                                                 working location In India or
-                                                                                abroad?</label><input type="text"
+                                                                                abroad?</label><input type="text" required
                                                                                 name="working_address_india"
                                                                                 value=""
                                                                                 placeholder="E.g. Mumbai, India"
