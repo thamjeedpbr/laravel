@@ -136,7 +136,7 @@
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
                         <div class="drop-heading  text-center border-bottom pb-3">
                             <h5 class="text-dark mb-1">{{ Auth::user()->name }}</h5>
-                            <small class="text-muted">{{  Auth::user()->roles->pluck('name')[0] }} </small>
+                            <small class="text-muted">{{  Auth::user()->type }} </small>
                         </div>
 
                         <a class="dropdown-item" href="{{ route('change_password_view') }}"><i class="fa fa-key" aria-hidden="true"></i> <span>Change Password</span></a>

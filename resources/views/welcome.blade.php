@@ -998,6 +998,16 @@
                                                 </div>
                                             </div>
                                         </section>
+                                        @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+
+                                        </ul>
+                                        </div>
+                                        @endif
                                         <section
                                             class="elementor-section elementor-top-section elementor-element elementor-element-0f0d989 cspt-col-stretched-none cspt-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                             data-id="0f0d989" data-element_type="section">
@@ -1155,10 +1165,10 @@
                                                                                         aria-describedby="forminator-form-307__field--select-1_644a1de457452-description">
                                                                                         <option value="">Select
                                                                                         </option>
-                                                                                        <option value="yes"
+                                                                                        <option value="Yes"
                                                                                             data-calculation="0">YES
                                                                                         </option>
-                                                                                        <option value="no"
+                                                                                        <option value="No"
                                                                                             data-calculation="0">NO
                                                                                         </option>
                                                                                     </select></div>
@@ -1235,10 +1245,10 @@
                                                                                 aria-describedby="forminator-form-307__field--select-3_644a1de457452-description">
                                                                                 <option value="">Select
                                                                                 </option>
-                                                                                <option value="yes"
+                                                                                <option value="Yes"
                                                                                     data-calculation="0">YES
                                                                                 </option>
-                                                                                <option value="no"
+                                                                                <option value="No"
                                                                                     data-calculation="0">NO
                                                                                 </option>
                                                                             </select></div>
@@ -2315,10 +2325,10 @@
                                                                                 aria-describedby="forminator-form-307__field--select-4_644a1de457452-description">
                                                                                 <option value="">Select
                                                                                 </option>
-                                                                                <option value="yes"
+                                                                                <option value="Yes"
                                                                                     data-calculation="0">YES
                                                                                 </option>
-                                                                                <option value="no"
+                                                                                <option value="No"
                                                                                     data-calculation="0">NO
                                                                                 </option>
                                                                             </select></div>
@@ -2533,14 +2543,7 @@
     </div><!-- #page -->
     </div>
 
-    <script>
-        window.RS_MODULES = window.RS_MODULES || {};
-        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-        window.RS_MODULES.defered = true;
-        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-        window.RS_MODULES.type = 'compiled';
-    </script>
+
     <link rel='stylesheet' id='forminator-module-css-307-css'
         href='http://lanternabroad.com/wp-content/uploads/forminator/307_751395d2be2771853ebc78457f1a3c97/css/style-307.css?ver=1681882201'
         type='text/css' media='all' />
@@ -2576,9 +2579,37 @@
     <style id='rs-plugin-settings-inline-css'>
         #rs-demo-id {}
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+    <script>
+        toastr.options = {
+            "closeButton": true,
+        };
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}");
+            @php
+                Session::forget('success');
+            @endphp
+        @endif
 
+        @if (Session::has('error'))
+            toastr.error("{{ Session::get('error') }}");
+            @php
+                Session::forget('error');
+            @endphp
+        @endif
+        @if (Session::has('warning'))
+            toastr.warning("{{ Session::get('warning') }}");
+            @php
+                Session::forget('warning');
+            @endphp
+        @endif
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                toastr.error("{{ $error }}");
+            @endforeach
+        @endif
 
-
+    </script>
 </body>
 
 </html>

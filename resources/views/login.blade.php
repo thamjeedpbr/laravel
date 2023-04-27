@@ -117,6 +117,37 @@
 
 		<!-- CUSTOM JS-->
 		<script src="{{ asset('assets/js/custom.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+        <script>
 
+            toastr.options = {
+                "closeButton": true,
+            };
+            @if (Session::has('success'))
+                toastr.success("{{ Session::get('success') }}");
+                @php
+                    Session::forget('success');
+                @endphp
+            @endif
+
+            @if (Session::has('error'))
+                toastr.error("{{ Session::get('error') }}");
+                @php
+                    Session::forget('error');
+                @endphp
+            @endif
+            @if (Session::has('warning'))
+                toastr.warning("{{ Session::get('warning') }}");
+                @php
+                    Session::forget('warning');
+                @endphp
+            @endif
+
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    toastr.error("{{ $error }}");
+                @endforeach
+            @endif
+        </script>
 	</body>
 </html>

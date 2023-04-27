@@ -11,8 +11,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
+ */
 
 Route::get('/migrate', function () {
     \Artisan::call('migrate');
@@ -53,5 +52,12 @@ Route::namespace ('App\Http\Controllers')->middleware('admin')->group(function (
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
     Route::get('/change-password', 'LoginController@change_password_view')->name('change_password_view');
     Route::post('/change-password', 'LoginController@update_password')->name('update_password');
+
+    Route::resource('candidate', CandidateController::class);
+    Route::post('candidate/all-data', 'CandidateController@GetAllCandidateAjax')->name('candidate.alldata');
+    Route::post('candidate/pending', 'CandidateController@GetPendingCandidateAjax')->name('candidate.pending');
+    Route::post('candidate/approved', 'CandidateController@GetApprovedCandidateAjax')->name('candidate.approved');
+    Route::post('candidate/rejected', 'CandidateController@GetRejectedCandidateAjax')->name('candidate.rejected');
+    Route::get('candidate/delete/{id}', 'CandidateController@delete')->name('candidate.delete');
 });
 Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name('logout');

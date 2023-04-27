@@ -62,30 +62,6 @@
             datatable();
         });
 
-        $(document).on('change', '.enquiry-label', function(e) {
-            var value = $(this).val();
-            var enquiry_id = $(this).attr('enquiry_id');
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            });
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('enquiry.changelabel') }}',
-                data: {
-                    value: value,
-                    enquiry_id: enquiry_id,
-                },
-                success: function(data) {
-                    if (data) {
-                        datatable();
-                    } else {
-                        alert("Try Again");
-                    }
-                }
-            });
-        });
 
         function datatable() {
             $.ajaxSetup({
@@ -108,7 +84,7 @@
                     [10, 25, 50, 100, 500, 1000, 2000, 'All']
                 ],
                 ajax: {
-                    url: '{{ route('enquiry.alldata') }}',
+                    url: '{{ route('candidate.alldata') }}',
                     method: 'POST',
 
                 },

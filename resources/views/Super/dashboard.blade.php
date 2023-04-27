@@ -15,7 +15,7 @@
 
         <!-- ROW-1 OPEN -->
         <div class="row">
-            @can('dashboard')
+            {{-- @can('dashboard')
                 <div class="col-sm-6 col-lg-6 col-xl-4">
                     <div class="card overflow-hidden">
                         <div class="card-body pb-0">
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-            @endcan
+            @endcan --}}
 
             {{-- <div class="col-sm-6 col-lg-6 col-xl-3">
 			<div class="card ">
