@@ -1,132 +1,3134 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en-US" class="no-js no-svg">
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
-
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <title>Registration &#8211; Lantern Abroad</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <link rel='dns-prefetch' href='//unpkg.com' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+    <link rel="alternate" type="application/rss+xml" title="Lantern Abroad &raquo; Feed"
+        href="http://lanternabroad.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Lantern Abroad &raquo; Comments Feed"
+        href="http://lanternabroad.com/comments/feed/" />
+    <script>
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "http:\/\/lanternabroad.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2"
             }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+        };
+        /*! This file is auto-generated */
+        ! function(e, a, t) {
+            var n, r, o, i = a.createElement("canvas"),
+                p = i.getContext && i.getContext("2d");
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+            function s(e, t) {
+                p.clearRect(0, 0, i.width, i.height), p.fillText(e, 0, 0);
+                e = i.toDataURL();
+                return p.clearRect(0, 0, i.width, i.height), p.fillText(t, 0, 0), e === i.toDataURL()
+            }
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
-                </div>
+            function c(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (o = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+                if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                    case "flag":
+                        return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !
+                            1 : !s("\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !s(
+                                "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f",
+                                "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"
+                                );
+                    case "emoji":
+                        return !s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff",
+                            "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")
+                }
+                return !1
+            }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports
+                .everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t
+                .readyCallback = function() {
+                    t.DOMReady = !0
+                }, t.supports.everything || (n = function() {
+                    t.readyCallback()
+                }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !
+                    1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+                    "complete" === a.readyState && t.readyCallback()
+                })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e
+                    .wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='http://lanternabroad.com/wp-includes/css/dist/block-library/style.min.css?ver=6.2' type='text/css'
+        media='all' />
+    <style id='global-styles-inline-css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
+        body {
+            margin: 0;
+        }
+
+        .wp-site-blocks>.alignleft {
+            float: left;
+            margin-right: 2em;
+        }
+
+        .wp-site-blocks>.alignright {
+            float: right;
+            margin-left: 2em;
+        }
+
+        .wp-site-blocks>.aligncenter {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        body {
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+        }
+
+        a:where(:not(.wp-element-button)) {
+            text-decoration: underline;
+        }
+
+        .wp-element-button,
+        .wp-block-button__link {
+            background-color: #32373c;
+            border-width: 0;
+            color: #fff;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            padding: calc(0.667em + 2px) calc(1.333em + 2px);
+            text-decoration: none;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel='stylesheet' id='contact-form-7-css'
+        href='http://lanternabroad.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.5.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-job-manager-job-listings-css'
+        href='http://lanternabroad.com/wp-content/plugins/wp-job-manager/assets/dist/css/job-listings.css?ver=d866e43503c5e047c6b0be0a9557cf8e'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cspt-all-gfonts-css'
+        href='https://fonts.googleapis.com/css?family=Mulish%3A200%2C200italic%2C300%2C300italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%2Citalic%2Cregular%2C700%2Cregular%2C300%7CNunito%3A800%2C600%2Cregular%2Citalic%2C700&#038;ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-icons-css'
+        href='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.18.0'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-frontend-css'
+        href='http://lanternabroad.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.12.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='swiper-css'
+        href='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/swiper/css/swiper.min.css?ver=5.3.6'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-post-8-css'
+        href='http://lanternabroad.com/wp-content/uploads/elementor/css/post-8.css?ver=1680762917' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='font-awesome-5-all-css'
+        href='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.12.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-4-shim-css'
+        href='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.12.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='elementor-global-css'
+        href='http://lanternabroad.com/wp-content/uploads/elementor/css/global.css?ver=1680762918' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='elementor-post-305-css'
+        href='http://lanternabroad.com/wp-content/uploads/elementor/css/post-305.css?ver=1680773496' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='owl-carousel-css'
+        href='http://lanternabroad.com/wp-content/plugins/emphires-addons/libraries/owl-carousel/assets/owl.carousel.min.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='owl-carousel-theme-css'
+        href='http://lanternabroad.com/wp-content/plugins/emphires-addons/libraries/owl-carousel/assets/owl.theme.default.min.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='bootstrap-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/libraries/bootstrap/css/bootstrap.min.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cspt-core-style-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/css/core.css?ver=6.2' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='cspt-theme-style-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/css/theme.css?ver=6.2' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='fontawesome-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/libraries/font-awesome/css/font-awesome.min.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='magnific-popup-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/libraries/magnific-popup/magnific-popup.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cspt-base-icons-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/libraries/creativesplanet-base-icons/css/creativesplanet-base-icons.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='balloon-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/libraries/balloon/balloon.min.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cspt-emphires-header-style-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/css/header/header-style-5.css?ver=6.2'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='cspt-dynamic-style-css'
+        href='http://lanternabroad.com/wp-admin/admin-ajax.php?action=cspt_auto_css&#038;ver=6.2' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='cspt-responsive-style-css'
+        href='http://lanternabroad.com/wp-content/themes/emphires/css/responsive.css?ver=6.2' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='google-fonts-1-css'
+        href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.2'
+        type='text/css' media='all' />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <script src='http://lanternabroad.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.3' id='jquery-core-js'></script>
+    <script src='http://lanternabroad.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'>
+    </script>
+    <script src='http://lanternabroad.com/wp-content/plugins/emphires-addons/js/addon-scripts.js?ver=6.2'
+        id='emphires-addons-js'></script>
+    <script
+        src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.12.1'
+        id='font-awesome-4-shim-js'></script>
+    <script
+        src='http://lanternabroad.com/wp-content/plugins/emphires-addons/libraries/owl-carousel/owl.carousel.min.js?ver=6.2'
+        id='owl-carousel-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/emphires-addons/libraries/waypoints/waypoints.min.js?ver=6.2'
+        id='waypoints-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/emphires-addons/libraries/numinate/numinate.min.js?ver=6.2'
+        id='numinate-js'></script>
+    <script
+        src='http://lanternabroad.com/wp-content/plugins/emphires-addons/libraries/jquery-circle-progress/circle-progress.min.js?ver=6.2'
+        id='jquery-circle-progress-js'></script>
+    <script
+        src='http://lanternabroad.com/wp-content/themes/emphires/libraries/magnific-popup/jquery.magnific-popup.min.js?ver=6.2'
+        id='magnific-popup-js'></script>
+    <script
+        src='http://lanternabroad.com/wp-content/themes/emphires/libraries/sticky-toolkit/jquery.sticky-kit.min.js?ver=6.2'
+        id='jquery-sticky-js'></script>
+    <script id='cspt-core-script-js-extra'>
+        /* <![CDATA[ */
+        var cspt_js_variables = {
+            "responsive": "1200"
+        };
+        /* ]]> */
+    </script>
+    <script src='http://lanternabroad.com/wp-content/themes/emphires/js/core.js?ver=6.2' id='cspt-core-script-js'></script>
+    <script src='http://lanternabroad.com/wp-content/themes/emphires/js/elementor.js?ver=6.2' id='cspt-elementor-script-js'>
+    </script>
+    <script src='https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js?ver=6.2'
+        id='cspt-lottiefiles-script-js'></script>
+    <script src='http://lanternabroad.com/wp-content/themes/emphires/libraries/isotope/isotope.pkgd.min.js?ver=6.2'
+        id='isotope-js'></script>
+    <link rel="https://api.w.org/" href="http://lanternabroad.com/wp-json/" />
+    <link rel="alternate" type="application/json" href="http://lanternabroad.com/wp-json/wp/v2/pages/305" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://lanternabroad.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="http://lanternabroad.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 6.2" />
+    <link rel="canonical" href="http://lanternabroad.com/registration/" />
+    <link rel='shortlink' href='http://lanternabroad.com/?p=305' />
+    <link rel="alternate" type="application/json+oembed"
+        href="http://lanternabroad.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flanternabroad.com%2Fregistration%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="http://lanternabroad.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flanternabroad.com%2Fregistration%2F&#038;format=xml" />
+    <meta name="bmi-version" content="1.2.8" />
+    <meta name="generator"
+        content="Elementor 3.12.1; features: e_dom_optimization, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+    <meta name="generator"
+        content="Powered by Slider Revolution 6.6.10 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <script>
+        function setREVStartSize(e) {
+            //window.requestAnimationFrame(function() {
+            window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+            window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+            try {
+                var pw = document.getElementById(e.c).parentNode.offsetWidth,
+                    newh;
+                pw = pw === 0 || isNaN(pw) || (e.l == "fullwidth" || e.layout == "fullwidth") ? window.RSIW : pw;
+                e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+                e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+                e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+                e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+                e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+                e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+                e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+                if (e.layout === "fullscreen" || e.l === "fullscreen")
+                    newh = Math.max(e.mh, window.RSIH);
+                else {
+                    e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+                    for (var i in e.rl)
+                        if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+                    e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+                    e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+                    for (var i in e.rl)
+                        if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+
+                    var nl = new Array(e.rl.length),
+                        ix = 0,
+                        sl;
+                    e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+                    e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+                    e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+                    e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+                    for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+                    sl = nl[0];
+                    for (var i in nl)
+                        if (sl > nl[i] && nl[i] > 0) {
+                            sl = nl[i];
+                            ix = i;
+                        }
+                    var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+                    newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+                }
+                var el = document.getElementById(e.c);
+                if (el !== null && el) el.style.height = newh + "px";
+                el = document.getElementById(e.c + "_wrapper");
+                if (el !== null && el) {
+                    el.style.height = newh + "px";
+                    el.style.display = "block";
+                }
+            } catch (e) {
+                console.log("Failure at Presize of Slider:" + e)
+            }
+            //});
+        };
+    </script>
+    <style id="wp-custom-css">
+        archive.post-type-archive-jobpost .site-content-wrap {
+            padding: 40px 0;
+        }
+    </style>
+    <style id="wpforms-css-vars-root">
+        :root {
+            --wpforms-field-border-radius: 3px;
+            --wpforms-field-background-color: #ffffff;
+            --wpforms-field-border-color: rgba(0, 0, 0, 0.25);
+            --wpforms-field-text-color: rgba(0, 0, 0, 0.7);
+            --wpforms-label-color: rgba(0, 0, 0, 0.85);
+            --wpforms-label-sublabel-color: rgba(0, 0, 0, 0.55);
+            --wpforms-label-error-color: #d63637;
+            --wpforms-button-border-radius: 3px;
+            --wpforms-button-background-color: #066aab;
+            --wpforms-button-text-color: #ffffff;
+            --wpforms-field-size-input-height: 43px;
+            --wpforms-field-size-input-spacing: 15px;
+            --wpforms-field-size-font-size: 16px;
+            --wpforms-field-size-line-height: 19px;
+            --wpforms-field-size-padding-h: 14px;
+            --wpforms-field-size-checkbox-size: 16px;
+            --wpforms-field-size-sublabel-spacing: 5px;
+            --wpforms-field-size-icon-size: 1;
+            --wpforms-label-size-font-size: 16px;
+            --wpforms-label-size-line-height: 19px;
+            --wpforms-label-size-sublabel-font-size: 14px;
+            --wpforms-label-size-sublabel-line-height: 17px;
+            --wpforms-button-size-font-size: 17px;
+            --wpforms-button-size-height: 41px;
+            --wpforms-button-size-padding-h: 15px;
+            --wpforms-button-size-margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+<body
+    class="page-template-default page page-id-305 cspt-sidebar-no emphires elementor-default elementor-kit-8 elementor-page elementor-page-305">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-red">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 0.27843137254902" />
+                    <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-midnight">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0" />
+                    <feFuncG type="table" tableValues="0 0.64705882352941" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-magenta-yellow">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.78039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.94901960784314" />
+                    <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-purple-green">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0.44705882352941 0.4" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false"
+        role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-blue-orange">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0.098039215686275 1" />
+                    <feFuncG type="table" tableValues="0 0.66274509803922" />
+                    <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+    <div id="page" class="site cspt-parent-header-style-5">
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+        <header id="masthead" class="site-header cspt-header-style-5  cspt-sticky-logo-no">
+            <div class="cspt-sticky-header cspt-header-sticky-yes cspt-sticky-type- cspt-sticky-bg-color-white"></div>
+            <div class="cspt-pre-header-wrapper  cspt-bg-color-white cspt-color-blackish">
+                <div class="container">
+                    <div class="d-flex justify-content-between">
+                        <div class="cspt-pre-header-left">
+                            <ul class="cspt-contact-info">
+                                <li><i class="cspt-base-icon-letter"></i> Info.lanternabroad@gmail.com</li>
+                                <li><i class="cspt-base-icon-placeholder-1"></i>Office Address: North Island,
+                                    New Zealand </li>
+                            </ul>
+                        </div><!-- .cspt-pre-header-left -->
+                        <div class="cspt-pre-header-right">
+
+                            <ul class="cspt-social-links">
+                                <li class="cspt-social-li cspt-social-facebook "><a href="#"
+                                        target="_blank"><span><i
+                                                class="cspt-base-icon-facebook-squared"></i></span></a></li>
+                                <li class="cspt-social-li cspt-social-twitter "><a href="#"
+                                        target="_blank"><span><i class="cspt-base-icon-twitter"></i></span></a></li>
+                                <li class="cspt-social-li cspt-social-linkedin "><a href="#"
+                                        target="_blank"><span><i
+                                                class="cspt-base-icon-linkedin-squared"></i></span></a></li>
+                                <li class="cspt-social-li cspt-social-instagram "><a href="#"
+                                        target="_blank"><span><i class="cspt-base-icon-instagram"></i></span></a></li>
+                            </ul>
+                        </div><!-- .cspt-pre-header-right -->
+                    </div><!-- .justify-content-between -->
+                </div><!-- .container -->
+            </div><!-- .cspt-pre-header-wrapper -->
+            <div class="cspt-header-height-wrapper">
+                <div
+                    class="cspt-header-inner cspt-sticky-logo-no cspt-responsive-logo-no cspt-responsive-header-bgcolor-white cspt-header-wrapper cspt-bg-color-white cspt-header-sticky-yes cspt-sticky-type- cspt-sticky-bg-color-white">
+                    <div class="d-flex justify-content-between align-items-center cspt-header-content">
+                        <div class="cspt-logo-menuarea">
+                            <div class="site-branding cspt-logo-area">
+                                <div class="wrap">
+                                    <!-- Logo area -->
+                                    <div class="site-title"><a href="http://lanternabroad.com/" rel="home"><img
+                                                class="cspt-main-logo"
+                                                src="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2.png"
+                                                alt="Lantern Abroad" title="Lantern Abroad" /></a></div>
+                                </div><!-- .wrap -->
+                            </div><!-- .site-branding -->
+                            <!-- Top Navigation Menu -->
+                            <div class="navigation-top">
+                                <div class="cspt-mobile-menu-bg"></div>
+                                <button id="menu-toggle" class="nav-menu-toggle">
+                                    <i class="cspt-base-icon-menu-1"></i>
+                                </button>
+                                <div class="wrap">
+                                    <nav id="site-navigation"
+                                        class="main-navigation cspt-navbar  cspt-main-active-color-globalcolor cspt-dropdown-active-color-globalcolor"
+                                        aria-label="Top Menu">
+                                        <div class="menu-main-menu-container">
+                                            <ul id="cspt-top-menu" class="menu">
+                                                <li id="menu-item-190"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-190">
+                                                    <a href="http://lanternabroad.com/">Home</a> </li>
+                                                <li id="menu-item-184"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184">
+                                                    <a href="http://lanternabroad.com/about-us-1/">About Us</a> </li>
+                                                <li id="menu-item-151"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-151">
+                                                    <a href="#">Services</a>
+                                                    <ul class="sub-menu">
+                                                        <li id="menu-item-152"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-cspt-service menu-item-152">
+                                                            <a href="http://lanternabroad.com/service/hr-consulting/">CAP
+                                                                seat (Competency assessment programme)</a> </li>
+                                                        <li id="menu-item-153"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-cspt-service menu-item-153">
+                                                            <a
+                                                                href="http://lanternabroad.com/service/improving-resource/">NCNZ
+                                                                Criteria Assessment and Registration</a> </li>
+                                                        <li id="menu-item-155"
+                                                            class="menu-item menu-item-type-post_type menu-item-object-cspt-service menu-item-155">
+                                                            <a
+                                                                href="http://lanternabroad.com/service/employee-training/">Staffing
+                                                                solutions</a> </li>
+                                                    </ul>
+                                                </li>
+                                                <li id="menu-item-167"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167">
+                                                    <a href="http://lanternabroad.com/blog-grid-view/">Blog</a> </li>
+                                                <li id="menu-item-168"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168">
+                                                    <a href="http://lanternabroad.com/contact-us/">Contact Us</a> </li>
+                                            </ul>
+                                        </div>
+                                    </nav><!-- #site-navigation -->
+                                </div><!-- .wrap -->
+                            </div><!-- .navigation-top -->
+                        </div>
+                        <div class="cspt-right-box">
+                            <div class="cspt-search-cart-box">
+                                <div class="cspt-header-search-btn"><a href="#"><i
+                                            class="cspt-base-icon-search"></i></a></div>
                             </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
+                            <div class="cspt-header-button">
+                                <a href="https://lanternabroad.com/registration">
+                                    <span class="cspt-header-button-text-1">REGISTER NOW</span> </a>
                             </div>
                         </div>
+                    </div><!-- .justify-content-between -->
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                </div><!-- .cspt-header-inner -->
+            </div><!-- .cspt-header-height-wrapper -->
+            <div class="cspt-title-bar-wrapper  cspt-bg-color-transparent cspt-bg-image-yes cspt-titlebar-style-left">
+                <div class="container">
+                    <div class="cspt-title-bar-content">
+                        <div class="cspt-title-bar-content-inner">
+                            <div class="cspt-tbar">
+                                <div class="cspt-tbar-inner container">
+                                    <h1 class="cspt-tbar-title"> Registration</h1>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
+                            <div class="cspt-breadcrumb">
+                                <div class="cspt-breadcrumb-inner"><span><a title="Go to Lantern Abroad."
+                                            href="http://lanternabroad.com" class="home"><span>Lantern
+                                                Abroad</span></a></span> &gt; <span><span
+                                            class="post post-page current-item">Registration</span></span></div>
                             </div>
                         </div>
+                    </div><!-- .cspt-title-bar-content -->
+                </div><!-- .container -->
+            </div><!-- .cspt-title-bar-wrapper -->
+        </header><!-- #masthead -->
+        <div class="site-content-contain ">
+            <div class="site-content-wrap">
+                <div id="content" class="site-content container">
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
+                    <div class="cspt-header-search-form-wrapper">
+                        <div class="cspt-search-close"><i class="cspt-base-icon-cancel"></i></div>
+                        <form role="search" method="get" class="search-form" action="http://lanternabroad.com/">
+                            <label for="search-form-644a1de447e31">
+                                <span class="screen-reader-text">Search for:</span>
+                            </label>
+                            <input type="search" id="search-form-644a1de447e31" class="search-field"
+                                placeholder="Search.." value="" name="s" />
+                            <button type="submit" class="search-submit">Search</button>
+                        </form>
+                    </div>
+                    <div id="primary" class="content-area ">
+                        <main id="main" class="site-main cspt-page-content-wrapper">
+                            <article id="post-305" class="post-305 page type-page status-publish hentry">
+                                <div class="entry-content">
+                                    <div data-elementor-type="wp-page" data-elementor-id="305"
+                                        class="elementor elementor-305">
+                                        <section
+                                            class="elementor-section elementor-top-section elementor-element elementor-element-0cff239 cspt-col-stretched-none cspt-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="0cff239" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-96463ce cspt-bg-color-over-image"
+                                                    data-id="96463ce" data-element_type="column">
+                                                    <div class="elementor-widget-wrap">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                            class="elementor-section elementor-top-section elementor-element elementor-element-d6903b1 cspt-col-stretched-none cspt-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="d6903b1" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-13660e6 cspt-bg-color-over-image"
+                                                    data-id="13660e6" data-element_type="column">
+                                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                                        <div class="elementor-element elementor-element-8f9a2ec elementor-widget elementor-widget-heading"
+                                                            data-id="8f9a2ec" data-element_type="widget"
+                                                            data-widget_type="heading.default">
+                                                            <div class="elementor-widget-container">
+                                                                <h2
+                                                                    class="elementor-heading-title elementor-size-default">
+                                                                    Fill to Submit</h2>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                            class="elementor-section elementor-top-section elementor-element elementor-element-0f0d989 cspt-col-stretched-none cspt-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="0f0d989" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-540ec29 cspt-bg-color-over-image"
+                                                    data-id="540ec29" data-element_type="column">
+                                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                                        <div class="elementor-element elementor-element-efa6fa2 elementor-widget elementor-widget-text-editor"
+                                                            data-id="efa6fa2" data-element_type="widget"
+                                                            data-widget_type="text-editor.default">
+                                                            <div class="elementor-widget-container">
+                                                                <p style="font-weight: 400;">Fill out the online form
+                                                                    here or email us at <strong><a
+                                                                            href="mailto:thedoctorsrecruitment@greencrosshealth.co.nz">email
+                                                                            @la.com</a></strong></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section
+                                            class="elementor-section elementor-top-section elementor-element elementor-element-99fb8a0 cspt-col-stretched-none cspt-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                            data-id="99fb8a0" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-09af6fb cspt-bg-color-over-image"
+                                                    data-id="09af6fb" data-element_type="column">
+                                                    <div class="elementor-widget-wrap elementor-element-populated">
+                                                        <div class="elementor-element elementor-element-f811862 elementor-widget elementor-widget-shortcode"
+                                                            data-id="f811862" data-element_type="widget"
+                                                            data-widget_type="shortcode.default">
+                                                            <div class="elementor-widget-container">
+                                                                <div class="elementor-shortcode">
+                                                                    <div class="forminator-ui forminator-custom-form forminator-custom-form-307 forminator-design--flat  forminator_ajax"
+                                                                        data-forminator-render="0"
+                                                                        data-form="forminator-module-307"
+                                                                        data-uid="644a1de457452"><br /></div>
+                                                                    <form id="forminator-module-307"
+                                                                        class="forminator-ui forminator-custom-form forminator-custom-form-307 forminator-design--flat  forminator_ajax"
+                                                                        method="post" data-forminator-render="0"
+                                                                        data-form-id="307" data-design="flat"
+                                                                        data-grid="open" style="display: none;"
+                                                                        data-uid="644a1de457452">
+                                                                        <div class="forminator-response-message forminator-error"
+                                                                            aria-hidden="true"></div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="name-1"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-name-1_644a1de457452"
+                                                                                        class="forminator-label">Full
+                                                                                        Name <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="text" name="name-1"
+                                                                                        value=""
+                                                                                        placeholder="E.g. John Doe"
+                                                                                        id="forminator-field-name-1_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        aria-required="true" /></div>
+                                                                            </div>
+                                                                            <div id="text-1"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-1_644a1de457452"
+                                                                                        class="forminator-label">Username
+                                                                                        <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="text" name="text-1"
+                                                                                        value=""
+                                                                                        placeholder="Enter username"
+                                                                                        id="forminator-field-text-1_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="true" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="text-2"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-2_644a1de457452"
+                                                                                        class="forminator-label">Qualification
+                                                                                        <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="text" name="text-2"
+                                                                                        value=""
+                                                                                        placeholder="E.g. MBA"
+                                                                                        id="forminator-field-text-2_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="1" /></div>
+                                                                            </div>
+                                                                            <div id="text-3"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-3_644a1de457452"
+                                                                                        class="forminator-label">Experience
+                                                                                        <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="text" name="text-3"
+                                                                                        value=""
+                                                                                        placeholder="E.g. 2 year as Staff nurse in Melbourne"
+                                                                                        id="forminator-field-text-3_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="1" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="text-4"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-4_644a1de457452"
+                                                                                        class="forminator-label">OET or
+                                                                                        IELTS Score <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="text" name="text-4"
+                                                                                        value=""
+                                                                                        placeholder="Enter your score here"
+                                                                                        id="forminator-field-text-4_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="1" /></div>
+                                                                            </div>
+                                                                            <div id="text-5"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-5_644a1de457452"
+                                                                                        class="forminator-label">CGFNS
+                                                                                        status (optional)</label><input
+                                                                                        type="text" name="text-5"
+                                                                                        value="" placeholder=""
+                                                                                        id="forminator-field-text-5_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="select-1"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-form-307__field--select-1_644a1de457452-label"
+                                                                                        class="forminator-label">New
+                                                                                        Zealand nursing council decision
+                                                                                        Letter <span
+                                                                                            class="forminator-required">*</span></label><select
+                                                                                        id="forminator-form-307__field--select-1_644a1de457452"
+                                                                                        class="forminator-select--field forminator-select2"
+                                                                                        data-required="1"
+                                                                                        name="select-1"
+                                                                                        data-default-value=""
+                                                                                        data-placeholder="Select"
+                                                                                        data-search="false"
+                                                                                        aria-describedby="forminator-form-307__field--select-1_644a1de457452-description">
+                                                                                        <option value="">Select
+                                                                                        </option>
+                                                                                        <option value="one"
+                                                                                            data-calculation="0">YES
+                                                                                        </option>
+                                                                                        <option value="two"
+                                                                                            data-calculation="0">NO
+                                                                                        </option>
+                                                                                    </select></div>
+                                                                            </div>
+                                                                            <div id="date-1"
+                                                                                class="forminator-col forminator-col-6 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-date-1-picker_644a1de457452"
+                                                                                        class="forminator-label">Preferred
+                                                                                        intake (filling space) <span
+                                                                                            class="forminator-required">*</span></label>
+                                                                                    <div
+                                                                                        class="forminator-input-with-icon">
+                                                                                        <label
+                                                                                            for="forminator-field-date-1-picker_644a1de457452"><span
+                                                                                                class="forminator-icon-calendar"
+                                                                                                aria-hidden="true"></span></label><input
+                                                                                            autocomplete="off"
+                                                                                            type="text"
+                                                                                            size="1"
+                                                                                            name="date-1"
+                                                                                            value=""
+                                                                                            placeholder="Choose Date"
+                                                                                            id="forminator-field-date-1-picker_644a1de457452"
+                                                                                            class="forminator-input forminator-datepicker"
+                                                                                            data-required="1"
+                                                                                            data-format="dd-mm-yy"
+                                                                                            data-restrict-type=""
+                                                                                            data-restrict=""
+                                                                                            data-start-year="1923"
+                                                                                            data-end-year="2123"
+                                                                                            data-past-dates="enable"
+                                                                                            data-start-of-week="1"
+                                                                                            data-start-date=""
+                                                                                            data-end-date=""
+                                                                                            data-start-field=""
+                                                                                            data-end-field=""
+                                                                                            data-start-offset=""
+                                                                                            data-end-offset=""
+                                                                                            data-disable-date=""
+                                                                                            data-disable-range="" />
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="select-2"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-form-307__field--select-2_644a1de457452-label"
+                                                                                        class="forminator-label">Northtec
+                                                                                        preferred Campus <span
+                                                                                            class="forminator-required">*</span></label><select
+                                                                                        id="forminator-form-307__field--select-2_644a1de457452"
+                                                                                        class="forminator-select--field forminator-select2"
+                                                                                        data-required="1"
+                                                                                        name="select-2"
+                                                                                        data-default-value=""
+                                                                                        data-placeholder="Select"
+                                                                                        data-search="false"
+                                                                                        aria-describedby="forminator-form-307__field--select-2_644a1de457452-description">
+                                                                                        <option value="">Select
+                                                                                        </option>
+                                                                                        <option value="one"
+                                                                                            data-calculation="0">
+                                                                                            Whangarei</option>
+                                                                                        <option value="two"
+                                                                                            data-calculation="0">
+                                                                                            Auckland</option>
+                                                                                    </select></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="text-6"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-6_644a1de457452"
+                                                                                        class="forminator-label">How
+                                                                                        did you know about Lantern
+                                                                                        Abroad? <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="text" name="text-6"
+                                                                                        value=""
+                                                                                        placeholder="E.g. From a friend"
+                                                                                        id="forminator-field-text-6_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="1" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="select-3"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-form-307__field--select-3_644a1de457452-label"
+                                                                                        class="forminator-label">Any
+                                                                                        Friends, Family or other living
+                                                                                        NZ ? <span
+                                                                                            class="forminator-required">*</span></label><select
+                                                                                        id="forminator-form-307__field--select-3_644a1de457452"
+                                                                                        class="forminator-select--field forminator-select2"
+                                                                                        data-required="1"
+                                                                                        name="select-3"
+                                                                                        data-default-value=""
+                                                                                        data-placeholder="Select"
+                                                                                        data-search="false"
+                                                                                        aria-describedby="forminator-form-307__field--select-3_644a1de457452-description">
+                                                                                        <option value="">Select
+                                                                                        </option>
+                                                                                        <option value="one"
+                                                                                            data-calculation="0">YES
+                                                                                        </option>
+                                                                                        <option value="two"
+                                                                                            data-calculation="0">NO
+                                                                                        </option>
+                                                                                    </select></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="text-7"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-7_644a1de457452"
+                                                                                        class="forminator-label">If
+                                                                                        Yes, Please Specify the
+                                                                                        Details</label><input
+                                                                                        type="text" name="text-7"
+                                                                                        value=""
+                                                                                        placeholder="E.g. My friend John is the there in NZ. He is a Medical doctor"
+                                                                                        id="forminator-field-text-7_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="textarea-1"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-textarea-1_644a1de457452"
+                                                                                        class="forminator-label">11.
+                                                                                        Cover letter</label>
+                                                                                    <textarea name="textarea-1" placeholder="E.g. Write to us" id="forminator-field-textarea-1_644a1de457452"
+                                                                                        class="forminator-textarea" rows="6" style="min-height:140px;"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="email-1"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-email-1_644a1de457452"
+                                                                                        class="forminator-label">Email
+                                                                                        <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="email" name="email-1"
+                                                                                        value=""
+                                                                                        placeholder="E.g. john@doe.com"
+                                                                                        id="forminator-field-email-1_644a1de457452"
+                                                                                        class="forminator-input forminator-email--field"
+                                                                                        data-required="true"
+                                                                                        aria-required="true" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="phone-1"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-phone-1_644a1de457452"
+                                                                                        class="forminator-label">Phone
+                                                                                        <span
+                                                                                            class="forminator-required">*</span></label><input
+                                                                                        type="text" name="phone-1"
+                                                                                        value=""
+                                                                                        placeholder="E.g. +1 300 400 5000"
+                                                                                        id="forminator-field-phone-1_644a1de457452"
+                                                                                        class="forminator-input forminator-field--phone"
+                                                                                        data-required="1"
+                                                                                        aria-required="true"
+                                                                                        autocomplete="off"
+                                                                                        data-national_mode="disabled"
+                                                                                        data-country="AF"
+                                                                                        data-validation="international" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="address-1"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-row">
+                                                                                    <div id="address-1-street_address"
+                                                                                        class="forminator-col">
+                                                                                        <div class="forminator-field">
+                                                                                            <label
+                                                                                                for="forminator-field-street_address-address-1_644a1de457452"
+                                                                                                class="forminator-label">Street
+                                                                                                Address <span
+                                                                                                    class="forminator-required">*</span></label><input
+                                                                                                type="text"
+                                                                                                name="address-1-street_address"
+                                                                                                placeholder="E.g. 42 Wallaby Way"
+                                                                                                id="forminator-field-street_address-address-1_644a1de457452"
+                                                                                                class="forminator-input"
+                                                                                                data-required="1"
+                                                                                                aria-required="true"
+                                                                                                value="" /></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="forminator-row">
+                                                                                    <div id="address-1-address_line"
+                                                                                        class="forminator-col">
+                                                                                        <div class="forminator-field">
+                                                                                            <label
+                                                                                                for="forminator-field-address_line-address-1_644a1de457452"
+                                                                                                class="forminator-label">Apartment,
+                                                                                                suite, etc</label><input
+                                                                                                type="text"
+                                                                                                name="address-1-address_line"
+                                                                                                placeholder=""
+                                                                                                id="forminator-field-address_line-address-1_644a1de457452"
+                                                                                                class="forminator-input"
+                                                                                                data-required=""
+                                                                                                aria-required="false"
+                                                                                                value="" /></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="forminator-row"
+                                                                                    data-multiple="true">
+                                                                                    <div id="address-1-city"
+                                                                                        class="forminator-col forminator-col-6">
+                                                                                        <div class="forminator-field">
+                                                                                            <label
+                                                                                                for="forminator-field-city-address-1_644a1de457452"
+                                                                                                class="forminator-label">City</label><input
+                                                                                                type="text"
+                                                                                                name="address-1-city"
+                                                                                                placeholder="E.g. Sydney"
+                                                                                                id="forminator-field-city-address-1_644a1de457452"
+                                                                                                class="forminator-input"
+                                                                                                data-required=""
+                                                                                                aria-required="false"
+                                                                                                value="" /></div>
+                                                                                    </div>
+                                                                                    <div id="address-1-state"
+                                                                                        class="forminator-col forminator-col-6">
+                                                                                        <div class="forminator-field">
+                                                                                            <label
+                                                                                                for="forminator-field-state-address-1_644a1de457452"
+                                                                                                class="forminator-label">State/Province</label><input
+                                                                                                type="text"
+                                                                                                name="address-1-state"
+                                                                                                placeholder="E.g. New South Wales"
+                                                                                                id="forminator-field-state-address-1_644a1de457452"
+                                                                                                class="forminator-input"
+                                                                                                data-required=""
+                                                                                                aria-required="false"
+                                                                                                value="" /></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="forminator-row"
+                                                                                    data-multiple="true">
+                                                                                    <div id="address-1-zip"
+                                                                                        class="forminator-col forminator-col-6">
+                                                                                        <div class="forminator-field">
+                                                                                            <label
+                                                                                                for="forminator-field-zip-address-1_644a1de457452"
+                                                                                                class="forminator-label">ZIP
+                                                                                                / Postal
+                                                                                                Code</label><input
+                                                                                                type="text"
+                                                                                                name="address-1-zip"
+                                                                                                placeholder="E.g. 2000"
+                                                                                                id="forminator-field-zip-address-1_644a1de457452"
+                                                                                                class="forminator-input"
+                                                                                                value="" /></div>
+                                                                                    </div>
+                                                                                    <div id="address-1-country"
+                                                                                        class="forminator-col forminator-col-6">
+                                                                                        <div class="forminator-field">
+                                                                                            <label
+                                                                                                for="forminator-form-307__field--address-1_644a1de457452"
+                                                                                                class="forminator-label">Country
+                                                                                            </label><select
+                                                                                                name="address-1-country"
+                                                                                                id="forminator-form-307__field--address-1_644a1de457452"
+                                                                                                class="forminator-select2"
+                                                                                                data-search="true"
+                                                                                                data-placeholder="Select country"
+                                                                                                data-default-value="">
+                                                                                                <option value=""
+                                                                                                    data-country-code=""
+                                                                                                    selected="selected">
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Afghanistan"
+                                                                                                    data-country-code="AF">
+                                                                                                    Afghanistan</option>
+                                                                                                <option value="Albania"
+                                                                                                    data-country-code="AL">
+                                                                                                    Albania</option>
+                                                                                                <option value="Algeria"
+                                                                                                    data-country-code="DZ">
+                                                                                                    Algeria</option>
+                                                                                                <option
+                                                                                                    value="American Samoa"
+                                                                                                    data-country-code="AS">
+                                                                                                    American Samoa
+                                                                                                </option>
+                                                                                                <option value="Andorra"
+                                                                                                    data-country-code="AD">
+                                                                                                    Andorra</option>
+                                                                                                <option value="Angola"
+                                                                                                    data-country-code="AO">
+                                                                                                    Angola</option>
+                                                                                                <option
+                                                                                                    value="Anguilla"
+                                                                                                    data-country-code="AI">
+                                                                                                    Anguilla</option>
+                                                                                                <option
+                                                                                                    value="Antarctica"
+                                                                                                    data-country-code="AQ">
+                                                                                                    Antarctica</option>
+                                                                                                <option
+                                                                                                    value="Antigua and Barbuda"
+                                                                                                    data-country-code="AG">
+                                                                                                    Antigua and Barbuda
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Argentina"
+                                                                                                    data-country-code="AR">
+                                                                                                    Argentina</option>
+                                                                                                <option value="Armenia"
+                                                                                                    data-country-code="AM">
+                                                                                                    Armenia</option>
+                                                                                                <option
+                                                                                                    value="Australia"
+                                                                                                    data-country-code="AU">
+                                                                                                    Australia</option>
+                                                                                                <option value="Aruba"
+                                                                                                    data-country-code="AW">
+                                                                                                    Aruba</option>
+                                                                                                <option value="Austria"
+                                                                                                    data-country-code="AT">
+                                                                                                    Austria</option>
+                                                                                                <option
+                                                                                                    value="Azerbaijan"
+                                                                                                    data-country-code="AZ">
+                                                                                                    Azerbaijan</option>
+                                                                                                <option value="Bahamas"
+                                                                                                    data-country-code="BS">
+                                                                                                    Bahamas</option>
+                                                                                                <option value="Bahrain"
+                                                                                                    data-country-code="BH">
+                                                                                                    Bahrain</option>
+                                                                                                <option
+                                                                                                    value="Bangladesh"
+                                                                                                    data-country-code="BD">
+                                                                                                    Bangladesh</option>
+                                                                                                <option
+                                                                                                    value="Barbados"
+                                                                                                    data-country-code="BB">
+                                                                                                    Barbados</option>
+                                                                                                <option value="Belarus"
+                                                                                                    data-country-code="BY">
+                                                                                                    Belarus</option>
+                                                                                                <option value="Belgium"
+                                                                                                    data-country-code="BE">
+                                                                                                    Belgium</option>
+                                                                                                <option value="Belize"
+                                                                                                    data-country-code="BZ">
+                                                                                                    Belize</option>
+                                                                                                <option value="Benin"
+                                                                                                    data-country-code="BJ">
+                                                                                                    Benin</option>
+                                                                                                <option value="Bermuda"
+                                                                                                    data-country-code="BM">
+                                                                                                    Bermuda</option>
+                                                                                                <option value="Bhutan"
+                                                                                                    data-country-code="BT">
+                                                                                                    Bhutan</option>
+                                                                                                <option value="Bolivia"
+                                                                                                    data-country-code="BO">
+                                                                                                    Bolivia</option>
+                                                                                                <option
+                                                                                                    value="Bosnia and Herzegovina"
+                                                                                                    data-country-code="BA">
+                                                                                                    Bosnia and
+                                                                                                    Herzegovina</option>
+                                                                                                <option
+                                                                                                    value="Botswana"
+                                                                                                    data-country-code="BW">
+                                                                                                    Botswana</option>
+                                                                                                <option
+                                                                                                    value="Bouvet Island"
+                                                                                                    data-country-code="BV">
+                                                                                                    Bouvet Island
+                                                                                                </option>
+                                                                                                <option value="Brazil"
+                                                                                                    data-country-code="BR">
+                                                                                                    Brazil</option>
+                                                                                                <option
+                                                                                                    value="British Indian Ocean Territory"
+                                                                                                    data-country-code="IO">
+                                                                                                    British Indian Ocean
+                                                                                                    Territory</option>
+                                                                                                <option value="Brunei"
+                                                                                                    data-country-code="BN">
+                                                                                                    Brunei</option>
+                                                                                                <option
+                                                                                                    value="Bulgaria"
+                                                                                                    data-country-code="BG">
+                                                                                                    Bulgaria</option>
+                                                                                                <option
+                                                                                                    value="Burkina Faso"
+                                                                                                    data-country-code="BF">
+                                                                                                    Burkina Faso
+                                                                                                </option>
+                                                                                                <option value="Burundi"
+                                                                                                    data-country-code="BI">
+                                                                                                    Burundi</option>
+                                                                                                <option
+                                                                                                    value="Cambodia"
+                                                                                                    data-country-code="KH">
+                                                                                                    Cambodia</option>
+                                                                                                <option
+                                                                                                    value="Cameroon"
+                                                                                                    data-country-code="CM">
+                                                                                                    Cameroon</option>
+                                                                                                <option value="Canada"
+                                                                                                    data-country-code="CA">
+                                                                                                    Canada</option>
+                                                                                                <option
+                                                                                                    value="Cabo Verde"
+                                                                                                    data-country-code="CV">
+                                                                                                    Cabo Verde</option>
+                                                                                                <option
+                                                                                                    value="Cayman Islands"
+                                                                                                    data-country-code="KY">
+                                                                                                    Cayman Islands
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Central African Republic"
+                                                                                                    data-country-code="CF">
+                                                                                                    Central African
+                                                                                                    Republic</option>
+                                                                                                <option value="Chad"
+                                                                                                    data-country-code="TD">
+                                                                                                    Chad</option>
+                                                                                                <option value="Chile"
+                                                                                                    data-country-code="CL">
+                                                                                                    Chile</option>
+                                                                                                <option
+                                                                                                    value="China, People's Republic of"
+                                                                                                    data-country-code="CN">
+                                                                                                    China, People's
+                                                                                                    Republic of</option>
+                                                                                                <option
+                                                                                                    value="Christmas Island"
+                                                                                                    data-country-code="CX">
+                                                                                                    Christmas Island
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Cocos Islands"
+                                                                                                    data-country-code="CC">
+                                                                                                    Cocos Islands
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Colombia"
+                                                                                                    data-country-code="CO">
+                                                                                                    Colombia</option>
+                                                                                                <option value="Comoros"
+                                                                                                    data-country-code="KM">
+                                                                                                    Comoros</option>
+                                                                                                <option
+                                                                                                    value="Congo, Democratic Republic of the"
+                                                                                                    data-country-code="CD">
+                                                                                                    Congo, Democratic
+                                                                                                    Republic of the
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Congo, Republic of the"
+                                                                                                    data-country-code="CG">
+                                                                                                    Congo, Republic of
+                                                                                                    the</option>
+                                                                                                <option
+                                                                                                    value="Cook Islands"
+                                                                                                    data-country-code="CK">
+                                                                                                    Cook Islands
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Costa Rica"
+                                                                                                    data-country-code="CR">
+                                                                                                    Costa Rica</option>
+                                                                                                <option
+                                                                                                    value="Côte d'Ivoire"
+                                                                                                    data-country-code="CI">
+                                                                                                    Côte d'Ivoire
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Croatia"
+                                                                                                    data-country-code="HR">
+                                                                                                    Croatia</option>
+                                                                                                <option value="Cuba"
+                                                                                                    data-country-code="CU">
+                                                                                                    Cuba</option>
+                                                                                                <option
+                                                                                                    value="Curaçao"
+                                                                                                    data-country-code="CW">
+                                                                                                    Curaçao</option>
+                                                                                                <option value="Cyprus"
+                                                                                                    data-country-code="CY">
+                                                                                                    Cyprus</option>
+                                                                                                <option
+                                                                                                    value="Czech Republic"
+                                                                                                    data-country-code="CZ">
+                                                                                                    Czech Republic
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Denmark"
+                                                                                                    data-country-code="DK">
+                                                                                                    Denmark</option>
+                                                                                                <option
+                                                                                                    value="Djibouti"
+                                                                                                    data-country-code="DJ">
+                                                                                                    Djibouti</option>
+                                                                                                <option
+                                                                                                    value="Dominica"
+                                                                                                    data-country-code="DM">
+                                                                                                    Dominica</option>
+                                                                                                <option
+                                                                                                    value="Dominican Republic"
+                                                                                                    data-country-code="DO">
+                                                                                                    Dominican Republic
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="East Timor"
+                                                                                                    data-country-code="TL">
+                                                                                                    East Timor</option>
+                                                                                                <option
+                                                                                                    value="Ecuador"
+                                                                                                    data-country-code="EC">
+                                                                                                    Ecuador</option>
+                                                                                                <option value="Egypt"
+                                                                                                    data-country-code="EG">
+                                                                                                    Egypt</option>
+                                                                                                <option
+                                                                                                    value="El Salvador"
+                                                                                                    data-country-code="SV">
+                                                                                                    El Salvador</option>
+                                                                                                <option
+                                                                                                    value="Equatorial Guinea"
+                                                                                                    data-country-code="GQ">
+                                                                                                    Equatorial Guinea
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Eritrea"
+                                                                                                    data-country-code="ER">
+                                                                                                    Eritrea</option>
+                                                                                                <option
+                                                                                                    value="Estonia"
+                                                                                                    data-country-code="EE">
+                                                                                                    Estonia</option>
+                                                                                                <option
+                                                                                                    value="Ethiopia"
+                                                                                                    data-country-code="ET">
+                                                                                                    Ethiopia</option>
+                                                                                                <option
+                                                                                                    value="Falkland Islands"
+                                                                                                    data-country-code="FK">
+                                                                                                    Falkland Islands
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Faroe Islands"
+                                                                                                    data-country-code="FO">
+                                                                                                    Faroe Islands
+                                                                                                </option>
+                                                                                                <option value="Fiji"
+                                                                                                    data-country-code="FJ">
+                                                                                                    Fiji</option>
+                                                                                                <option
+                                                                                                    value="Finland"
+                                                                                                    data-country-code="FI">
+                                                                                                    Finland</option>
+                                                                                                <option value="France"
+                                                                                                    data-country-code="FR">
+                                                                                                    France</option>
+                                                                                                <option
+                                                                                                    value="France, Metropolitan"
+                                                                                                    data-country-code="FX">
+                                                                                                    France, Metropolitan
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="French Guiana"
+                                                                                                    data-country-code="GF">
+                                                                                                    French Guiana
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="French Polynesia"
+                                                                                                    data-country-code="PF">
+                                                                                                    French Polynesia
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="French South Territories"
+                                                                                                    data-country-code="TF">
+                                                                                                    French South
+                                                                                                    Territories</option>
+                                                                                                <option value="Gabon"
+                                                                                                    data-country-code="GA">
+                                                                                                    Gabon</option>
+                                                                                                <option value="Gambia"
+                                                                                                    data-country-code="GM">
+                                                                                                    Gambia</option>
+                                                                                                <option
+                                                                                                    value="Georgia"
+                                                                                                    data-country-code="GE">
+                                                                                                    Georgia</option>
+                                                                                                <option
+                                                                                                    value="Germany"
+                                                                                                    data-country-code="DE">
+                                                                                                    Germany</option>
+                                                                                                <option
+                                                                                                    value="Guernsey"
+                                                                                                    data-country-code="GG">
+                                                                                                    Guernsey</option>
+                                                                                                <option value="Ghana"
+                                                                                                    data-country-code="GH">
+                                                                                                    Ghana</option>
+                                                                                                <option
+                                                                                                    value="Gibraltar"
+                                                                                                    data-country-code="GI">
+                                                                                                    Gibraltar</option>
+                                                                                                <option value="Greece"
+                                                                                                    data-country-code="GR">
+                                                                                                    Greece</option>
+                                                                                                <option
+                                                                                                    value="Greenland"
+                                                                                                    data-country-code="GL">
+                                                                                                    Greenland</option>
+                                                                                                <option
+                                                                                                    value="Grenada"
+                                                                                                    data-country-code="GD">
+                                                                                                    Grenada</option>
+                                                                                                <option
+                                                                                                    value="Guadeloupe"
+                                                                                                    data-country-code="GP">
+                                                                                                    Guadeloupe</option>
+                                                                                                <option value="Guam"
+                                                                                                    data-country-code="GU">
+                                                                                                    Guam</option>
+                                                                                                <option
+                                                                                                    value="Guatemala"
+                                                                                                    data-country-code="GT">
+                                                                                                    Guatemala</option>
+                                                                                                <option value="Guinea"
+                                                                                                    data-country-code="GN">
+                                                                                                    Guinea</option>
+                                                                                                <option
+                                                                                                    value="Guinea-Bissau"
+                                                                                                    data-country-code="GW">
+                                                                                                    Guinea-Bissau
+                                                                                                </option>
+                                                                                                <option value="Guyana"
+                                                                                                    data-country-code="GY">
+                                                                                                    Guyana</option>
+                                                                                                <option value="Haiti"
+                                                                                                    data-country-code="HT">
+                                                                                                    Haiti</option>
+                                                                                                <option
+                                                                                                    value="Heard Island And Mcdonald Island"
+                                                                                                    data-country-code="HM">
+                                                                                                    Heard Island And
+                                                                                                    Mcdonald Island
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Honduras"
+                                                                                                    data-country-code="HN">
+                                                                                                    Honduras</option>
+                                                                                                <option
+                                                                                                    value="Hong Kong"
+                                                                                                    data-country-code="HK">
+                                                                                                    Hong Kong</option>
+                                                                                                <option
+                                                                                                    value="Hungary"
+                                                                                                    data-country-code="HU">
+                                                                                                    Hungary</option>
+                                                                                                <option
+                                                                                                    value="Iceland"
+                                                                                                    data-country-code="IS">
+                                                                                                    Iceland</option>
+                                                                                                <option value="India"
+                                                                                                    data-country-code="IN">
+                                                                                                    India</option>
+                                                                                                <option
+                                                                                                    value="Indonesia"
+                                                                                                    data-country-code="ID">
+                                                                                                    Indonesia</option>
+                                                                                                <option value="Iran"
+                                                                                                    data-country-code="IR">
+                                                                                                    Iran</option>
+                                                                                                <option value="Iraq"
+                                                                                                    data-country-code="IQ">
+                                                                                                    Iraq</option>
+                                                                                                <option
+                                                                                                    value="Ireland"
+                                                                                                    data-country-code="IE">
+                                                                                                    Ireland</option>
+                                                                                                <option value="Israel"
+                                                                                                    data-country-code="IL">
+                                                                                                    Israel</option>
+                                                                                                <option value="Italy"
+                                                                                                    data-country-code="IT">
+                                                                                                    Italy</option>
+                                                                                                <option
+                                                                                                    value="Jamaica"
+                                                                                                    data-country-code="JM">
+                                                                                                    Jamaica</option>
+                                                                                                <option value="Japan"
+                                                                                                    data-country-code="JP">
+                                                                                                    Japan</option>
+                                                                                                <option value="Jersey"
+                                                                                                    data-country-code="JE">
+                                                                                                    Jersey</option>
+                                                                                                <option
+                                                                                                    value="Johnston Island"
+                                                                                                    data-country-code="JT">
+                                                                                                    Johnston Island
+                                                                                                </option>
+                                                                                                <option value="Jordan"
+                                                                                                    data-country-code="JO">
+                                                                                                    Jordan</option>
+                                                                                                <option
+                                                                                                    value="Kazakhstan"
+                                                                                                    data-country-code="KZ">
+                                                                                                    Kazakhstan</option>
+                                                                                                <option value="Kenya"
+                                                                                                    data-country-code="KE">
+                                                                                                    Kenya</option>
+                                                                                                <option
+                                                                                                    value="Kiribati"
+                                                                                                    data-country-code="KI">
+                                                                                                    Kiribati</option>
+                                                                                                <option
+                                                                                                    value="Korea, Democratic People's Republic of"
+                                                                                                    data-country-code="KP">
+                                                                                                    Korea, Democratic
+                                                                                                    People's Republic of
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Korea, Republic of"
+                                                                                                    data-country-code="KR">
+                                                                                                    Korea, Republic of
+                                                                                                </option>
+                                                                                                <option value="Kosovo"
+                                                                                                    data-country-code="XK">
+                                                                                                    Kosovo</option>
+                                                                                                <option value="Kuwait"
+                                                                                                    data-country-code="KW">
+                                                                                                    Kuwait</option>
+                                                                                                <option
+                                                                                                    value="Kyrgyzstan"
+                                                                                                    data-country-code="KG">
+                                                                                                    Kyrgyzstan</option>
+                                                                                                <option
+                                                                                                    value="Lao People's Democratic Republic"
+                                                                                                    data-country-code="LA">
+                                                                                                    Lao People's
+                                                                                                    Democratic Republic
+                                                                                                </option>
+                                                                                                <option value="Latvia"
+                                                                                                    data-country-code="LV">
+                                                                                                    Latvia</option>
+                                                                                                <option
+                                                                                                    value="Lebanon"
+                                                                                                    data-country-code="LB">
+                                                                                                    Lebanon</option>
+                                                                                                <option
+                                                                                                    value="Lesotho"
+                                                                                                    data-country-code="LS">
+                                                                                                    Lesotho</option>
+                                                                                                <option
+                                                                                                    value="Liberia"
+                                                                                                    data-country-code="LR">
+                                                                                                    Liberia</option>
+                                                                                                <option value="Libya"
+                                                                                                    data-country-code="LY">
+                                                                                                    Libya</option>
+                                                                                                <option
+                                                                                                    value="Liechtenstein"
+                                                                                                    data-country-code="LI">
+                                                                                                    Liechtenstein
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Lithuania"
+                                                                                                    data-country-code="LT">
+                                                                                                    Lithuania</option>
+                                                                                                <option
+                                                                                                    value="Luxembourg"
+                                                                                                    data-country-code="LU">
+                                                                                                    Luxembourg</option>
+                                                                                                <option value="Macau"
+                                                                                                    data-country-code="MO">
+                                                                                                    Macau</option>
+                                                                                                <option
+                                                                                                    value="North Macedonia"
+                                                                                                    data-country-code="MK">
+                                                                                                    North Macedonia
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Madagascar"
+                                                                                                    data-country-code="MG">
+                                                                                                    Madagascar</option>
+                                                                                                <option value="Malawi"
+                                                                                                    data-country-code="MW">
+                                                                                                    Malawi</option>
+                                                                                                <option
+                                                                                                    value="Malaysia"
+                                                                                                    data-country-code="MY">
+                                                                                                    Malaysia</option>
+                                                                                                <option
+                                                                                                    value="Maldives"
+                                                                                                    data-country-code="MV">
+                                                                                                    Maldives</option>
+                                                                                                <option value="Mali"
+                                                                                                    data-country-code="ML">
+                                                                                                    Mali</option>
+                                                                                                <option value="Malta"
+                                                                                                    data-country-code="MT">
+                                                                                                    Malta</option>
+                                                                                                <option
+                                                                                                    value="Marshall Islands"
+                                                                                                    data-country-code="MH">
+                                                                                                    Marshall Islands
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Martinique"
+                                                                                                    data-country-code="MQ">
+                                                                                                    Martinique</option>
+                                                                                                <option
+                                                                                                    value="Mauritania"
+                                                                                                    data-country-code="MR">
+                                                                                                    Mauritania</option>
+                                                                                                <option
+                                                                                                    value="Mauritius"
+                                                                                                    data-country-code="MU">
+                                                                                                    Mauritius</option>
+                                                                                                <option
+                                                                                                    value="Mayotte"
+                                                                                                    data-country-code="YT">
+                                                                                                    Mayotte</option>
+                                                                                                <option value="Mexico"
+                                                                                                    data-country-code="MX">
+                                                                                                    Mexico</option>
+                                                                                                <option
+                                                                                                    value="Micronesia"
+                                                                                                    data-country-code="FM">
+                                                                                                    Micronesia</option>
+                                                                                                <option
+                                                                                                    value="Moldova"
+                                                                                                    data-country-code="MD">
+                                                                                                    Moldova</option>
+                                                                                                <option value="Monaco"
+                                                                                                    data-country-code="MC">
+                                                                                                    Monaco</option>
+                                                                                                <option
+                                                                                                    value="Mongolia"
+                                                                                                    data-country-code="MN">
+                                                                                                    Mongolia</option>
+                                                                                                <option
+                                                                                                    value="Montserrat"
+                                                                                                    data-country-code="MS">
+                                                                                                    Montserrat</option>
+                                                                                                <option
+                                                                                                    value="Montenegro"
+                                                                                                    data-country-code="ME">
+                                                                                                    Montenegro</option>
+                                                                                                <option
+                                                                                                    value="Morocco"
+                                                                                                    data-country-code="MA">
+                                                                                                    Morocco</option>
+                                                                                                <option
+                                                                                                    value="Mozambique"
+                                                                                                    data-country-code="MZ">
+                                                                                                    Mozambique</option>
+                                                                                                <option
+                                                                                                    value="Myanmar"
+                                                                                                    data-country-code="MM">
+                                                                                                    Myanmar</option>
+                                                                                                <option
+                                                                                                    value="Namibia"
+                                                                                                    data-country-code="NA">
+                                                                                                    Namibia</option>
+                                                                                                <option value="Nauru"
+                                                                                                    data-country-code="NR">
+                                                                                                    Nauru</option>
+                                                                                                <option value="Nepal"
+                                                                                                    data-country-code="NP">
+                                                                                                    Nepal</option>
+                                                                                                <option
+                                                                                                    value="Netherlands"
+                                                                                                    data-country-code="NL">
+                                                                                                    Netherlands</option>
+                                                                                                <option
+                                                                                                    value="Netherlands Antilles"
+                                                                                                    data-country-code="AN">
+                                                                                                    Netherlands Antilles
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="New Caledonia"
+                                                                                                    data-country-code="NC">
+                                                                                                    New Caledonia
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="New Zealand"
+                                                                                                    data-country-code="NZ">
+                                                                                                    New Zealand</option>
+                                                                                                <option
+                                                                                                    value="Nicaragua"
+                                                                                                    data-country-code="NI">
+                                                                                                    Nicaragua</option>
+                                                                                                <option value="Niger"
+                                                                                                    data-country-code="NE">
+                                                                                                    Niger</option>
+                                                                                                <option
+                                                                                                    value="Nigeria"
+                                                                                                    data-country-code="NG">
+                                                                                                    Nigeria</option>
+                                                                                                <option value="Niue"
+                                                                                                    data-country-code="NU">
+                                                                                                    Niue</option>
+                                                                                                <option
+                                                                                                    value="Norfolk Island"
+                                                                                                    data-country-code="NF">
+                                                                                                    Norfolk Island
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Northern Mariana Islands"
+                                                                                                    data-country-code="MP">
+                                                                                                    Northern Mariana
+                                                                                                    Islands</option>
+                                                                                                <option value="Norway"
+                                                                                                    data-country-code="NO">
+                                                                                                    Norway</option>
+                                                                                                <option value="Oman"
+                                                                                                    data-country-code="OM">
+                                                                                                    Oman</option>
+                                                                                                <option
+                                                                                                    value="Pakistan"
+                                                                                                    data-country-code="PK">
+                                                                                                    Pakistan</option>
+                                                                                                <option value="Palau"
+                                                                                                    data-country-code="PW">
+                                                                                                    Palau</option>
+                                                                                                <option
+                                                                                                    value="Palestine, State of"
+                                                                                                    data-country-code="PS">
+                                                                                                    Palestine, State of
+                                                                                                </option>
+                                                                                                <option value="Panama"
+                                                                                                    data-country-code="PA">
+                                                                                                    Panama</option>
+                                                                                                <option
+                                                                                                    value="Papua New Guinea"
+                                                                                                    data-country-code="PG">
+                                                                                                    Papua New Guinea
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Paraguay"
+                                                                                                    data-country-code="PY">
+                                                                                                    Paraguay</option>
+                                                                                                <option value="Peru"
+                                                                                                    data-country-code="PE">
+                                                                                                    Peru</option>
+                                                                                                <option
+                                                                                                    value="Philippines"
+                                                                                                    data-country-code="PH">
+                                                                                                    Philippines</option>
+                                                                                                <option
+                                                                                                    value="Pitcairn Islands"
+                                                                                                    data-country-code="PN">
+                                                                                                    Pitcairn Islands
+                                                                                                </option>
+                                                                                                <option value="Poland"
+                                                                                                    data-country-code="PL">
+                                                                                                    Poland</option>
+                                                                                                <option
+                                                                                                    value="Portugal"
+                                                                                                    data-country-code="PT">
+                                                                                                    Portugal</option>
+                                                                                                <option
+                                                                                                    value="Puerto Rico"
+                                                                                                    data-country-code="PR">
+                                                                                                    Puerto Rico</option>
+                                                                                                <option value="Qatar"
+                                                                                                    data-country-code="QA">
+                                                                                                    Qatar</option>
+                                                                                                <option
+                                                                                                    value="Reunion Island"
+                                                                                                    data-country-code="RE">
+                                                                                                    Reunion Island
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Romania"
+                                                                                                    data-country-code="RO">
+                                                                                                    Romania</option>
+                                                                                                <option value="Russia"
+                                                                                                    data-country-code="RU">
+                                                                                                    Russia</option>
+                                                                                                <option value="Rwanda"
+                                                                                                    data-country-code="RW">
+                                                                                                    Rwanda</option>
+                                                                                                <option
+                                                                                                    value="Saint Kitts and Nevis"
+                                                                                                    data-country-code="KN">
+                                                                                                    Saint Kitts and
+                                                                                                    Nevis</option>
+                                                                                                <option
+                                                                                                    value="Saint Lucia"
+                                                                                                    data-country-code="LC">
+                                                                                                    Saint Lucia</option>
+                                                                                                <option
+                                                                                                    value="Saint Vincent and the Grenadines"
+                                                                                                    data-country-code="VC">
+                                                                                                    Saint Vincent and
+                                                                                                    the Grenadines
+                                                                                                </option>
+                                                                                                <option value="Samoa"
+                                                                                                    data-country-code="WS">
+                                                                                                    Samoa</option>
+                                                                                                <option
+                                                                                                    value="Saint Helena"
+                                                                                                    data-country-code="SH">
+                                                                                                    Saint Helena
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Saint Pierre & Miquelon"
+                                                                                                    data-country-code="PM">
+                                                                                                    Saint Pierre &
+                                                                                                    Miquelon</option>
+                                                                                                <option
+                                                                                                    value="San Marino"
+                                                                                                    data-country-code="SM">
+                                                                                                    San Marino</option>
+                                                                                                <option
+                                                                                                    value="Sao Tome and Principe"
+                                                                                                    data-country-code="ST">
+                                                                                                    Sao Tome and
+                                                                                                    Principe</option>
+                                                                                                <option
+                                                                                                    value="Saudi Arabia"
+                                                                                                    data-country-code="SA">
+                                                                                                    Saudi Arabia
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Senegal"
+                                                                                                    data-country-code="SN">
+                                                                                                    Senegal</option>
+                                                                                                <option value="Serbia"
+                                                                                                    data-country-code="RS">
+                                                                                                    Serbia</option>
+                                                                                                <option
+                                                                                                    value="Seychelles"
+                                                                                                    data-country-code="SC">
+                                                                                                    Seychelles</option>
+                                                                                                <option
+                                                                                                    value="Sierra Leone"
+                                                                                                    data-country-code="SL">
+                                                                                                    Sierra Leone
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Singapore"
+                                                                                                    data-country-code="SG">
+                                                                                                    Singapore</option>
+                                                                                                <option
+                                                                                                    value="Sint Maarten"
+                                                                                                    data-country-code="MF">
+                                                                                                    Sint Maarten
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Slovakia"
+                                                                                                    data-country-code="SK">
+                                                                                                    Slovakia</option>
+                                                                                                <option
+                                                                                                    value="Slovenia"
+                                                                                                    data-country-code="SI">
+                                                                                                    Slovenia</option>
+                                                                                                <option
+                                                                                                    value="Solomon Islands"
+                                                                                                    data-country-code="SB">
+                                                                                                    Solomon Islands
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Somalia"
+                                                                                                    data-country-code="SO">
+                                                                                                    Somalia</option>
+                                                                                                <option
+                                                                                                    value="South Africa"
+                                                                                                    data-country-code="ZA">
+                                                                                                    South Africa
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="South Georgia and South Sandwich"
+                                                                                                    data-country-code="GS">
+                                                                                                    South Georgia and
+                                                                                                    South Sandwich
+                                                                                                </option>
+                                                                                                <option value="Spain"
+                                                                                                    data-country-code="ES">
+                                                                                                    Spain</option>
+                                                                                                <option
+                                                                                                    value="Sri Lanka"
+                                                                                                    data-country-code="LK">
+                                                                                                    Sri Lanka</option>
+                                                                                                <option
+                                                                                                    value="Stateless Persons"
+                                                                                                    data-country-code="XX">
+                                                                                                    Stateless Persons
+                                                                                                </option>
+                                                                                                <option value="Sudan"
+                                                                                                    data-country-code="SD">
+                                                                                                    Sudan</option>
+                                                                                                <option
+                                                                                                    value="Sudan, South"
+                                                                                                    data-country-code="SS">
+                                                                                                    Sudan, South
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Suriname"
+                                                                                                    data-country-code="SR">
+                                                                                                    Suriname</option>
+                                                                                                <option
+                                                                                                    value="Svalbard and Jan Mayen"
+                                                                                                    data-country-code="SJ">
+                                                                                                    Svalbard and Jan
+                                                                                                    Mayen</option>
+                                                                                                <option
+                                                                                                    value="Swaziland"
+                                                                                                    data-country-code="SZ">
+                                                                                                    Swaziland</option>
+                                                                                                <option value="Sweden"
+                                                                                                    data-country-code="SE">
+                                                                                                    Sweden</option>
+                                                                                                <option
+                                                                                                    value="Switzerland"
+                                                                                                    data-country-code="CH">
+                                                                                                    Switzerland</option>
+                                                                                                <option value="Syria"
+                                                                                                    data-country-code="SY">
+                                                                                                    Syria</option>
+                                                                                                <option
+                                                                                                    value="Taiwan, Republic of China"
+                                                                                                    data-country-code="TW">
+                                                                                                    Taiwan, Republic of
+                                                                                                    China</option>
+                                                                                                <option
+                                                                                                    value="Tajikistan"
+                                                                                                    data-country-code="TJ">
+                                                                                                    Tajikistan</option>
+                                                                                                <option
+                                                                                                    value="Tanzania"
+                                                                                                    data-country-code="TZ">
+                                                                                                    Tanzania</option>
+                                                                                                <option
+                                                                                                    value="Thailand"
+                                                                                                    data-country-code="TH">
+                                                                                                    Thailand</option>
+                                                                                                <option value="Togo"
+                                                                                                    data-country-code="TG">
+                                                                                                    Togo</option>
+                                                                                                <option
+                                                                                                    value="Tokelau"
+                                                                                                    data-country-code="TK">
+                                                                                                    Tokelau</option>
+                                                                                                <option value="Tonga"
+                                                                                                    data-country-code="TO">
+                                                                                                    Tonga</option>
+                                                                                                <option
+                                                                                                    value="Trinidad and Tobago"
+                                                                                                    data-country-code="TT">
+                                                                                                    Trinidad and Tobago
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Tunisia"
+                                                                                                    data-country-code="TN">
+                                                                                                    Tunisia</option>
+                                                                                                <option value="Turkey"
+                                                                                                    data-country-code="TR">
+                                                                                                    Turkey</option>
+                                                                                                <option
+                                                                                                    value="Turkmenistan"
+                                                                                                    data-country-code="TM">
+                                                                                                    Turkmenistan
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Turks And Caicos Islands"
+                                                                                                    data-country-code="TC">
+                                                                                                    Turks And Caicos
+                                                                                                    Islands</option>
+                                                                                                <option value="Tuvalu"
+                                                                                                    data-country-code="TV">
+                                                                                                    Tuvalu</option>
+                                                                                                <option value="Uganda"
+                                                                                                    data-country-code="UG">
+                                                                                                    Uganda</option>
+                                                                                                <option
+                                                                                                    value="Ukraine"
+                                                                                                    data-country-code="UA">
+                                                                                                    Ukraine</option>
+                                                                                                <option
+                                                                                                    value="United Arab Emirates"
+                                                                                                    data-country-code="AE">
+                                                                                                    United Arab Emirates
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="United Kingdom"
+                                                                                                    data-country-code="GB">
+                                                                                                    United Kingdom
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="US Minor Outlying Islands"
+                                                                                                    data-country-code="UM">
+                                                                                                    US Minor Outlying
+                                                                                                    Islands</option>
+                                                                                                <option
+                                                                                                    value="United States of America (USA)"
+                                                                                                    data-country-code="US">
+                                                                                                    United States of
+                                                                                                    America (USA)
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Uruguay"
+                                                                                                    data-country-code="UY">
+                                                                                                    Uruguay</option>
+                                                                                                <option
+                                                                                                    value="Uzbekistan"
+                                                                                                    data-country-code="UZ">
+                                                                                                    Uzbekistan</option>
+                                                                                                <option
+                                                                                                    value="Vanuatu"
+                                                                                                    data-country-code="VU">
+                                                                                                    Vanuatu</option>
+                                                                                                <option
+                                                                                                    value="Vatican City"
+                                                                                                    data-country-code="VA">
+                                                                                                    Vatican City
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Venezuela"
+                                                                                                    data-country-code="VE">
+                                                                                                    Venezuela</option>
+                                                                                                <option
+                                                                                                    value="Vietnam"
+                                                                                                    data-country-code="VN">
+                                                                                                    Vietnam</option>
+                                                                                                <option
+                                                                                                    value="Virgin Islands, British"
+                                                                                                    data-country-code="VG">
+                                                                                                    Virgin Islands,
+                                                                                                    British</option>
+                                                                                                <option
+                                                                                                    value="Virgin Islands, U.S."
+                                                                                                    data-country-code="VI">
+                                                                                                    Virgin Islands, U.S.
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Wallis And Futuna Islands"
+                                                                                                    data-country-code="WF">
+                                                                                                    Wallis And Futuna
+                                                                                                    Islands</option>
+                                                                                                <option
+                                                                                                    value="Western Sahara"
+                                                                                                    data-country-code="EH">
+                                                                                                    Western Sahara
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Yemen Arab Rep."
+                                                                                                    data-country-code="YE">
+                                                                                                    Yemen Arab Rep.
+                                                                                                </option>
+                                                                                                <option
+                                                                                                    value="Yemen Democratic"
+                                                                                                    data-country-code="YD">
+                                                                                                    Yemen Democratic
+                                                                                                </option>
+                                                                                                <option value="Zambia"
+                                                                                                    data-country-code="ZM">
+                                                                                                    Zambia</option>
+                                                                                                <option
+                                                                                                    value="Zimbabwe"
+                                                                                                    data-country-code="ZW">
+                                                                                                    Zimbabwe</option>
+                                                                                            </select></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="select-4"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-form-307__field--select-4_644a1de457452-label"
+                                                                                        class="forminator-label">Are
+                                                                                        you Working? <span
+                                                                                            class="forminator-required">*</span></label><select
+                                                                                        id="forminator-form-307__field--select-4_644a1de457452"
+                                                                                        class="forminator-select--field forminator-select2"
+                                                                                        data-required="1"
+                                                                                        name="select-4"
+                                                                                        data-default-value=""
+                                                                                        data-placeholder="Select"
+                                                                                        data-search="false"
+                                                                                        aria-describedby="forminator-form-307__field--select-4_644a1de457452-description">
+                                                                                        <option value="">Select
+                                                                                        </option>
+                                                                                        <option value="one"
+                                                                                            data-calculation="0">YES
+                                                                                        </option>
+                                                                                        <option value="two"
+                                                                                            data-calculation="0">NO
+                                                                                        </option>
+                                                                                    </select></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row">
+                                                                            <div id="text-8"
+                                                                                class="forminator-col forminator-col-12 ">
+                                                                                <div class="forminator-field"><label
+                                                                                        for="forminator-field-text-8_644a1de457452"
+                                                                                        class="forminator-label">Current
+                                                                                        working location In India or
+                                                                                        abroad?</label><input
+                                                                                        type="text"
+                                                                                        name="text-8"
+                                                                                        value=""
+                                                                                        placeholder="E.g. Mumbai, India"
+                                                                                        id="forminator-field-text-8_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-required="" /></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="forminator-row forminator-hidden">
+                                                                            <input type="hidden"
+                                                                                id="hidden-1_644a1de457452"
+                                                                                name="hidden-1"
+                                                                                value="submission_id" /></div><input
+                                                                            type="hidden" name="referer_url"
+                                                                            value="" />
+                                                                        <div
+                                                                            class="forminator-row forminator-row-last">
+                                                                            <div class="forminator-col">
+                                                                                <div class="forminator-field"><button
+                                                                                        class="forminator-button forminator-button-submit">Register</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div><input type="hidden"
+                                                                            id="forminator_nonce"
+                                                                            name="forminator_nonce"
+                                                                            value="2988ceb1ba" /><input
+                                                                            type="hidden" name="_wp_http_referer"
+                                                                            value="/registration/" /><input
+                                                                            type="hidden" name="form_id"
+                                                                            value="307"><input type="hidden"
+                                                                            name="page_id" value="305"><input
+                                                                            type="hidden" name="form_type"
+                                                                            value="registration"><input
+                                                                            type="hidden" name="current_url"
+                                                                            value="http://lanternabroad.com/registration/"><input
+                                                                            type="hidden" name="render_id"
+                                                                            value="0"><input type="hidden"
+                                                                            name="action"
+                                                                            value="forminator_submit_form_custom-forms">
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <h3 class="cspt-hide">Registration</h3>
+                                </div><!-- .entry-content -->
+                            </article><!-- #post-## -->
+                        </main><!-- #main -->
+                    </div><!-- #primary -->
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
+                </div><!-- .site-content-wrap -->
+                <footer id="colophon"
+                    class="site-footer cspt-footer-style-1 cspt-color-blackish cspt-bg-color-light cspt-footer-menu-yes cspt-footer-widget-yes">
+                    <div class="cspt-footer-big-area-wrapper cspt-bg-color-gradientcolor">
+                        <div class="footer-wrap cspt-footer-big-area">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="cspt-footer-big-left">
+                                        <h3 class="cspt-footer-big-title">Call Our Adviser for Immigration Advice</h3>
+                                    </div>
+                                    <div class="cspt-footer-big-right">
+                                        <div class="vc_btn3-container vc_btn3-right"><button
+                                                class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-outline vc_btn3-color-white"><span>Call
+                                                    Now</span></button></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+                    <div class="footer-wrap cspt-footer-widget-area  cspt-bg-color-transparent">
+                        <div class="container">
+                            <div class="row">
+                                <div class="cspt-footer-widget cspt-footer-widget-col-1 col-md-6 col-lg-3">
+                                    <aside id="text-3"
+                                        class="widget widget_text emphires_widget  emphires_widget_count_1">
+                                        <div class="textwidget">
+                                            <p><img decoding="async" loading="lazy"
+                                                    class="alignnone size-medium wp-image-9"
+                                                    src="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png"
+                                                    alt="" width="300" height="117"
+                                                    srcset="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png 300w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-1024x400.png 1024w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-768x300.png 768w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-770x301.png 770w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2.png 1417w"
+                                                    sizes="(max-width: 300px) 100vw, 300px" /></p>
+                                            <p>Lantern Abroad limited is a New Zealand registered company providing
+                                                guidance and support for the qualified and eligible nurses from other
+                                                countries to become registered nurses in New Zealand.</p>
+                                        </div>
+                                    </aside>
+                                    <aside id="emphires_contact_widget-1"
+                                        class="widget emphires_contact_widget emphires_widget  emphires_widget_count_2">
+                                        <h2 class="widget-title">ADDRESS</h2>
+                                        <div class="cspt-contact-widget-lines">
+                                            <div class="cspt-contact-widget-line cspt-contact-widget-address">North
+                                                Island<br />
+                                                New Zealand,</div>
+                                            <div class="cspt-contact-widget-line cspt-contact-widget-phone"><span>Talk
+                                                    To Our Support </span> +64 21 107 8682</div>
+                                        </div>
+                                    </aside>
+                                </div><!-- .cspt-footer-widget -->
+                                <div class="cspt-footer-widget cspt-footer-widget-col-2 col-md-6 col-lg-3">
+                                    <aside id="nav_menu-1"
+                                        class="widget widget_nav_menu emphires_widget  emphires_widget_count_3">
+                                        <h2 class="widget-title">Menu</h2>
+                                        <div class="menu-menu-container">
+                                            <ul id="menu-menu" class="menu">
+                                                <li id="menu-item-201"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-201">
+                                                    <a href="#">Home</a> </li>
+                                                <li id="menu-item-195"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-195">
+                                                    <a href="#">About Us</a> </li>
+                                                <li id="menu-item-196"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-196">
+                                                    <a href="#">Services</a> </li>
+                                                <li id="menu-item-197"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-197">
+                                                    <a href="#">Blogs</a> </li>
+                                                <li id="menu-item-198"
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-198">
+                                                    <a href="#">Contact</a> </li>
+                                            </ul>
+                                        </div>
+                                    </aside>
+                                </div><!-- .cspt-footer-widget -->
+                                <div class="cspt-footer-widget cspt-footer-widget-col-3 col-md-6 col-lg-3">
+                                    <aside id="emphires_recent_posts_widget-2"
+                                        class="widget emphires_recent_posts_widget emphires_widget  emphires_widget_count_4">
+                                        <h2 class="widget-title">Latest News</h2>
+                                    </aside>
+                                </div><!-- .cspt-footer-widget -->
+                                <div class="cspt-footer-widget cspt-footer-widget-col-4 col-md-6 col-lg-3">
+                                    <aside id="text-4"
+                                        class="widget widget_text emphires_widget  emphires_widget_count_5">
+                                        <h2 class="widget-title">ADDRESS</h2>
+                                        <div class="textwidget">
+                                            <p><strong>Lantern Abroad</strong><br />
+                                                Mookkkannnoor (near Angamaly)<br />
+                                                Ernakulam<br />
+                                                Kerala</p>
+                                            <p>&nbsp;</p>
+                                        </div>
+                                    </aside>
+                                    <aside id="text-5"
+                                        class="widget widget_text emphires_widget  emphires_widget_count_6">
+                                        <h2 class="widget-title">Follow Us On</h2>
+                                        <div class="textwidget">
+                                            <ul class="cspt-social-links">
+                                                <li class="cspt-social-li cspt-social-facebook "><a href="#"
+                                                        target="_blank" rel="noopener"><span><i
+                                                                class="cspt-base-icon-facebook-squared"></i></span></a>
+                                                </li>
+                                                <li class="cspt-social-li cspt-social-twitter "><a href="#"
+                                                        target="_blank" rel="noopener"><span><i
+                                                                class="cspt-base-icon-twitter"></i></span></a></li>
+                                                <li class="cspt-social-li cspt-social-linkedin "><a href="#"
+                                                        target="_blank" rel="noopener"><span><i
+                                                                class="cspt-base-icon-linkedin-squared"></i></span></a>
+                                                </li>
+                                                <li class="cspt-social-li cspt-social-instagram "><a href="#"
+                                                        target="_blank" rel="noopener"><span><i
+                                                                class="cspt-base-icon-instagram"></i></span></a></li>
+                                            </ul>
+                                        </div>
+                                    </aside>
+                                </div><!-- .cspt-footer-widget -->
+                            </div><!-- .row -->
                         </div>
                     </div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    <div class="cspt-footer-text-area  cspt-bg-color-transparent">
+                        <div class="container">
+                            <div class="cspt-footer-text-inner">
+                                <div class="row">
+
+                                    <div class="cspt-footer-copyright col-md-6">
+
+
+                                        <div class="cspt-footer-copyright-text-area">
+                                            Copyright © 2023 <a href="http://mitzonesoft.com/">Mitzonesoft</a> All
+                                            Rights Reserved. </div>
+                                    </div>
+                                    <div class="cspt-footer-menu-area col-md-6">
+                                        <div class="menu-footer-menu-container">
+                                            <ul class="cspt-footer-menu">
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-192">
+                                                    <a href="#">Privacy &#038; Policy</a> </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-193">
+                                                    <a href="#">Conditions</a> </li>
+                                                <li
+                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-194">
+                                                    <a href="#">Refund Policy</a> </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <a href="#" class="scroll-to-top"><i
+                                        class="cspt-base-icon-arrow-right"></i><span class="cspt-hide">Back to
+                                        top</span></a>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-            </div>
-        </div>
-    </body>
+                </footer><!-- #colophon -->
+            </div><!-- .site-content-contain -->
+        </div><!-- #page -->
+    </div>
+
+    <script>
+        window.RS_MODULES = window.RS_MODULES || {};
+        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+        window.RS_MODULES.defered = true;
+        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+        window.RS_MODULES.type = 'compiled';
+    </script>
+    <link rel='stylesheet' id='forminator-module-css-307-css'
+        href='http://lanternabroad.com/wp-content/uploads/forminator/307_751395d2be2771853ebc78457f1a3c97/css/style-307.css?ver=1681882201'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='forminator-icons-css'
+        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/forminator-icons.min.css?ver=1.23.3'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='forminator-utilities-css'
+        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/forminator-utilities.min.css?ver=1.23.3'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='forminator-grid-default-css'
+        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/grid/forminator-grid.open.min.css?ver=1.23.3'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='forminator-forms-flat-base-css'
+        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-flat.base.min.css?ver=1.23.3'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='forminator-forms-flat-select2-css'
+        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-flat.select2.min.css?ver=1.23.3'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='forminator-forms-flat-full-css'
+        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-flat.full.min.css?ver=1.23.3'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='intlTelInput-forminator-css-css'
+        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/css/intlTelInput.min.css?ver=4.0.3'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='buttons-css'
+        href='http://lanternabroad.com/wp-includes/css/buttons.min.css?ver=6.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='e-animations-css'
+        href='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.12.1'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'
+        href='http://lanternabroad.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.10'
+        type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css'>
+        #rs-demo-id {}
+    </style>
+    <script src='http://lanternabroad.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.5.1'
+        id='swv-js'></script>
+    <script id='contact-form-7-js-extra'>
+        /* <![CDATA[ */
+        var wpcf7 = {
+            "api": {
+                "root": "http:\/\/lanternabroad.com\/wp-json\/",
+                "namespace": "contact-form-7\/v1"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script src='http://lanternabroad.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.5.1'
+        id='contact-form-7-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.10' defer
+        async id='tp-tools-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.10' defer async
+        id='revmin-js'></script>
+    <script
+        src='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/js/select2.full.min.js?ver=1.23.3'
+        id='forminator-select2-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/forminator/assets/js/library/jquery.validate.min.js?ver=1.23.3'
+        id='forminator-jquery-validate-js'></script>
+    <script
+        src='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/js/forminator-form.min.js?ver=1.23.3'
+        id='forminator-form-js'></script>
+    <script id='forminator-front-scripts-js-extra'>
+        /* <![CDATA[ */
+        var ForminatorFront = {
+            "ajaxUrl": "http:\/\/lanternabroad.com\/wp-admin\/admin-ajax.php",
+            "cform": {
+                "processing": "Submitting form, please wait",
+                "error": "An error occurred while processing the form. Please try again",
+                "upload_error": "An upload error occurred while processing the form. Please try again",
+                "pagination_prev": "Previous",
+                "pagination_next": "Next",
+                "pagination_go": "Submit",
+                "gateway": {
+                    "processing": "Processing payment, please wait",
+                    "paid": "Success! Payment confirmed. Submitting form, please wait",
+                    "error": "Error! Something went wrong when verifying the payment"
+                },
+                "captcha_error": "Invalid CAPTCHA",
+                "no_file_chosen": "No file chosen",
+                "intlTelInput_utils_script": "http:\/\/lanternabroad.com\/wp-content\/plugins\/forminator\/assets\/js\/library\/intlTelInputUtils.js",
+                "process_error": "Please try again"
+            },
+            "poll": {
+                "processing": "Submitting vote, please wait",
+                "error": "An error occurred saving the vote. Please try again"
+            },
+            "quiz": {
+                "view_results": "View Results"
+            },
+            "select2": {
+                "load_more": "Loading more results\u2026",
+                "no_result_found": "No results found",
+                "searching": "Searching\u2026",
+                "loaded_error": "The results could not be loaded."
+            }
+        };
+        var datepickerLang = {
+            "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December"
+            ],
+            "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+            "dateFormat": "MM d, yy",
+            "firstDay": "1",
+            "isRTL": ""
+        };
+        /* ]]> */
+    </script>
+    <script src='http://lanternabroad.com/wp-content/plugins/forminator/build/front/front.multi.min.js?ver=1.23.3'
+        id='forminator-front-scripts-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/forminator/assets/js/library/intlTelInput.min.js?ver=1.23.3'
+        id='forminator-intlTelInput-js'></script>
+    <script src='http://lanternabroad.com/wp-includes/js/dist/vendor/moment.min.js?ver=2.29.4' id='moment-js'></script>
+    <script id='moment-js-after'>
+        moment.updateLocale('en_US', {
+            "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+                "October", "November", "December"
+            ],
+            "monthsShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "weekdays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "weekdaysShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "week": {
+                "dow": 1
+            },
+            "longDateFormat": {
+                "LT": "g:i a",
+                "LTS": null,
+                "L": null,
+                "LL": "F j, Y",
+                "LLL": "F j, Y g:i a",
+                "LLLL": null
+            }
+        });
+    </script>
+    <script src='http://lanternabroad.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js'></script>
+    <script src='http://lanternabroad.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2'
+        id='jquery-ui-datepicker-js'></script>
+    <script id='jquery-ui-datepicker-js-after'>
+        jQuery(function(jQuery) {
+            jQuery.datepicker.setDefaults({
+                "closeText": "Close",
+                "currentText": "Today",
+                "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August",
+                    "September", "October", "November", "December"
+                ],
+                "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct",
+                    "Nov", "Dec"
+                ],
+                "nextText": "Next",
+                "prevText": "Previous",
+                "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+                "dateFormat": "MM d, yy",
+                "firstDay": 1,
+                "isRTL": false
+            });
+        });
+    </script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.12.1'
+        id='elementor-webpack-runtime-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.12.1'
+        id='elementor-frontend-modules-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
+        id='elementor-waypoints-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'
+        id='swiper-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.12.1'
+        id='share-link-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0'
+        id='elementor-dialog-js'></script>
+    <script id='elementor-frontend-js-before'>
+        var elementorFrontendConfig = {
+            "environmentMode": {
+                "edit": false,
+                "wpPreview": false,
+                "isScriptDebug": false
+            },
+            "i18n": {
+                "shareOnFacebook": "Share on Facebook",
+                "shareOnTwitter": "Share on Twitter",
+                "pinIt": "Pin it",
+                "download": "Download",
+                "downloadImage": "Download image",
+                "fullscreen": "Fullscreen",
+                "zoom": "Zoom",
+                "share": "Share",
+                "playVideo": "Play Video",
+                "previous": "Previous",
+                "next": "Next",
+                "close": "Close"
+            },
+            "is_rtl": false,
+            "breakpoints": {
+                "xs": 0,
+                "sm": 480,
+                "md": 768,
+                "lg": 1025,
+                "xl": 1440,
+                "xxl": 1600
+            },
+            "responsive": {
+                "breakpoints": {
+                    "mobile": {
+                        "label": "Mobile Portrait",
+                        "value": 767,
+                        "default_value": 767,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "mobile_extra": {
+                        "label": "Mobile Landscape",
+                        "value": 880,
+                        "default_value": 880,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "tablet": {
+                        "label": "Tablet Portrait",
+                        "value": 1024,
+                        "default_value": 1024,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "tablet_extra": {
+                        "label": "Tablet Landscape",
+                        "value": 1200,
+                        "default_value": 1200,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "laptop": {
+                        "label": "Laptop",
+                        "value": 1366,
+                        "default_value": 1366,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "widescreen": {
+                        "label": "Widescreen",
+                        "value": 2400,
+                        "default_value": 2400,
+                        "direction": "min",
+                        "is_enabled": false
+                    }
+                }
+            },
+            "version": "3.12.1",
+            "is_static": false,
+            "experimentalFeatures": {
+                "e_dom_optimization": true,
+                "additional_custom_breakpoints": true,
+                "landing-pages": true
+            },
+            "urls": {
+                "assets": "http:\/\/lanternabroad.com\/wp-content\/plugins\/elementor\/assets\/"
+            },
+            "swiperClass": "swiper-container",
+            "settings": {
+                "page": [],
+                "editorPreferences": []
+            },
+            "kit": {
+                "active_breakpoints": ["viewport_mobile", "viewport_tablet"],
+                "global_image_lightbox": "yes",
+                "lightbox_enable_counter": "yes",
+                "lightbox_enable_fullscreen": "yes",
+                "lightbox_enable_zoom": "yes",
+                "lightbox_enable_share": "yes",
+                "lightbox_title_src": "title",
+                "lightbox_description_src": "description"
+            },
+            "post": {
+                "id": 305,
+                "title": "Registration%20%E2%80%93%20Lantern%20Abroad",
+                "excerpt": "",
+                "featuredImage": false
+            }
+        };
+    </script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.12.1'
+        id='elementor-frontend-js'></script>
+    <script src='http://lanternabroad.com/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.12.1'
+        id='preloaded-modules-js'></script>
+    <script src='http://lanternabroad.com/wp-includes/js/underscore.min.js?ver=1.13.4' id='underscore-js'></script>
+    <script id='wp-util-js-extra'>
+        /* <![CDATA[ */
+        var _wpUtilSettings = {
+            "ajax": {
+                "url": "\/wp-admin\/admin-ajax.php"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script src='http://lanternabroad.com/wp-includes/js/wp-util.min.js?ver=6.2' id='wp-util-js'></script>
+    <script id='wpforms-elementor-js-extra'>
+        /* <![CDATA[ */
+        var wpformsElementorVars = {
+            "captcha_provider": "recaptcha",
+            "recaptcha_type": "v2"
+        };
+        /* ]]> */
+    </script>
+    <script
+        src='http://lanternabroad.com/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.8.1.2'
+        id='wpforms-elementor-js'></script>
+    <script>
+        jQuery(function() {
+            jQuery.ajax({
+                url: 'http://lanternabroad.com/wp-admin/admin-ajax.php',
+                type: "POST",
+                data: {
+                    action: "forminator_get_nonce",
+                },
+                success: function(response) {
+                    jQuery('#forminator-module-307 #forminator_nonce').val(response.data);
+                }
+            });
+        })
+    </script>
+    <script>
+        jQuery(function() {
+            window.Forminator_Cform_Paginations = window.Forminator_Cform_Paginations || [];
+            window.Forminator_Cform_Paginations[307] = {
+                "has-pagination": false,
+                "pagination-header-design": "show",
+                "pagination-header": "nav",
+                "last-steps": "Finish",
+                "last-previous": "Previous",
+                "pagination-labels": "default",
+                "has-paypal": false
+            };
+
+            var runForminatorFront = function() {
+                jQuery('#forminator-module-307[data-forminator-render="0"]')
+                    .forminatorFront({
+                        "form_type": "custom-form",
+                        "inline_validation": true,
+                        "print_value": false,
+                        "rules": "\"name-1\": \"required\",\"name-1\": \"trim\",\"text-1\": {\"required\": true,},\"text-2\": {\"required\": true,},\"text-3\": {\"required\": true,},\"text-4\": {\"required\": true,},\"select-1\": \"required\",\"date-1\": {\n\"required\": true,\"dateformat\": \"dd-mm-yy\",},\n\"select-2\": \"required\",\"text-6\": {\"required\": true,},\"select-3\": \"required\",\"email-1\": {\n\"required\": true,\"emailWP\": true,},\n\"phone-1\": {\"required\": true,\"trim\": true,\"forminatorPhoneInternational\": true,},\"address-1-street_address\": \"trim\",\"address-1-street_address\": \"required\",\"select-4\": \"required\",",
+                        "messages": "\"name-1\": \"Name is required.\",\n\"text-1\": {\"required\": \"This field is required. Please enter text.\",\n},\"text-2\": {\"required\": \"This field is required. Please enter text.\",\n},\"text-3\": {\"required\": \"This field is required. Please enter text.\",\n},\"text-4\": {\"required\": \"This field is required. Please enter text.\",\n},\"select-1\": \"This field is required. Please select a value.\",\n\"date-1\": {\n\"required\": \"This field is required.\",\n\"dateformat\": \"Not valid date\",\n},\n\"select-2\": \"This field is required. Please select a value.\",\n\"text-6\": {\"required\": \"This field is required. Please enter text.\",\n},\"select-3\": \"This field is required. Please select a value.\",\n\"email-1\": {\n\"required\": \"This field is required. Please enter email.\",\n\"emailWP\": \"This is not a valid email.\",\n\"email\": \"This is not a valid email.\",\n},\n\"phone-1\": {\n\"required\": \"This field is required. Please input a phone number.\",\n\"trim\": \"This field is required. Please input a phone number.\",\n\"forminatorPhoneInternational\": \"Please input a valid international phone number.\",\n\"phone\": \"Please input a valid international phone number.\",\n},\n\"address-1-street_address\": \"This field is required. Please enter the street address.\",\n\"select-4\": \"This field is required. Please select a value.\",\n",
+                        "conditions": {
+                            "fields": [],
+                            "relations": {
+                                "name-1": [],
+                                "text-1": [],
+                                "text-2": [],
+                                "text-3": [],
+                                "text-4": [],
+                                "text-5": [],
+                                "select-1": [],
+                                "date-1": [],
+                                "select-2": [],
+                                "text-6": [],
+                                "select-3": [],
+                                "text-7": [],
+                                "textarea-1": [],
+                                "email-1": [],
+                                "phone-1": [],
+                                "address-1": [],
+                                "select-4": [],
+                                "text-8": [],
+                                "hidden-1": [],
+                                "submit": []
+                            }
+                        },
+                        "calendar": "{\"days\":[\"Su\",\"Mo\",\"Tu\",\"We\",\"Th\",\"Fr\",\"Sa\"],\"months\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"]}",
+                        "paypal_config": {
+                            "live_id": "",
+                            "sandbox_id": "",
+                            "redirect_url": "http:\/\/lanternabroad.com\/registration",
+                            "form_id": 307
+                        },
+                        "forminator_fields": ["address", "calculation", "captcha", "consent", "currency",
+                            "custom", "date", "email", "gdprcheckbox", "group", "hidden", "html",
+                            "checkbox", "name", "number", "page-break", "password", "paypal", "phone",
+                            "postdata", "radio", "section", "select", "stripe", "text", "textarea",
+                            "time", "upload", "url"
+                        ],
+                        "general_messages": {
+                            "calculation_error": "Failed to calculate field.",
+                            "payment_require_ssl_error": "SSL required to submit this form, please check your URL.",
+                            "payment_require_amount_error": "PayPal amount must be greater than 0.",
+                            "form_has_error": "Please correct the errors before submission."
+                        },
+                        "payment_require_ssl": false,
+                        "has_loader": true,
+                        "loader_label": "Submitting...",
+                        "calcs_memoize_time": 300,
+                        "is_reset_enabled": true,
+                        "has_stripe": false,
+                        "has_paypal": false,
+                        "submit_button_class": ""
+                    });
+            }
+
+            if (window.elementorFrontend) {
+                if (typeof elementorFrontend.hooks !== "undefined") {
+                    elementorFrontend.hooks.addAction('frontend/element_ready/global', function() {
+                        runForminatorFront();
+                    });
+                }
+            } else {
+                runForminatorFront();
+            }
+
+            if (typeof ForminatorValidationErrors !== 'undefined') {
+                var forminatorFrontSubmit = jQuery(ForminatorValidationErrors.selector).data(
+                    'forminatorFrontSubmit');
+                if (typeof forminatorFrontSubmit !== 'undefined') {
+                    forminatorFrontSubmit.show_messages(ForminatorValidationErrors.errors);
+                }
+            }
+            if (typeof ForminatorFormHider !== 'undefined') {
+                var forminatorFront = jQuery(ForminatorFormHider.selector).data('forminatorFront');
+                if (typeof forminatorFront !== 'undefined') {
+                    jQuery(forminatorFront.forminator_selector).find('.forminator-row').hide();
+                    jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-steps').hide();
+                    jQuery(forminatorFront.forminator_selector).find('.forminator-pagination-footer').hide();
+                }
+            }
+            if (typeof ForminatorFormNewTabRedirect !== 'undefined') {
+                var forminatorFront = ForminatorFormNewTabRedirect.url;
+                if (typeof forminatorFront !== 'undefined') {
+                    window.open(ForminatorFormNewTabRedirect.url, '_blank');
+                }
+            }
+        });
+    </script>
+</body>
+
 </html>
