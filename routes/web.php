@@ -48,7 +48,7 @@ Route::prefix('/login')->namespace('App\Http\Controllers')->group(function () {
     Route::get('/', 'LoginController@login')->name('login');
     Route::post('/', 'LoginController@login_submit')->name('login.submit');
 });
-Route::namespace ('App\Http\Controllers')->middleware('admin')->group(function () {
+Route::namespace('App\Http\Controllers')->middleware('admin')->group(function () {
     Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
     Route::get('/change-password', 'LoginController@change_password_view')->name('change_password_view');
     Route::post('/change-password', 'LoginController@update_password')->name('update_password');
@@ -57,6 +57,9 @@ Route::namespace ('App\Http\Controllers')->middleware('admin')->group(function (
     Route::get('candidate-list-approved', 'CandidateController@approved')->name('candidate.list.approved');
     Route::get('candidate-list-pending', 'CandidateController@pending')->name('candidate.list.pending');
     Route::get('candidate-list-rejected', 'CandidateController@rejected')->name('candidate.list.rejected');
+
+    Route::get('candidate-status/approve/{id}', 'CandidateController@approve_candidate')->name('candidate.status.approve');
+    Route::get('candidate-status/reject/{id}', 'CandidateController@reject_candidate')->name('candidate.status.reject');
 
     Route::post('candidate/all-data', 'CandidateController@GetAllCandidateAjax')->name('candidate.alldata');
     Route::post('candidate/pending', 'CandidateController@GetPendingCandidateAjax')->name('candidate.pending');

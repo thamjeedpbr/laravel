@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Candidate;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class CandidateController extends Controller
 {
@@ -130,11 +133,17 @@ class CandidateController extends Controller
                         <i class="fa fa-eye" aria-hidden="true"></i>
                     </button>
                     </a>
-                    <a href="' . route('candidate.delete', $candidate->id) . '">
-                    <button class="btn btn-danger btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
-                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    <a href="' . route('candidate.status.approve', $candidate->id) . '">
+                    <button class="btn btn-success btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-check" aria-hidden="true"></i>
                     </button>
-                    </a>';
+                    </a>
+                    <a href="' . route('candidate.status.reject', $candidate->id) . '">
+                    <button class="btn btn-danger btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </button>
+                    </a>
+                    ';
 
                     return $data;
                 })
@@ -369,6 +378,9 @@ class CandidateController extends Controller
     {
         $candidate = Candidate::find($id);
         if ($candidate) {
+            if ($candidate->status = 1) {
+                User::where('candidate_id', $id)->delete();
+            }
             $candidate->delete();
             return redirect()->back()->with('success', 'candidate successfully Removed.');
         } else {
@@ -385,6 +397,59 @@ class CandidateController extends Controller
         }
         return "false";
 
+    }
+    public function approve_candidate($id)
+    {
+        $candidate = Candidate::find($id);
+        if ($candidate) {
+            $user = User::where('candidate_id', $id)->exists();
+            if ($user) {
+                return redirect()->back()->with('error', 'Candidate Already  Approved');
+            }
+            $user1 = User::where('email', $candidate->email)->exists();
+            if ($user1) {
+                return redirect()->back()->with('error', 'Candidate Email is Already Used');
+            }
+            DB::beginTransaction();
+            $password = "password";
+            // $password = random_int(100000, 999999);
+            $user = new User();
+            $user->name = $candidate->fullname;
+            $user->candidate_id = $id;
+            $user->email = $candidate->email;
+            $user->phone = $candidate->phone;
+            $user->password = Hash::make($password);
+            $user->type = "candidate";
+            if (!$user->save()) {
+                DB::rollback();
+                return redirect()->back()->with('error', 'Try again');
+            }
+            $candidate->user_id = $user->id;
+            $candidate->status = 1;
+            if ($candidate->save()) {
+                // $email = new WelcomeMail($user, $password);
+                // $status = Mail::to($user->email)->send($email);
+                DB::commit();
+                return redirect()->back()->with('success', 'candidate successfully Approved');
+            } else {
+                DB::rollback();
+                return redirect()->back()->with('error', 'Try again');
+            }
+        } else {
+            return redirect()->back()->with('error', 'candidate not found');
+        }
+
+    }
+    public function reject_candidate($id)
+    {
+        $candidate = Candidate::find($id);
+        if ($candidate) {
+            $candidate->status = 2;
+            $candidate->save();
+            return redirect()->back()->with('success', 'candidate successfully Rejected.');
+        } else {
+            return redirect()->back()->with('error', 'candidate not found');
+        }
     }
 
 }

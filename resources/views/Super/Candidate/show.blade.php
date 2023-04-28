@@ -33,27 +33,60 @@
                                             <h6 class="text-muted mb-3">username: {{ $candidate->username }}</h6>
                                             <h6 class="text-muted mb-3">qualification: {{ $candidate->qualification }}</h6>
                                             <h6 class="text-muted mb-3">experience: {{ $candidate->experience }}</h6>
-                                            <h6 class="text-muted mb-3">OET_or_IELTS_Score: {{ $candidate->OET_or_IELTS_Score }}</h6>
+                                            <h6 class="text-muted mb-3">OET_or_IELTS_Score:
+                                                {{ $candidate->OET_or_IELTS_Score }}</h6>
                                             <h6 class="text-muted mb-3">CGFNS_status: {{ $candidate->CGFNS_status }}</h6>
-                                            <h6 class="text-muted mb-3">New_Zealand_nursing_council: {{ $candidate->New_Zealand_nursing_council }}</h6>
-                                            <h6 class="text-muted mb-3">preferred_Campus: {{ $candidate->preferred_Campus }}</h6>
-                                            <h6 class="text-muted mb-3">Preferred_intake: {{ $candidate->Preferred_intake }}</h6>
-                                            <h6 class="text-muted mb-3">refereal_method: {{ $candidate->refereal_method }}</h6>
-                                            <h6 class="text-muted mb-3">Friends_Family_NZ_status: {{ $candidate->Friends_Family_NZ_status }}</h6>
-                                            <h6 class="text-muted mb-3">Friends_Family_NZ: {{ $candidate->Friends_Family_NZ }}</h6>
+                                            <h6 class="text-muted mb-3">New_Zealand_nursing_council:
+                                                {{ $candidate->New_Zealand_nursing_council }}</h6>
+                                            <h6 class="text-muted mb-3">preferred_Campus:
+                                                {{ $candidate->preferred_Campus }}</h6>
+                                            <h6 class="text-muted mb-3">Preferred_intake:
+                                                {{ $candidate->Preferred_intake }}</h6>
+                                            <h6 class="text-muted mb-3">refereal_method: {{ $candidate->refereal_method }}
+                                            </h6>
+                                            <h6 class="text-muted mb-3">Friends_Family_NZ_status:
+                                                {{ $candidate->Friends_Family_NZ_status }}</h6>
+                                            <h6 class="text-muted mb-3">Friends_Family_NZ:
+                                                {{ $candidate->Friends_Family_NZ }}</h6>
                                             <h6 class="text-muted mb-3">email: {{ $candidate->email }}</h6>
                                             <h6 class="text-muted mb-3">phone: {{ $candidate->phone }}</h6>
-                                            <h6 class="text-muted mb-3">street_address: {{ $candidate->street_address }}</h6>
+                                            <h6 class="text-muted mb-3">street_address: {{ $candidate->street_address }}
+                                            </h6>
                                             <h6 class="text-muted mb-3">address_line: {{ $candidate->address_line }}</h6>
                                             <h6 class="text-muted mb-3">address_city: {{ $candidate->address_city }}</h6>
                                             <h6 class="text-muted mb-3">address_state: {{ $candidate->address_state }}</h6>
-                                            <h6 class="text-muted mb-3">address_country: {{ $candidate->address_country }}</h6>
+                                            <h6 class="text-muted mb-3">address_country: {{ $candidate->address_country }}
+                                            </h6>
                                             <h6 class="text-muted mb-3">address_zip: {{ $candidate->address_zip }}</h6>
                                             <h6 class="text-muted mb-3">working: {{ $candidate->working }}</h6>
-                                            <h6 class="text-muted mb-3">working_address_india: {{ $candidate->working_address_india }}</h6>
+                                            <h6 class="text-muted mb-3">working_address_india:
+                                                {{ $candidate->working_address_india }}</h6>
                                             <h6 class="text-muted mb-3">Cover_letter: {{ $candidate->Cover_letter }}</h6>
                                         </div>
                                     </div>
+                                    @if ($candidate->status == 0)
+                                        <div class="wideget-user-desc d-flex">
+                                            <a href="' . route('candidate.status.approve', $candidate->id) . '">
+                                                <button class="btn btn-success btn-gray-medium"
+                                                    onclick="return confirm(`Are you sure?`)"
+                                                    style="text-decoration:none; display: inline-block; width: 30px;">
+                                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                            <a href="' . route('candidate.status.reject', $candidate->id) . '">
+                                                <button class="btn btn-warning btn-gray-medium"
+                                                    onclick="return confirm(`Are you sure?`)"
+                                                    style="text-decoration:none; display: inline-block; width: 30px;">
+                                                    <i class="fa fa-close" aria-hidden="true"></i>
+                                                </button>
+                                            </a>
+                                            <a href="' . route('candidate.delete', $candidate->id) . '">
+                                                <button class="btn btn-danger btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </button>
+                                                </a>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -61,21 +94,21 @@
                 </div>
 
                 @if ($candidate->status == 1)
-                <div class="card">
-                    <div class="card-body">
-                        <div class="border-0">
-                            <div class="tab-content">
-                                <div class="tab-pane active show" id="tab-51">
-                                    <div id="profile-log-switch">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="border-0">
+                                <div class="tab-content">
+                                    <div class="tab-pane active show" id="tab-51">
+                                        <div id="profile-log-switch">
 
-                                        <div class="table-responsive ">
-                                            <div class="col-md">
-                                                <div class="media-heading">
-                                                    <h5 class="text-uppercase"><strong>Candidate Datas</strong></h5>
-                                                </div>
-                                                <div class="table-responsive ">
-                                                    <table class="table row table-bcandidateless">
-                                                        {{-- <tbody class="col-lg-12 col-xl-12 p-0">
+                                            <div class="table-responsive ">
+                                                <div class="col-md">
+                                                    <div class="media-heading">
+                                                        <h5 class="text-uppercase"><strong>Candidate Datas</strong></h5>
+                                                    </div>
+                                                    <div class="table-responsive ">
+                                                        <table class="table row table-bcandidateless">
+                                                            {{-- <tbody class="col-lg-12 col-xl-12 p-0">
                                                             @foreach ($issues as $issue)
                                                                 <tr>
                                                                     <td><strong>{{ $issue->name }}</strong>({{ $issue->quality }})
@@ -101,7 +134,7 @@
                                                             @endisset
 
                                                         </tbody> --}}
-                                                        {{-- <tbody class="col-lg-12 col-xl-6 p-0">
+                                                            {{-- <tbody class="col-lg-12 col-xl-6 p-0">
 
                                                             <tr>
                                                                 <td><strong>Payment Status :</strong>
@@ -119,17 +152,17 @@
                                                                 </tr>
                                                             @endif
                                                         </tbody> --}}
-                                                    </table>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endif
 
             </div><!-- COL-END -->
