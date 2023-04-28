@@ -59,6 +59,8 @@
                         </div>
                     </div>
                 </div>
+
+                @if ($candidate->status == 1)
                 <div class="card">
                     <div class="card-body">
                         <div class="border-0">
@@ -128,6 +130,8 @@
                         </div>
                     </div>
                 </div>
+                @endif
+
             </div><!-- COL-END -->
         </div>
         <!-- CONTAINER CLOSED -->
