@@ -12,15 +12,24 @@
     </div>
     <ul class="side-menu">
         <li>
-            <a class="side-menu__item {{ request()->is('dashboard') ? 'active' : '' }}"
-                href="{{ route('dashboard') }}"><i class="side-menu__icon fe fe-box"></i><span
-                    class="side-menu__label">Dashboard</span></a>
-        </li>
-
-        <li>
             <a class="side-menu__item {{ request()->is('candidate') ? 'active' : '' }}"
                 href="{{ route('candidate.index') }}"><i class="side-menu__icon fe fe-box"></i><span
-                    class="side-menu__label">Candidate</span></a>
+                    class="side-menu__label">All Candidate</span></a>
+        </li>
+        <li>
+            <a class="side-menu__item {{ request()->is('candidate-list-pending') ? 'active' : '' }}"
+                href="{{ route('candidate.list.pending') }}"><i class="side-menu__icon fe fe-box"></i><span
+                    class="side-menu__label">Pending Candidate</span></a>
+        </li>
+        <li>
+            <a class="side-menu__item {{ request()->is('candidate-list-rejected') ? 'active' : '' }}"
+                href="{{ route('candidate.list.rejected') }}"><i class="side-menu__icon fe fe-box"></i><span
+                    class="side-menu__label">Rejected Candidate</span></a>
+        </li>
+        <li>
+            <a class="side-menu__item {{ request()->is('candidate-list-approved') ? 'active' : '' }}"
+                href="{{ route('candidate.list.approved') }}"><i class="side-menu__icon fe fe-box"></i><span
+                    class="side-menu__label">Approved Candidate</span></a>
         </li>
 
     </ul>

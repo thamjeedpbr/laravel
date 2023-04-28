@@ -11,7 +11,7 @@
 
         <!-- PAGE-HEADER -->
         <div class="page-header">
-            <h4 class="page-title">Enquiry</h4>
+            <h4 class="page-title">Approved Enquiry</h4>
         </div>
         <!-- PAGE-HEADER END -->
 
@@ -99,7 +99,7 @@
                     [10, 25, 50, 100, 500, 1000, 2000, 'All']
                 ],
                 ajax: {
-                    url: '{{ route('candidate.alldata') }}',
+                    url: '{{ route('candidate.approved') }}',
                     method: 'POST',
 
                 },

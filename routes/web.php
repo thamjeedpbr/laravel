@@ -54,6 +54,10 @@ Route::namespace ('App\Http\Controllers')->middleware('admin')->group(function (
     Route::post('/change-password', 'LoginController@update_password')->name('update_password');
 
     Route::resource('candidate', CandidateController::class);
+    Route::get('candidate-list-approved', 'CandidateController@approved')->name('candidate.list.approved');
+    Route::get('candidate-list-pending', 'CandidateController@pending')->name('candidate.list.pending');
+    Route::get('candidate-list-rejected', 'CandidateController@rejected')->name('candidate.list.rejected');
+
     Route::post('candidate/all-data', 'CandidateController@GetAllCandidateAjax')->name('candidate.alldata');
     Route::post('candidate/pending', 'CandidateController@GetPendingCandidateAjax')->name('candidate.pending');
     Route::post('candidate/approved', 'CandidateController@GetApprovedCandidateAjax')->name('candidate.approved');

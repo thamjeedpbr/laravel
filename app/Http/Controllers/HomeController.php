@@ -61,7 +61,7 @@ class HomeController extends Controller
         $candidate->working = $request->working;
         $candidate->status = 0; //pending
         $candidate->save();
-        return redirect()->back()->with('success', 'candidate successfully Registered.');
+        return redirect()->back()->with('success', 'Candidate successfully Registered,Check Mail for Updates');
     }
     public function dashboard()
     {

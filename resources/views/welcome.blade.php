@@ -988,11 +988,19 @@
                                                         <div class="elementor-element elementor-element-8f9a2ec elementor-widget elementor-widget-heading"
                                                             data-id="8f9a2ec" data-element_type="widget"
                                                             data-widget_type="heading.default">
+                                                            @if(session()->has('success'))
+                                                            <div class="elementor-widget-container">
+                                                                <h2
+                                                                    class="elementor-heading-title elementor-size-default">
+                                                                    Form Submited Succesfully</h2>
+                                                            </div>
+                                                            @else
                                                             <div class="elementor-widget-container">
                                                                 <h2
                                                                     class="elementor-heading-title elementor-size-default">
                                                                     Fill to Submit</h2>
                                                             </div>
+                                                            @endif
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1008,6 +1016,11 @@
                                         </ul>
                                         </div>
                                         @endif
+                                        @if(session()->has('success'))
+                                            <div class="alert alert-success">
+                                                {{ session()->get('success') }}
+                                            </div>
+                                        @else
                                         <section
                                             class="elementor-section elementor-top-section elementor-element elementor-element-0f0d989 cspt-col-stretched-none cspt-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                             data-id="0f0d989" data-element_type="section">
@@ -2368,6 +2381,8 @@
                                             </div>
                                     </div>
                                     </section>
+                                    @endif
+
                                 </div>
                                 <h3 class="cspt-hide">Registration</h3>
                     </div><!-- .entry-content -->

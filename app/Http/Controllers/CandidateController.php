@@ -16,10 +16,21 @@ class CandidateController extends Controller
     {
         return view('Super.Candidate.index');
     }
+    public function pending()
+    {
+        return view('Super.Candidate.pending');
+    }
+    public function approved()
+    {
+        return view('Super.Candidate.approved');
+    }
+    public function rejected()
+    {
+        return view('Super.Candidate.rejected');
+    }
     public function GetAllcandidateAjax(Request $request)
     {
         if ($request->ajax()) {
-
             $candidate = Candidate::orderby('id', 'desc')->get();
             return datatables()->of($candidate)
             // ->setRowClass(function (Candidate $candidate) {
@@ -40,6 +51,11 @@ class CandidateController extends Controller
             //     return $color;
             // },
             // )
+                ->addColumn('fullname', function (Candidate $candidate) {
+                    $data = '<a href="' . route('candidate.show', $candidate->id) . '">
+               ' . $candidate->fullname . ' </a>';
+                    return $data;
+                })
                 ->addColumn('action', function (Candidate $candidate) {
                     $data = '<a href="' . route('candidate.show', $candidate->id) . '">
                     <button class="btn btn-status btn-gray-medium" style="text-decoration:none; display: inline-block; width: 30px;">
@@ -74,7 +90,213 @@ class CandidateController extends Controller
                     $data = date('Y-m-d H:i:A', strtotime($candidate->created_at));
                     return $data;
                 })
-                ->escapeColumns([])->addIndexColumn()->make(true);
+                ->escapeColumns([])->addIndexColumn()->make(true)
+
+            ;
+
+        }
+    }
+    public function GetPendingCandidateAjax(Request $request)
+    {
+        if ($request->ajax()) {
+            $candidate = Candidate::orderby('id', 'desc')->where('status', 0)->get();
+            return datatables()->of($candidate)
+            // ->setRowClass(function (Candidate $candidate) {
+            //     switch ($candidate->label_type) {
+            //         case 'win':
+            //             $color = "alert-success";
+            //             break;
+            //         case 'loss':
+            //             $color = "alert-danger";
+            //             break;
+            //         case 'pending':
+            //             $color = "alert-warning";
+            //             break;
+            //         default:
+            //             $color = null;
+            //             break;
+            //     }
+            //     return $color;
+            // },
+            // )
+                ->addColumn('fullname', function (Candidate $candidate) {
+                    $data = '<a href="' . route('candidate.show', $candidate->id) . '">
+               ' . $candidate->fullname . ' </a>';
+                    return $data;
+                })
+                ->addColumn('action', function (Candidate $candidate) {
+                    $data = '<a href="' . route('candidate.show', $candidate->id) . '">
+                    <button class="btn btn-status btn-gray-medium" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                    </a>
+                    <a href="' . route('candidate.delete', $candidate->id) . '">
+                    <button class="btn btn-danger btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    </a>';
+
+                    return $data;
+                })
+            // ->addColumn('label_dropdown', function (candidate $candidate) use ($candidateLabel) {
+            //     $data1 = (string) '<select class="form-control candidate-label" candidate_id='.$candidate->id.' id="label" name"label">';
+            //     $data3 = "<option>Select One</option>";
+            //     foreach ($candidateLabel as $label) {
+            //         if ($candidate->label == $label->id) {
+            //             $data2 = '<option  value=' . $label->id . ' selected >' . $label->name . '</option>`';
+            //         } else {
+            //             $data2 = '<option  value=' . $label->id . '>' . $label->name . '</option>`';
+            //         }
+            //         $data3 = $data3 . $data2;
+            //     }
+            //     $data4 = '</select> ';
+            //     $data = (string) $data1 . (string) $data3 . (string) $data4;
+            //     return $data;
+
+            // })
+                ->addColumn('created_at', function (Candidate $candidate) {
+                    $data = date('Y-m-d H:i:A', strtotime($candidate->created_at));
+                    return $data;
+                })
+                ->escapeColumns([])->addIndexColumn()->make(true)
+
+            ;
+
+        }
+    }
+    public function GetApprovedCandidateAjax(Request $request)
+    {
+        if ($request->ajax()) {
+            $candidate = Candidate::orderby('id', 'desc')->where('status', 1)->get();
+            return datatables()->of($candidate)
+            // ->setRowClass(function (Candidate $candidate) {
+            //     switch ($candidate->label_type) {
+            //         case 'win':
+            //             $color = "alert-success";
+            //             break;
+            //         case 'loss':
+            //             $color = "alert-danger";
+            //             break;
+            //         case 'pending':
+            //             $color = "alert-warning";
+            //             break;
+            //         default:
+            //             $color = null;
+            //             break;
+            //     }
+            //     return $color;
+            // },
+            // )
+                ->addColumn('fullname', function (Candidate $candidate) {
+                    $data = '<a href="' . route('candidate.show', $candidate->id) . '">
+               ' . $candidate->fullname . ' </a>';
+                    return $data;
+                })
+                ->addColumn('action', function (Candidate $candidate) {
+                    $data = '<a href="' . route('candidate.show', $candidate->id) . '">
+                    <button class="btn btn-status btn-gray-medium" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                    </a>
+                    <a href="' . route('candidate.delete', $candidate->id) . '">
+                    <button class="btn btn-danger btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    </a>';
+
+                    return $data;
+                })
+            // ->addColumn('label_dropdown', function (candidate $candidate) use ($candidateLabel) {
+            //     $data1 = (string) '<select class="form-control candidate-label" candidate_id='.$candidate->id.' id="label" name"label">';
+            //     $data3 = "<option>Select One</option>";
+            //     foreach ($candidateLabel as $label) {
+            //         if ($candidate->label == $label->id) {
+            //             $data2 = '<option  value=' . $label->id . ' selected >' . $label->name . '</option>`';
+            //         } else {
+            //             $data2 = '<option  value=' . $label->id . '>' . $label->name . '</option>`';
+            //         }
+            //         $data3 = $data3 . $data2;
+            //     }
+            //     $data4 = '</select> ';
+            //     $data = (string) $data1 . (string) $data3 . (string) $data4;
+            //     return $data;
+
+            // })
+                ->addColumn('created_at', function (Candidate $candidate) {
+                    $data = date('Y-m-d H:i:A', strtotime($candidate->created_at));
+                    return $data;
+                })
+                ->escapeColumns([])->addIndexColumn()->make(true)
+
+            ;
+
+        }
+    }
+    public function GetRejectedCandidateAjax(Request $request)
+    {
+        if ($request->ajax()) {
+            $candidate = Candidate::orderby('id', 'desc')->where('status', 2)->get();
+            return datatables()->of($candidate)
+            // ->setRowClass(function (Candidate $candidate) {
+            //     switch ($candidate->label_type) {
+            //         case 'win':
+            //             $color = "alert-success";
+            //             break;
+            //         case 'loss':
+            //             $color = "alert-danger";
+            //             break;
+            //         case 'pending':
+            //             $color = "alert-warning";
+            //             break;
+            //         default:
+            //             $color = null;
+            //             break;
+            //     }
+            //     return $color;
+            // },
+            // )
+                ->addColumn('fullname', function (Candidate $candidate) {
+                    $data = '<a href="' . route('candidate.show', $candidate->id) . '">
+               ' . $candidate->fullname . ' </a>';
+                    return $data;
+                })
+                ->addColumn('action', function (Candidate $candidate) {
+                    $data = '<a href="' . route('candidate.show', $candidate->id) . '">
+                    <button class="btn btn-status btn-gray-medium" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
+                    </button>
+                    </a>
+                    <a href="' . route('candidate.delete', $candidate->id) . '">
+                    <button class="btn btn-danger btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    </a>';
+
+                    return $data;
+                })
+            // ->addColumn('label_dropdown', function (candidate $candidate) use ($candidateLabel) {
+            //     $data1 = (string) '<select class="form-control candidate-label" candidate_id='.$candidate->id.' id="label" name"label">';
+            //     $data3 = "<option>Select One</option>";
+            //     foreach ($candidateLabel as $label) {
+            //         if ($candidate->label == $label->id) {
+            //             $data2 = '<option  value=' . $label->id . ' selected >' . $label->name . '</option>`';
+            //         } else {
+            //             $data2 = '<option  value=' . $label->id . '>' . $label->name . '</option>`';
+            //         }
+            //         $data3 = $data3 . $data2;
+            //     }
+            //     $data4 = '</select> ';
+            //     $data = (string) $data1 . (string) $data3 . (string) $data4;
+            //     return $data;
+
+            // })
+                ->addColumn('created_at', function (Candidate $candidate) {
+                    $data = date('Y-m-d H:i:A', strtotime($candidate->created_at));
+                    return $data;
+                })
+                ->escapeColumns([])->addIndexColumn()->make(true)
+
+            ;
 
         }
     }
