@@ -10,7 +10,7 @@
 		<link rel="shortcut icon" href="../../assets/images/brand/favicon.ico" type="image/x-icon"/>
 
 		<!-- TITLE -->
-		<title>Fixerman – Admin Login</title>
+		<title>Lantern Abroad – Admin Login</title>
 
 		<!-- DASHBOARD CSS -->
 		<link href="{{ asset('assets/css/dashboard.css') }}" rel="stylesheet"/>
@@ -23,7 +23,7 @@
 		<link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet"/>
 
 		<!-- Skin css-->
-		<link href="{{ asset('assets/skins/skins-modes/color1.css') }}"  id="theme" rel="stylesheet" type="text/css" media="all" />
+		<link href="{{ asset('assets/skins/skins-modes/color19.css') }}"  id="theme" rel="stylesheet" type="text/css" media="all" />
 
 	</head>
 

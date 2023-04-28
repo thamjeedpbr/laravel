@@ -5,14 +5,14 @@
     <!-- Meta data -->
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
-    <meta content="Lantern Abroad – Admin Pannel" name="description">
+    <meta content="Lantern Abroad – Candidate Pannel" name="description">
 
     <!--favicon -->
     <link rel="icon" href="../../assets/images/brand/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="../../assets/images/brand/favicon.ico" type="image/x-icon" />
 
     <!-- TITLE -->
-    <title>Lantern Abroad – Admin Pannel</title>
+    <title>Lantern Abroad – Candidate Pannel</title>
 
     <!-- DASHBOARD CSS -->
     <link href="{{ asset('assets/css/dashboard.css') }}" rel="stylesheet" />
@@ -45,22 +45,17 @@
     <div class="page">
         <div class="page-main">
             <!-- HEADER -->
-            @include('Super.layouts.header')
+            @include('Candidate.layouts.header')
             <!-- HEADER END -->
 
-            <!-- Sidebar menu-->
-            <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-
-            @include('Super.layouts.sidebar')
-
-            <!-- CONTAINER -->
+               <!-- CONTAINER -->
             @yield('content')
 
             <!-- CONTAINER CLOSED -->
         </div>
 
         <!-- FOOTER -->
-        @include('Super.layouts.footer')
+        @include('Candidate.layouts.footer')
 
         <!-- FOOTER END -->
     </div>

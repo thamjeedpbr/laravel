@@ -24,6 +24,8 @@ class LoginController extends Controller
             if (Auth::guard('web')->user()) {
                 if (Auth::guard('web')->user()->type == "admin") {
                     return redirect()->route('dashboard');
+                } elseif (Auth::guard('web')->user()->type == "candidate") {
+                    return redirect()->route('candidate.dashboard');
                 } else {
                     return redirect()->back()->with('error_message', ' Invalid User');
                 }

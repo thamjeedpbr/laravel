@@ -40,6 +40,14 @@ class CreateCandidatesTable extends Migration
             $table->text('working_address_india')->nullable();
             $table->text('working')->nullable();
             $table->integer('status')->default(0);
+
+            $table->string('docs_status')->nullable();
+            $table->text('docs_comments')->nullable();
+            $table->string('immigration_advise')->nullable();
+            $table->string('airport_accommodation')->nullable();
+
+            $table->text('feedback')->nullable();
+
             $table->timestamps();
         });
     }

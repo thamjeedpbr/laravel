@@ -67,4 +67,8 @@ Route::namespace('App\Http\Controllers')->middleware('admin')->group(function ()
     Route::post('candidate/rejected', 'CandidateController@GetRejectedCandidateAjax')->name('candidate.rejected');
     Route::get('candidate/delete/{id}', 'CandidateController@delete')->name('candidate.delete');
 });
+Route::namespace('App\Http\Controllers')->middleware('candidate')->group(function () {
+    Route::get('/candidate-dashboard', 'HomeController@candidate_dashboard')->name('candidate.dashboard');
+});
+
 Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name('logout');

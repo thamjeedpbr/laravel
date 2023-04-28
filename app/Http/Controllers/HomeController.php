@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Candidate;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
 class HomeController extends Controller
 {
     public function register(Request $request)
@@ -66,5 +66,10 @@ class HomeController extends Controller
     public function dashboard()
     {
         return view('Super.dashboard');
+    }
+    public function candidate_dashboard()
+    {
+        $candidate = Candidate::where('user_id',Auth::user()->id)->first();
+        return view('Candidate.dashboard')->with(compact('candidate'));
     }
 }
