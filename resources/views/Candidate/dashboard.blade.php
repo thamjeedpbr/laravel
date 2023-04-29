@@ -11,73 +11,25 @@
 
         <!-- PAGE-HEADER -->
         <div class="page-header">
-            <h4 class="page-title">Candidate Details</h4>
+            <h4 class="page-title">OFFER LETTER REQUIREMENTS</h4>
         </div>
         <!-- PAGE-HEADER END -->
 
         <!-- ROW-1 OPEN -->
+
         <div class="row" id="user-profile">
+
             <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-body">
-                        @if ($candidate->docs_status == 1)
-                            <div class="alert alert-success">
-                                {{ $candidate->docs_comments }}
-                            </div>
-                        @elseif($candidate->docs_status != null && $candidate->docs_status == 0)
-                            <div class="alert alert-danger">
-                                {{ $candidate->docs_comments }}
-                            </div>
-                        @endif
-                        <div class="wideget-user">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12">
-                                    <div class="wideget-user-desc d-flex">
-                                        <div class="user-wrap">
-                                            <h4>#Candidate Id : {{ $candidate->id }}</h4>
-                                            <h6 class="text-muted mb-3">Name:{{ $candidate->fullname }}</h6>
-                                            <h6 class="text-muted mb-3">Contact number: {{ $candidate->phone }}</h6>
-                                            <h6 class="text-muted mb-3">Registered Date: {{ $candidate->created_at }}</h6>
-                                            <h6 class="text-muted mb-3">Status: {{ $candidate->status_text }}</h6>
-                                            <h6 class="text-muted mb-3">username: {{ $candidate->username }}</h6>
-                                            <h6 class="text-muted mb-3">qualification: {{ $candidate->qualification }}</h6>
-                                            <h6 class="text-muted mb-3">experience: {{ $candidate->experience }}</h6>
-                                            <h6 class="text-muted mb-3">OET_or_IELTS_Score:
-                                                {{ $candidate->OET_or_IELTS_Score }}</h6>
-                                            <h6 class="text-muted mb-3">CGFNS_status: {{ $candidate->CGFNS_status }}</h6>
-                                            <h6 class="text-muted mb-3">New_Zealand_nursing_council:
-                                                {{ $candidate->New_Zealand_nursing_council }}</h6>
-                                            <h6 class="text-muted mb-3">preferred_Campus:
-                                                {{ $candidate->preferred_Campus }}</h6>
-                                            <h6 class="text-muted mb-3">Preferred_intake:
-                                                {{ $candidate->Preferred_intake }}</h6>
-                                            <h6 class="text-muted mb-3">refereal_method: {{ $candidate->refereal_method }}
-                                            </h6>
-                                            <h6 class="text-muted mb-3">Friends_Family_NZ_status:
-                                                {{ $candidate->Friends_Family_NZ_status }}</h6>
-                                            <h6 class="text-muted mb-3">Friends_Family_NZ:
-                                                {{ $candidate->Friends_Family_NZ }}</h6>
-                                            <h6 class="text-muted mb-3">email: {{ $candidate->email }}</h6>
-                                            <h6 class="text-muted mb-3">phone: {{ $candidate->phone }}</h6>
-                                            <h6 class="text-muted mb-3">street_address: {{ $candidate->street_address }}
-                                            </h6>
-                                            <h6 class="text-muted mb-3">address_line: {{ $candidate->address_line }}</h6>
-                                            <h6 class="text-muted mb-3">address_city: {{ $candidate->address_city }}</h6>
-                                            <h6 class="text-muted mb-3">address_state: {{ $candidate->address_state }}</h6>
-                                            <h6 class="text-muted mb-3">address_country: {{ $candidate->address_country }}
-                                            </h6>
-                                            <h6 class="text-muted mb-3">address_zip: {{ $candidate->address_zip }}</h6>
-                                            <h6 class="text-muted mb-3">working: {{ $candidate->working }}</h6>
-                                            <h6 class="text-muted mb-3">working_address_india:
-                                                {{ $candidate->working_address_india }}</h6>
-                                            <h6 class="text-muted mb-3">Cover_letter: {{ $candidate->Cover_letter }}</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                @if ($candidate->docs_status == 1)
+                    <div class="alert alert-success">
+                        {{ $candidate->docs_comments }}
                     </div>
-                </div>
+                @elseif($candidate->docs_status != null && $candidate->docs_status == 0)
+                    <div class="alert alert-danger">
+                        {{ $candidate->docs_comments }}
+                    </div>
+                @endif
+
                 <div class="card">
                     <div class="card-body">
                         <div class="border-0">
@@ -98,15 +50,21 @@
                                                         <div class="row">
 
                                                             <div class="col-md-6">
-                                                                <div class="alert alert-warning">
-                                                                    Condition- Please make lantern abroad aware if you are selecting another imigration adviser or an agent.
-                                                                </div>
-                                                                <div class="alert alert-warning">
-                                                                    Attach occupational health screening completed form as directed in the offer of place
-                                                                </div>
-                                                                <div class="alert alert-warning">
-                                                                    Notify Lantern Abroad when the visa is ready and please send us a copy of your visa approval.
-                                                                </div>
+                                                                @if ($candidate->docs_status == 1)
+                                                                    <div class="alert alert-warning">
+                                                                        Condition- Please make lantern abroad aware if you
+                                                                        are selecting another imigration adviser or an
+                                                                        agent.
+                                                                    </div>
+                                                                    <div class="alert alert-warning">
+                                                                        Attach occupational health screening completed form
+                                                                        as directed in the offer of place
+                                                                    </div>
+                                                                    <div class="alert alert-warning">
+                                                                        Notify Lantern Abroad when the visa is ready and
+                                                                        please send us a copy of your visa approval.
+                                                                    </div>
+                                                                @endif
                                                                 @foreach ($files as $file)
                                                                     <div class="form-group overflow-hidden">
                                                                         <div class="form-group">
@@ -128,35 +86,35 @@
                                                                 @endforeach
 
                                                                 @if ($candidate->docs_status != 1)
-
-                                                                <div class="form-group overflow-hidden">
-                                                                    <div class="form-group">
-                                                                        <h5>Others</h3>
-                                                                            <input type="text" class="form-control"
-                                                                                name="name[]" value="Others">
-                                                                            </select>
+                                                                    <div class="form-group overflow-hidden">
+                                                                        <div class="form-group">
+                                                                            <h5>Others</h3>
+                                                                                <input type="text" class="form-control"
+                                                                                    name="name[]" value="Others">
+                                                                                </select>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="file" name="docs[]"
+                                                                                class="form-control">
+                                                                        </div>
                                                                     </div>
-                                                                    <div class="form-group">
-                                                                        <input type="file" name="docs[]"
-                                                                            class="form-control">
-                                                                    </div>
-                                                                </div>
-                                                                <div id="new_chq"></div>
+                                                                    <div id="new_chq"></div>
 
-                                                                <div class="form-group overflow-hidden">
-                                                                    <input type="button" class="btn btn-success"
-                                                                        onclick="add()" Value="Add Others">
-                                                                    <input type="button" class="btn btn-danger"
-                                                                        onclick="remove()" Value="Remove Others">
-                                                                    <input type="hidden" value="1" id="total_chq">
-                                                                </div>
+                                                                    <div class="form-group overflow-hidden">
+                                                                        <input type="button" class="btn btn-success"
+                                                                            onclick="add()" Value="Add Others">
+                                                                        <input type="button" class="btn btn-danger"
+                                                                            onclick="remove()" Value="Remove Others">
+                                                                        <input type="hidden" value="1" id="total_chq">
+                                                                    </div>
                                                                 @endif
                                                                 @if ($candidate->docs_status == 1)
                                                                     <h5>Immigration advise Yes/No. If yes adviser charges
                                                                         apply</h3>
                                                                         <div class="form-group">
                                                                             <input type="text" class="form-control"
-                                                                                name="immigration_advise" value="{{ $candidate->immigration_advise }}"
+                                                                                name="immigration_advise"
+                                                                                value="{{ $candidate->immigration_advise }}"
                                                                                 placeholder="Immigration Advise">
 
                                                                         </div>
@@ -164,18 +122,18 @@
                                                                             /Accommodation?</h3>
                                                                             <div class="form-group">
                                                                                 <input type="text" class="form-control"
-                                                                                    name="airport_accommodation" value="{{ $candidate->airport_accommodation }}"
+                                                                                    name="airport_accommodation"
+                                                                                    value="{{ $candidate->airport_accommodation }}"
                                                                                     placeholder="Immigration Advise">
 
                                                                             </div>
                                                                             <h5>Feedback</h3>
                                                                                 <div class="form-group">
                                                                                     <input type="text"
-                                                                                        class="form-control"
-                                                                                        name="feedback" value="{{ $candidate->feedback }}"
+                                                                                        class="form-control" name="feedback"
+                                                                                        value="{{ $candidate->feedback }}"
                                                                                         placeholder="Feedback">
                                                                                 </div>
-
                                                                 @endif
                                                             </div>
 
@@ -248,7 +206,60 @@
                         </div>
                     </div>
                 @endif
+                <div class="card">
+                    <div class="card-body">
 
+                        <div class="wideget-user">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="wideget-user-desc d-flex">
+                                        <div class="user-wrap">
+                                            <h4>#Candidate Id : {{ $candidate->id }}</h4>
+                                            <h6 class="text-muted mb-3">Name:{{ $candidate->fullname }}</h6>
+                                            <h6 class="text-muted mb-3">Contact number: {{ $candidate->phone }}</h6>
+                                            <h6 class="text-muted mb-3">Registered Date: {{ $candidate->created_at }}</h6>
+                                            <h6 class="text-muted mb-3">Status: {{ $candidate->status_text }}</h6>
+                                            <h6 class="text-muted mb-3">username: {{ $candidate->username }}</h6>
+                                            <h6 class="text-muted mb-3">qualification: {{ $candidate->qualification }}
+                                            </h6>
+                                            <h6 class="text-muted mb-3">experience: {{ $candidate->experience }}</h6>
+                                            <h6 class="text-muted mb-3">OET_or_IELTS_Score:
+                                                {{ $candidate->OET_or_IELTS_Score }}</h6>
+                                            <h6 class="text-muted mb-3">CGFNS_status: {{ $candidate->CGFNS_status }}</h6>
+                                            <h6 class="text-muted mb-3">New_Zealand_nursing_council:
+                                                {{ $candidate->New_Zealand_nursing_council }}</h6>
+                                            <h6 class="text-muted mb-3">preferred_Campus:
+                                                {{ $candidate->preferred_Campus }}</h6>
+                                            <h6 class="text-muted mb-3">Preferred_intake:
+                                                {{ $candidate->Preferred_intake }}</h6>
+                                            <h6 class="text-muted mb-3">refereal_method: {{ $candidate->refereal_method }}
+                                            </h6>
+                                            <h6 class="text-muted mb-3">Friends_Family_NZ_status:
+                                                {{ $candidate->Friends_Family_NZ_status }}</h6>
+                                            <h6 class="text-muted mb-3">Friends_Family_NZ:
+                                                {{ $candidate->Friends_Family_NZ }}</h6>
+                                            <h6 class="text-muted mb-3">email: {{ $candidate->email }}</h6>
+                                            <h6 class="text-muted mb-3">phone: {{ $candidate->phone }}</h6>
+                                            <h6 class="text-muted mb-3">street_address: {{ $candidate->street_address }}
+                                            </h6>
+                                            <h6 class="text-muted mb-3">address_line: {{ $candidate->address_line }}</h6>
+                                            <h6 class="text-muted mb-3">address_city: {{ $candidate->address_city }}</h6>
+                                            <h6 class="text-muted mb-3">address_state: {{ $candidate->address_state }}
+                                            </h6>
+                                            <h6 class="text-muted mb-3">address_country: {{ $candidate->address_country }}
+                                            </h6>
+                                            <h6 class="text-muted mb-3">address_zip: {{ $candidate->address_zip }}</h6>
+                                            <h6 class="text-muted mb-3">working: {{ $candidate->working }}</h6>
+                                            <h6 class="text-muted mb-3">working_address_india:
+                                                {{ $candidate->working_address_india }}</h6>
+                                            <h6 class="text-muted mb-3">Cover_letter: {{ $candidate->Cover_letter }}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div><!-- COL-END -->
         </div>
         <!-- CONTAINER CLOSED -->

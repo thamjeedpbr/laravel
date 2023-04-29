@@ -49,7 +49,7 @@ Route::prefix('/login')->namespace('App\Http\Controllers')->group(function () {
     Route::post('/', 'LoginController@login_submit')->name('login.submit');
 });
 Route::namespace('App\Http\Controllers')->middleware('admin')->group(function () {
-    Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
+    Route::get('/dashboard', 'CandidateController@pending')->name('dashboard');
     Route::get('/change-password', 'LoginController@change_password_view')->name('change_password_view');
     Route::post('/change-password', 'LoginController@update_password')->name('update_password');
 
@@ -68,11 +68,12 @@ Route::namespace('App\Http\Controllers')->middleware('admin')->group(function ()
     Route::post('candidate/approved', 'CandidateController@GetApprovedCandidateAjax')->name('candidate.approved');
     Route::post('candidate/rejected', 'CandidateController@GetRejectedCandidateAjax')->name('candidate.rejected');
     Route::get('candidate/delete/{id}', 'CandidateController@delete')->name('candidate.delete');
+    Route::get('candidate/docs-delete/{id}', 'CandidateController@DocsDelete')->name('candidate.docs.delete');
+
 });
 Route::namespace('App\Http\Controllers')->middleware('candidate')->group(function () {
     Route::get('/candidate-dashboard', 'HomeController@candidate_dashboard')->name('candidate.dashboard');
     Route::post('candidate/upload-docs', 'CandidateController@DocsUpload')->name('candidate.upload.docs');
-    Route::get('candidate/docs-delete/{id}', 'CandidateController@DocsDelete')->name('candidate.docs.delete');
 });
 
 Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name('logout');

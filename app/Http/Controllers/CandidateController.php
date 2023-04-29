@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\WelcomeMail;
 use App\Models\Candidate;
 use App\Models\CandidateDocs;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class CandidateController extends Controller
 {
@@ -402,43 +404,48 @@ class CandidateController extends Controller
     }
     public function approve_candidate($id)
     {
-        $candidate = Candidate::find($id);
-        if ($candidate) {
-            $user = User::where('candidate_id', $id)->exists();
-            if ($user) {
-                return redirect()->back()->with('error', 'Candidate Already  Approved');
-            }
-            $user1 = User::where('email', $candidate->email)->exists();
-            if ($user1) {
-                return redirect()->back()->with('error', 'Candidate Email is Already Used');
-            }
-            DB::beginTransaction();
-            $password = "password";
-            // $password = random_int(100000, 999999);
-            $user = new User();
-            $user->name = $candidate->fullname;
-            $user->candidate_id = $id;
-            $user->email = $candidate->email;
-            $user->phone = $candidate->phone;
-            $user->password = Hash::make($password);
-            $user->type = "candidate";
-            if (!$user->save()) {
-                DB::rollback();
-                return redirect()->back()->with('error', 'Try again');
-            }
-            $candidate->user_id = $user->id;
-            $candidate->status = 1;
-            if ($candidate->save()) {
-                // $email = new WelcomeMail($user, $password);
-                // $status = Mail::to($user->email)->send($email);
-                DB::commit();
-                return redirect()->back()->with('success', 'candidate successfully Approved');
+        try {
+            $candidate = Candidate::find($id);
+            if ($candidate) {
+                $user = User::where('candidate_id', $id)->exists();
+                if ($user) {
+                    return redirect()->back()->with('error', 'Candidate Already  Approved');
+                }
+                $user1 = User::where('email', $candidate->email)->exists();
+                if ($user1) {
+                    return redirect()->back()->with('error', 'Candidate Email is Already Used');
+                }
+                DB::beginTransaction();
+                // $password = "password";
+                $password = random_int(100000, 999999);
+                $user = new User();
+                $user->name = $candidate->fullname;
+                $user->candidate_id = $id;
+                $user->email = $candidate->email;
+                $user->phone = $candidate->phone;
+                $user->password = Hash::make($password);
+                $user->type = "candidate";
+                if (!$user->save()) {
+                    DB::rollback();
+                    return redirect()->back()->with('error', 'Try again');
+                }
+                $candidate->user_id = $user->id;
+                $candidate->status = 1;
+                if ($candidate->save()) {
+                    $email = new WelcomeMail($user, $password);
+                    $status = Mail::to($user->email)->send($email);
+                    DB::commit();
+                    return redirect()->back()->with('success', 'candidate successfully Approved');
+                } else {
+                    DB::rollback();
+                    return redirect()->back()->with('error', 'Try again');
+                }
             } else {
-                DB::rollback();
-                return redirect()->back()->with('error', 'Try again');
+                return redirect()->back()->with('error', 'candidate not found');
             }
-        } else {
-            return redirect()->back()->with('error', 'candidate not found');
+        } catch (\Throwable $th) {
+            DB::rollback();
+            return redirect()->back()->with('error', $th->getMessage());
         }
 
     }

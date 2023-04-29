@@ -19,12 +19,12 @@
                                         <td style="font-size: 0; line-height: 0;" height="top">&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td style="padding: 20px 0; text-align: centre;" valign="middle">
+                                        {{-- <td style="padding: 20px 0; text-align: centre;" valign="middle">
                                             <a href="http://lanternabroad.com/" target="_blank" rel="noopener">
                                                 <img src="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2.png"
                                                     border="0">
                                             </a>
-                                        </td>
+                                        </td> --}}
                                         <td style="padding: 20px 0; text-align: right; font-family: Helvetica,Arial,sans-serif; font-size: 16px;"
                                             valign="middle">&nbsp;</td>
                                     </tr>
@@ -64,6 +64,7 @@
                                                                                 {{ $user->name }},&nbsp;
                                                                                 <br>Your new password is here
                                                                                 <br>{{ $password }}
+                                                                                <br>https://register.lanternabroad.com/login
                                                                             </span>
                                                                             <br>
                                                                             <br>

@@ -28,7 +28,6 @@
         media="all" />
 
     <!-- SIDEBAR CSS -->
-    <link href="{{ asset('assets/plugins/sidebar/sidebar.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
     <style>
         .required:after {
@@ -36,7 +35,7 @@
             color: red;
         }
     </style>
-    @yield('style')
+      @yield('style')
 
 </head>
 
