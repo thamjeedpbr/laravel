@@ -24,7 +24,7 @@
     <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" />
 
     <!-- Skin css-->
-    <link href="{{ asset('assets/skins/skins-modes/color19.css') }}" id="theme" rel="stylesheet" type="text/css"
+    <link href="{{ asset('assets/skins/skins-modes/color13.css') }}" id="theme" rel="stylesheet" type="text/css"
         media="all" />
 
     <!-- SIDEBAR CSS -->
