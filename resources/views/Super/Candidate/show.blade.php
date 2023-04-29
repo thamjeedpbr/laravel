@@ -12,11 +12,12 @@
         <!-- PAGE-HEADER -->
         <div class="page-header">
             <h4 class="page-title">Candidate Details</h4>
+            <button id="pdfButton" class="btn btn-primary"><b>PDF</b></button>
         </div>
         <!-- PAGE-HEADER END -->
 
         <!-- ROW-1 OPEN -->
-        <div class="row" id="user-profile">
+        <div class="row" id="generatePDF">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
@@ -161,7 +162,7 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-html2canvas-ignore="true">
                         <div class="card-body">
                             <div class="border-0">
                                 <div class="tab-content">
@@ -219,4 +220,18 @@
         <!-- CONTAINER CLOSED -->
     @endsection
     @section('script')
+    <script>
+        var button = document.getElementById("pdfButton");
+        var makepdf = document.getElementById("generatePDF");
+        button.addEventListener("click", function () {
+        window.print();
+
+        //    var mywindow = window.print();
+        // //    mywindow.document.write(makepdf.innerHTML);
+        //    mywindow.document.close();
+        //    mywindow.focus();
+        //    mywindow.print();
+        //    return true;
+        });
+     </script>
     @endsection
