@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Candidate;
+use App\Models\CandidateDocs;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -335,7 +336,8 @@ class CandidateController extends Controller
     public function show($id)
     {
         $candidate = Candidate::find($id);
-        return view('Super.Candidate.show')->with(compact('candidate'));
+        $CandidateDocs = CandidateDocs::where('candidate_id', $candidate->id)->get();
+        return view('Super.Candidate.show')->with(compact('candidate', 'CandidateDocs'));
     }
 
     /**
@@ -450,6 +452,82 @@ class CandidateController extends Controller
         } else {
             return redirect()->back()->with('error', 'candidate not found');
         }
+    }
+
+    public function DocsDelete($id)
+    {
+        $CandidateDocs = CandidateDocs::find($id);
+        if ($CandidateDocs) {
+            @unlink('candidateDocs/' . $CandidateDocs->link);
+            $CandidateDocs->delete();
+            return redirect()->back()->with('success', 'Document successfully Removed.');
+        } else {
+            return redirect()->back()->with('error', 'Try again');
+        }
+
+    }
+    public function DocsUpload(Request $request)
+    {
+        $request->validate([
+            'docs.*' => 'nullable|mimes:pdf,jpg,jpeg,png|max:2048',
+            'name.*' => 'required',
+            'candidate_id' => 'required',
+        ]);
+        try {
+            $candidate = Candidate::find($request->candidate_id);
+            if ($candidate->docs_status == 1) {
+                $candidate->immigration_advise = $request->immigration_advise;
+                $candidate->airport_accommodation = $request->airport_accommodation;
+                $candidate->feedback = $request->feedback;
+                $candidate->save();
+            }
+            // dd($request->all());
+            foreach ($request->name as $key => $name) {
+                if (isset($request->docs[$key])) {
+                    $docs = $request->docs[$key];
+                    if ($docs->getType() == "file") {
+                        $fileName = str_replace(' ', '-', $name) . '-' . $request->candidate_id . '.' . $docs->extension();
+                        $path = asset('candidateDocs/' . $fileName);
+                        $CandidateDocs = CandidateDocs::where('candidate_id', $request->candidate_id)->where('name', $name)->first();
+                        if (!$CandidateDocs) {
+                            $CandidateDocs = new CandidateDocs();
+                        }
+                        $CandidateDocs->name = $name;
+                        // $CandidateDocs->comment = $request->comment[$key];
+                        $CandidateDocs->link = $fileName;
+                        $CandidateDocs->candidate_id = $request->candidate_id;
+                        if ($CandidateDocs->save()) {
+                            $docs->move('candidateDocs/', $fileName);
+                        } else {
+                            return redirect()->back()->with('error', 'Try again');
+                        }
+                    }
+                }
+            }
+            return redirect()->back()->with('success', 'Document successfully Uploaded.');
+
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('error', $th->getMessage());
+        }
+
+    }
+    public function CandidateDocsStatus(Request $request)
+    {
+        // dd($request->all());
+        $request->validate([
+            'candidate_id' => 'required',
+        ]);
+        $Candidate = Candidate::where('id', $request->candidate_id)->first();
+        if (isset($request->docs_status)) {
+            $Candidate->docs_status = 1;
+        } else {
+            $Candidate->docs_status = 0;
+        }
+
+        $Candidate->docs_comments = $request->docs_comments;
+        $Candidate->save();
+        return redirect()->back()->with('success', 'Document Status successfully Updated.');
+
     }
 
 }

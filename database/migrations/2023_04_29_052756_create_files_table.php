@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCandidateDocsTable extends Migration
+class CreateFilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateCandidateDocsTable extends Migration
      */
     public function up()
     {
-        Schema::create('candidate_docs', function (Blueprint $table) {
+        Schema::create('files', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('candidate_id');
             $table->string('name');
-            $table->string('link');
-            $table->string('comment')->nullable();
+            $table->string('value');
+            $table->string('step');
+            $table->string('status')->default(0)->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateCandidateDocsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('candidate_docs');
+        Schema::dropIfExists('files');
     }
 }

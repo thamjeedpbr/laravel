@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Candidate;
+use App\Models\CandidateDocs;
+use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     public function register(Request $request)
@@ -69,7 +72,16 @@ class HomeController extends Controller
     }
     public function candidate_dashboard()
     {
-        $candidate = Candidate::where('user_id',Auth::user()->id)->first();
-        return view('Candidate.dashboard')->with(compact('candidate'));
+        $candidate = Candidate::where('user_id', Auth::user()->id)->first();
+        $CandidateDocs = CandidateDocs::where('candidate_id', $candidate->id)->get();
+        $files = File::select('name', 'value');
+        if ($candidate->docs_status == 1) {
+            $files = $files->where('step', 3);
+        }
+        else{
+            $files = $files->where('step', 2);
+        }
+        $files = $files->get();
+        return view('Candidate.dashboard')->with(compact('candidate', 'CandidateDocs', 'files'));
     }
 }

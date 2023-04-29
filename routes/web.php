@@ -61,6 +61,8 @@ Route::namespace('App\Http\Controllers')->middleware('admin')->group(function ()
     Route::get('candidate-status/approve/{id}', 'CandidateController@approve_candidate')->name('candidate.status.approve');
     Route::get('candidate-status/reject/{id}', 'CandidateController@reject_candidate')->name('candidate.status.reject');
 
+    Route::post('candidate-docs/status', 'CandidateController@CandidateDocsStatus')->name('candidate.docs.status');
+
     Route::post('candidate/all-data', 'CandidateController@GetAllCandidateAjax')->name('candidate.alldata');
     Route::post('candidate/pending', 'CandidateController@GetPendingCandidateAjax')->name('candidate.pending');
     Route::post('candidate/approved', 'CandidateController@GetApprovedCandidateAjax')->name('candidate.approved');
@@ -69,6 +71,8 @@ Route::namespace('App\Http\Controllers')->middleware('admin')->group(function ()
 });
 Route::namespace('App\Http\Controllers')->middleware('candidate')->group(function () {
     Route::get('/candidate-dashboard', 'HomeController@candidate_dashboard')->name('candidate.dashboard');
+    Route::post('candidate/upload-docs', 'CandidateController@DocsUpload')->name('candidate.upload.docs');
+    Route::get('candidate/docs-delete/{id}', 'CandidateController@DocsDelete')->name('candidate.docs.delete');
 });
 
 Route::get('/logout', 'App\Http\Controllers\LoginController@logout')->name('logout');

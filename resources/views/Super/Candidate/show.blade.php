@@ -62,29 +62,43 @@
                                             <h6 class="text-muted mb-3">working_address_india:
                                                 {{ $candidate->working_address_india }}</h6>
                                             <h6 class="text-muted mb-3">Cover_letter: {{ $candidate->Cover_letter }}</h6>
+                                            @isset($candidate->immigration_advise)
+                                                <h6 class="mb-3">Immigration Advise:
+                                                    {{ $candidate->immigration_advise }}</h6>
+                                            @endisset
+                                            @isset($candidate->airport_accommodation)
+                                                <h6 class="mb-3">Airport Accommodation:
+                                                    {{ $candidate->airport_accommodation }}</h6>
+                                            @endisset
+                                            @isset($candidate->feedback)
+                                                <h6 class="mb-3">Feedback:
+                                                    {{ $candidate->feedback }}</h6>
+                                            @endisset
                                         </div>
                                     </div>
                                     @if ($candidate->status == 0)
                                         <div class="wideget-user-desc d-flex">
-                                            <a href="' . route('candidate.status.approve', $candidate->id) . '">
+                                            <a href="{{ route('candidate.status.approve', $candidate->id) }}">
                                                 <button class="btn btn-success btn-gray-medium"
                                                     onclick="return confirm(`Are you sure?`)"
                                                     style="text-decoration:none; display: inline-block; width: 30px;">
                                                     <i class="fa fa-check" aria-hidden="true"></i>
                                                 </button>
                                             </a>
-                                            <a href="' . route('candidate.status.reject', $candidate->id) . '">
+                                            <a href="{{ route('candidate.status.reject', $candidate->id) }}">
                                                 <button class="btn btn-warning btn-gray-medium"
                                                     onclick="return confirm(`Are you sure?`)"
                                                     style="text-decoration:none; display: inline-block; width: 30px;">
                                                     <i class="fa fa-close" aria-hidden="true"></i>
                                                 </button>
                                             </a>
-                                            <a href="' . route('candidate.delete', $candidate->id) . '">
-                                                <button class="btn btn-danger btn-gray-medium" onclick="return confirm(`Are you sure?`)" style="text-decoration:none; display: inline-block; width: 30px;">
+                                            <a href="{{ route('candidate.delete', $candidate->id) }}">
+                                                <button class="btn btn-danger btn-gray-medium"
+                                                    onclick="return confirm(`Are you sure?`)"
+                                                    style="text-decoration:none; display: inline-block; width: 30px;">
                                                     <i class="fa fa-trash" aria-hidden="true"></i>
                                                 </button>
-                                                </a>
+                                            </a>
                                         </div>
                                     @endif
                                 </div>
@@ -100,59 +114,94 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active show" id="tab-51">
                                         <div id="profile-log-switch">
+                                            <div class="table-responsive ">
+                                                <div class="table-responsive ">
+                                                    <div class="col-md">
+                                                        <div class="media-heading">
+                                                            <h5 class="text-uppercase"><strong>Your Uploaded
+                                                                    Documents</strong>
+                                                            </h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <div class="table-responsive">
+                                                                <table id="datable-1"
+                                                                    class="table table-bordered key-buttons text-nowrap">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th class="border-bottom-0">Name</th>
+                                                                            <th class="border-bottom-0">Action</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        @foreach ($CandidateDocs as $doc)
+                                                                            <tr>
+                                                                                <td>{{ $doc->name }}</td>
+                                                                                <td>
+                                                                                    <a href="{{ $doc->url }}"
+                                                                                        target="_blank">View </a>
+                                                                                    <a href="{{ route('candidate.docs.delete', $doc->id) }}"
+                                                                                        onclick="return confirm(`Are you sure?`)">
+                                                                                        DELETE</a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        @endforeach
 
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="border-0">
+                                <div class="tab-content">
+                                    <div class="tab-pane active show" id="tab-51">
+                                        <div id="profile-log-switch">
                                             <div class="table-responsive ">
                                                 <div class="col-md">
                                                     <div class="media-heading">
-                                                        <h5 class="text-uppercase"><strong>Candidate Datas</strong></h5>
+                                                        <h5 class="text-uppercase"><strong>Update Documents Status</strong>
+                                                        </h5>
                                                     </div>
-                                                    <div class="table-responsive ">
-                                                        <table class="table row table-bcandidateless">
-                                                            {{-- <tbody class="col-lg-12 col-xl-12 p-0">
-                                                            @foreach ($issues as $issue)
-                                                                <tr>
-                                                                    <td><strong>{{ $issue->name }}</strong>({{ $issue->quality }})
-                                                                        @isset($issue->amount)
-                                                                            {{ $issue->amount }} AED
-                                                                        @endisset()
-                                                                    </td>
-                                                                </tr>
-                                                            @endforeach
-                                                            @foreach ($pricings as $pricing)
-                                                                <tr>
-                                                                    <td><strong>{{ $pricing->name }}</strong>
-                                                                    </td>
-                                                                </tr>
-                                                            @endforeach
-                                                            @isset($candidate->issue_name)
-                                                                @if ($candidate->issue_name != '' && $candidate->issue_name != null)
-                                                                    <tr>
-                                                                        <td><strong>{{ $candidate->issue_name }}</strong>
-                                                                        </td>
-                                                                    </tr>
-                                                                @endif
-                                                            @endisset
-
-                                                        </tbody> --}}
-                                                            {{-- <tbody class="col-lg-12 col-xl-6 p-0">
-
-                                                            <tr>
-                                                                <td><strong>Payment Status :</strong>
-                                                                    @if ($candidate->payment_status)
-                                                                        Paid
-                                                                    @else
-                                                                        Not paid
-                                                                    @endif
-                                                                </td>
-                                                            </tr>
-                                                            @if ($candidate->sheduled)
-                                                                <tr>
-                                                                    <td><strong>Sheduled at :</strong>
-                                                                        {{ $candidate->sheduled_at }}</td>
-                                                                </tr>
-                                                            @endif
-                                                        </tbody> --}}
-                                                        </table>
+                                                    <div class="card-body">
+                                                        <form action="{{ route('candidate.docs.status') }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('POST')
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group overflow-hidden">
+                                                                        <div class="form-group">
+                                                                            <label for="vehicle1">I have Approved all
+                                                                                documents</label>
+                                                                            <input type="checkbox" id="vehicle1"
+                                                                                name="docs_status" value="1"
+                                                                                @if ($candidate->docs_status == 1) checked @endif>
+                                                                        </div>
+                                                                        <div class="form-group">
+                                                                            <input type="text" class="form-control"
+                                                                                name="docs_comments"
+                                                                                value="{{ $candidate->docs_comments }}"
+                                                                                placeholder="Comments (if any)">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <input type="hidden" name="candidate_id"
+                                                                value="{{ $candidate->id }}" hidden>
+                                                            <input class="btn btn-primary" type="submit" value="Update"
+                                                                name="Upload">
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
