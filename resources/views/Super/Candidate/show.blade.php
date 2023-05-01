@@ -101,6 +101,14 @@
                                                 </button>
                                             </a>
                                         </div>
+                                    @else
+                                    <a href="{{ route('candidate.send.password', $candidate->id) }}">
+                                        <button class="btn btn-warning btn-gray-medium"
+                                            onclick="return confirm(`Are you sure to reset password?`)"
+                                            style="text-decoration:none; display: inline-block; width: 30px;">
+                                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                                        </button>
+                                    </a>
                                     @endif
                                 </div>
                             </div>

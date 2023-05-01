@@ -432,9 +432,9 @@ class CandidateController extends Controller
                 $candidate->user_id = $user->id;
                 $candidate->status = 1;
                 if ($candidate->save()) {
+                    DB::commit();
                     $email = new WelcomeMail($user, $password);
                     $status = Mail::to($user->email)->send($email);
-                    DB::commit();
                     return redirect()->back()->with('success', 'candidate successfully Approved');
                 } else {
                     DB::rollback();
@@ -444,10 +444,39 @@ class CandidateController extends Controller
                 return redirect()->back()->with('error', 'candidate not found');
             }
         } catch (\Throwable $th) {
-            DB::rollback();
             return redirect()->back()->with('error', $th->getMessage());
         }
 
+    }
+    public function ResendPassword($id)
+    {
+        try {
+            $candidate = Candidate::find($id);
+            if ($candidate) {
+                $user = User::where('candidate_id', $id)->first();
+                if ($user) {
+                    DB::beginTransaction();
+                    $password = random_int(100000, 999999);
+                    $user->password = Hash::make($password);
+                    if (!$user->save()) {
+                        DB::rollback();
+                        return redirect()->back()->with('error', 'Try again');
+                    }
+                    $email = new WelcomeMail($user, $password);
+                    $status = Mail::to($user->email)->send($email);
+                    DB::commit();
+                    return redirect()->back()->with('success', 'Login Data shared');
+                } else {
+                    return redirect()->back()->with('error', 'User Not Activated');
+                }
+            } else {
+                return redirect()->back()->with('error', 'candidate not found');
+            }
+
+        } catch (\Throwable $th) {
+            DB::rollback();
+            return redirect()->back()->with('error', $th->getMessage());
+        }
     }
     public function reject_candidate($id)
     {

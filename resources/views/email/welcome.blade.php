@@ -62,8 +62,9 @@
                                                                         <td style="height: 154px;">
                                                                             <span style="font-size: 16px;">Dear
                                                                                 {{ $user->name }},&nbsp;
-                                                                                <br>Your new password is here
-                                                                                <br>{{ $password }}
+                                                                                <br>Your Login details is
+                                                                                <br>Email:{{ $user->email }}
+                                                                                <br>Password:{{ $password }}
                                                                                 <br>https://register.lanternabroad.com/login
                                                                             </span>
                                                                             <br>

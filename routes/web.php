@@ -60,6 +60,7 @@ Route::namespace('App\Http\Controllers')->middleware('admin')->group(function ()
 
     Route::get('candidate-status/approve/{id}', 'CandidateController@approve_candidate')->name('candidate.status.approve');
     Route::get('candidate-status/reject/{id}', 'CandidateController@reject_candidate')->name('candidate.status.reject');
+    Route::get('candidate-send/password/{id}', 'CandidateController@ResendPassword')->name('candidate.send.password');
 
     Route::post('candidate-docs/status', 'CandidateController@CandidateDocsStatus')->name('candidate.docs.status');
 
