@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\WelcomeMail;
+use App\Jobs\WelcomeJob;
 use App\Models\Candidate;
 use App\Models\CandidateDocs;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Mail;
 
 class CandidateController extends Controller
 {
@@ -432,9 +431,9 @@ class CandidateController extends Controller
                 $candidate->user_id = $user->id;
                 $candidate->status = 1;
                 if ($candidate->save()) {
+                    dispatch(new WelcomeJob($user, $password));
                     DB::commit();
-                    $email = new WelcomeMail($user, $password);
-                    $status = Mail::to($user->email)->send($email);
+
                     return redirect()->back()->with('success', 'candidate successfully Approved');
                 } else {
                     DB::rollback();
@@ -455,6 +454,7 @@ class CandidateController extends Controller
             if ($candidate) {
                 $user = User::where('candidate_id', $id)->first();
                 if ($user) {
+
                     DB::beginTransaction();
                     $password = random_int(100000, 999999);
                     $user->password = Hash::make($password);
@@ -462,10 +462,9 @@ class CandidateController extends Controller
                         DB::rollback();
                         return redirect()->back()->with('error', 'Try again');
                     }
-                    $email = new WelcomeMail($user, $password);
-                    $status = Mail::to($user->email)->send($email);
+                    dispatch(new WelcomeJob($user, $password));
                     DB::commit();
-                    return redirect()->back()->with('success', 'Login Data shared');
+                    return redirect()->back()->with('success', 'Login Data shared,will receive in 10 minutes');
                 } else {
                     return redirect()->back()->with('error', 'User Not Activated');
                 }
