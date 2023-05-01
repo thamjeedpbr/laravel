@@ -913,13 +913,9 @@
                             </div><!-- .navigation-top -->
                         </div>
                         <div class="cspt-right-box">
-                            <div class="cspt-search-cart-box">
-                                <div class="cspt-header-search-btn"><a href="#"><i
-                                            class="cspt-base-icon-search"></i></a></div>
-                            </div>
                             <div class="cspt-header-button">
-                                <a href="https://lanternabroad.com/registration">
-                                    <span class="cspt-header-button-text-1">REGISTER NOW</span> </a>
+                                <a href="{{route('login')}}">
+                                    <span class="cspt-header-button-text-1">Login</span> </a>
                             </div>
                         </div>
                     </div><!-- .justify-content-between -->
@@ -1126,7 +1122,8 @@
                                                                                         placeholder="E.g. 2 year as Staff nurse in Melbourne"
                                                                                         id="forminator-field-text-3_644a1de457452"
                                                                                         class="forminator-input forminator-name--field"
-                                                                                        data-="1" /></div>
+                                                                                        data-="1" />
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="forminator-row">
@@ -1193,14 +1190,22 @@
                                                                                         class="forminator-label">Preferred
                                                                                         intake (filling space) <span
                                                                                             class="forminator-">*</span></label>
-                                                                                    <input autocomplete="off" required
+                                                                                    {{-- <input  required
                                                                                         type="date"
                                                                                         name="Preferred_intake"
                                                                                         value=""
                                                                                         placeholder="Choose Date"
-                                                                                        class="forminator-input forminator"
-                                                                                        data-="1"
-                                                                                        data-format="dd-mm-yy" />
+                                                                                        class=" forminator-field-text-3_644a1de457452 forminator-input forminator"
+                                                                                         /> --}}
+                                                                                        <input required
+                                                                                        type="text"
+                                                                                        name="Preferred_intake"
+                                                                                        value=""
+                                                                                        placeholder="Enter Date (dd-mm-yyyy)"
+                                                                                        id="forminator-field-text-3_644a1de457452"
+                                                                                        class="forminator-input forminator-name--field"
+                                                                                        data-format="dd-mm-yy"/>
+
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2559,30 +2564,7 @@
     </div>
 
 
-    <link rel='stylesheet' id='forminator-module-css-307-css'
-        href='http://lanternabroad.com/wp-content/uploads/forminator/307_751395d2be2771853ebc78457f1a3c97/css/style-307.css?ver=1681882201'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='forminator-icons-css'
-        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/forminator-icons.min.css?ver=1.23.3'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='forminator-utilities-css'
-        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/forminator-utilities.min.css?ver=1.23.3'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='forminator-grid-default-css'
-        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/grid/forminator-grid.open.min.css?ver=1.23.3'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='forminator-forms-flat-base-css'
-        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-flat.base.min.css?ver=1.23.3'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='forminator-forms-flat-select2-css'
-        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-flat.select2.min.css?ver=1.23.3'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='forminator-forms-flat-full-css'
-        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/forminator-ui/css/src/form/forminator-form-flat.full.min.css?ver=1.23.3'
-        type='text/css' media='all' />
-    <link rel='stylesheet' id='intlTelInput-forminator-css-css'
-        href='http://lanternabroad.com/wp-content/plugins/forminator/assets/css/intlTelInput.min.css?ver=4.0.3'
-        type='text/css' media='all' />
+
     <link rel='stylesheet' id='buttons-css'
         href='http://lanternabroad.com/wp-includes/css/buttons.min.css?ver=6.2' type='text/css' media='all' />
     <link rel='stylesheet' id='e-animations-css'
