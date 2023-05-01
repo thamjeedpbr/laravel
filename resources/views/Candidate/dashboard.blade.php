@@ -1462,7 +1462,6 @@
     <script>
         function add() {
             var new_chq_no = parseInt($('#total_chq').val()) + 1;
-            alert(new_chq_no);
             //   var new_input="<input type='text' id='new_"+new_chq_no+"'>";
             var new_input = `<div class="form-group overflow-hidden" id='new_` + new_chq_no + `'>
                                                                 <div class="form-group">
