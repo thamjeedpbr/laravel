@@ -27,7 +27,6 @@
                                         <th class="border-bottom-0">fullname</th>
                                         <th class="border-bottom-0">phone</th>
                                         <th class="border-bottom-0">email</th>
-                                        <th class="border-bottom-0">username</th>
                                         <th class="border-bottom-0">Registered at</th>
                                         <th class="border-bottom-0">qualification</th>
                                         <th class="border-bottom-0">experience</th>
@@ -118,10 +117,6 @@
                     {
                         data: 'email',
                         name: 'email',
-                    },
-                    {
-                        data: 'username',
-                        name: 'username',
                     },
                     {
                         data: 'created_at',

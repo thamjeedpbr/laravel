@@ -1308,10 +1308,9 @@
                             <aside id="text-3" class="widget widget_text emphires_widget  emphires_widget_count_1">
                                 <div class="textwidget">
                                     <p><img decoding="async" loading="lazy" class="alignnone size-medium wp-image-9"
-                                            src="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png"
+                                        src="../assets/images/brand/logo.png"
                                             alt="" width="300" height="117"
-                                            srcset="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png 300w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-1024x400.png 1024w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-768x300.png 768w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-770x301.png 770w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2.png 1417w"
-                                            sizes="(max-width: 300px) 100vw, 300px" /></p>
+                                                                                       sizes="(max-width: 300px) 100vw, 300px" /></p>
                                     <p>Lantern Abroad limited is a New Zealand registered company providing
                                         guidance and support for the qualified and eligible nurses from other
                                         countries to become registered nurses in New Zealand.</p>

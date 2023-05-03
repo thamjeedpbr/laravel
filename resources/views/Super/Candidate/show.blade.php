@@ -1,5 +1,10 @@
 @extends('Super.layouts.master')
+@section('head')
+<title>Lantern Abroad – {{ $candidate->fullname }}</title>
+@endsection
+
 @section('style')
+
     <!-- Data table css -->
     <link href="{{ asset('assets/plugins/datatable/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/plugins/datatable/css/buttons.bootstrap4.min.css') }}">
@@ -31,7 +36,6 @@
                                             <h6 class="text-muted mb-3">Contact number: {{ $candidate->phone }}</h6>
                                             <h6 class="text-muted mb-3">Registered Date: {{ $candidate->created_at }}</h6>
                                             <h6 class="text-muted mb-3">Status: {{ $candidate->status_text }}</h6>
-                                            <h6 class="text-muted mb-3">username: {{ $candidate->username }}</h6>
                                             <h6 class="text-muted mb-3">qualification: {{ $candidate->qualification }}</h6>
                                             <h6 class="text-muted mb-3">experience: {{ $candidate->experience }}</h6>
                                             <h6 class="text-muted mb-3">OET_or_IELTS_Score:

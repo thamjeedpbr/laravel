@@ -14,7 +14,6 @@ class HomeController extends Controller
     {
         $request->validate([
             "fullname" => "required",
-            "username" => "required",
             "qualification" => "required",
             "experience" => "required",
             "OET_or_IELTS_Score" => "required",
@@ -40,7 +39,6 @@ class HomeController extends Controller
 
         $candidate = new Candidate();
         $candidate->fullname = $request->fullname;
-        $candidate->username = $request->username;
         $candidate->qualification = $request->qualification;
         $candidate->experience = $request->experience;
         $candidate->OET_or_IELTS_Score = $request->OET_or_IELTS_Score;

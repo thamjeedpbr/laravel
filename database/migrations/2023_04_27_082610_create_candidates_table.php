@@ -17,7 +17,6 @@ class CreateCandidatesTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->nullable();
             $table->string('fullname');
-            $table->string('username');
             $table->string('qualification');
             $table->string('experience')->nullable();
             $table->string('OET_or_IELTS_Score');
@@ -40,7 +39,6 @@ class CreateCandidatesTable extends Migration
             $table->text('working_address_india')->nullable();
             $table->text('working')->nullable();
             $table->integer('status')->default(0);
-
             $table->string('docs_status')->nullable();
             $table->text('docs_comments')->nullable();
             $table->string('immigration_advise')->nullable();

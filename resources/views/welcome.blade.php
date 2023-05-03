@@ -14,6 +14,7 @@
         href="http://lanternabroad.com/feed/" />
     <link rel="alternate" type="application/rss+xml" title="Lantern Abroad &raquo; Comments Feed"
         href="http://lanternabroad.com/comments/feed/" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script>
         window._wpemojiSettings = {
             "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
@@ -70,6 +71,21 @@
         }(window, document, window._wpemojiSettings);
     </script>
     <style>
+        .form-input{
+            style="
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    color: #848484;
+    line-height: normal;
+    padding: 0px 15px;
+    font-weight: 400;
+    background: #eff2f7;
+    border: 0;
+    border-radius: 5px;
+"
+        }
         img.wp-smiley,
         img.emoji {
             display: inline !important;
@@ -1075,22 +1091,8 @@
                                                                                         value=""
                                                                                         placeholder="E.g. John Doe"
                                                                                         id="forminator-field-name-1_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
+                                                                                        class="form-input"
                                                                                          /></div>
-                                                                            </div>
-                                                                            <div id="text-1"
-                                                                                class="forminator-col forminator-col-6 ">
-                                                                                <div class="forminator-field"><label
-                                                                                        for="forminator-field-text-1_644a1de457452"
-                                                                                        class="forminator-label">Username
-                                                                                        <span
-                                                                                            class="forminator-">*</span></label><input required
-                                                                                        type="text" name="username"
-                                                                                        value=""
-                                                                                        placeholder="Enter username"
-                                                                                        id="forminator-field-text-1_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
-                                                                                        data-="true" /></div>
                                                                             </div>
                                                                         </div>
                                                                         <div class="forminator-row">
@@ -1106,7 +1108,7 @@
                                                                                         value=""
                                                                                         placeholder="E.g. MBA"
                                                                                         id="forminator-field-text-2_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
+                                                                                        class="form-input"
                                                                                         data-="1" /></div>
                                                                             </div>
                                                                             <div id="text-3"
@@ -1121,7 +1123,7 @@
                                                                                         value=""
                                                                                         placeholder="E.g. 2 year as Staff nurse in Melbourne"
                                                                                         id="forminator-field-text-3_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
+                                                                                        class="form-input"
                                                                                         data-="1" />
                                                                                 </div>
                                                                             </div>
@@ -1139,8 +1141,9 @@
                                                                                         value=""
                                                                                         placeholder="Enter your score here"
                                                                                         id="forminator-field-text-4_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
-                                                                                        data-="1" /></div>
+                                                                                        class="form-input"
+                                                                                        data-="1" />
+                                                                                    </div>
                                                                             </div>
                                                                             <div id="text-5"
                                                                                 class="forminator-col forminator-col-6 ">
@@ -1152,7 +1155,7 @@
                                                                                         name="CGFNS_status"
                                                                                         value="" placeholder=""
                                                                                         id="forminator-field-text-5_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
+                                                                                        class="form-input"
                                                                                         data-="" /></div>
                                                                             </div>
                                                                         </div>
@@ -1184,27 +1187,19 @@
                                                                                     </select></div>
                                                                             </div>
                                                                             <div id="date-1"
-                                                                                class="forminator-col forminator-col-6 ">
+                                                                                class="form-group forminator-col-6 ">
                                                                                 <div class="forminator-field"><label
                                                                                         for="forminator-field-date-1-picker_644a1de457452"
                                                                                         class="forminator-label">Preferred
                                                                                         intake (filling space) <span
                                                                                             class="forminator-">*</span></label>
-                                                                                    {{-- <input  required
+                                                                                        <input required
                                                                                         type="date"
                                                                                         name="Preferred_intake"
-                                                                                        value=""
-                                                                                        placeholder="Choose Date"
-                                                                                        class=" forminator-field-text-3_644a1de457452 forminator-input forminator"
-                                                                                         /> --}}
-                                                                                        <input required
-                                                                                        type="text"
-                                                                                        name="Preferred_intake"
-                                                                                        value=""
-                                                                                        placeholder="Enter Date (dd-mm-yyyy)"
-                                                                                        id="forminator-field-text-3_644a1de457452"
-                                                                                        class="forminator-input forminator-name--field"
-                                                                                        data-format="dd-mm-yy"/>
+                                                                                        min="{{ date('Y-m-d') }}"
+                                                                                        placeholder="Select Date"
+                                                                                        class="form-input"
+                                                                                     />
 
                                                                                 </div>
                                                                             </div>
@@ -1241,7 +1236,7 @@
                                                                                 value=""
                                                                                 placeholder="E.g. From a friend"
                                                                                 id="forminator-field-text-6_644a1de457452"
-                                                                                class="forminator-input forminator-name--field"
+                                                                                class="form-input"
                                                                                 data-="1" /></div>
                                                                     </div>
                                                                 </div>
@@ -1284,7 +1279,7 @@
                                                                                 value=""
                                                                                 placeholder="E.g. My friend John is the there in NZ. He is a Medical doctor"
                                                                                 id="forminator-field-text-7_644a1de457452"
-                                                                                class="forminator-input forminator-name--field"
+                                                                                class="form-input"
                                                                                 data-="" /></div>
                                                                     </div>
                                                                 </div>
@@ -2364,7 +2359,7 @@
                                                                                 value=""
                                                                                 placeholder="E.g. Mumbai, India"
                                                                                 id="forminator-field-text-8_644a1de457452"
-                                                                                class="forminator-input forminator-name--field"
+                                                                                class="form-input"
                                                                                 data-="" /></div>
                                                                     </div>
                                                                 </div>
@@ -2423,9 +2418,8 @@
                                     <div class="textwidget">
                                         <p><img decoding="async" loading="lazy"
                                                 class="alignnone size-medium wp-image-9"
-                                                src="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png"
+                                                src="../assets/images/brand/logo.png"
                                                 alt="" width="300" height="117"
-                                                srcset="http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-300x117.png 300w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-1024x400.png 1024w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-768x300.png 768w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2-770x301.png 770w, http://lanternabroad.com/wp-content/uploads/2023/04/LANTERN-Logo-2.png 1417w"
                                                 sizes="(max-width: 300px) 100vw, 300px" /></p>
                                         <p>Lantern Abroad limited is a New Zealand registered company providing
                                             guidance and support for the qualified and eligible nurses from other
