@@ -27,7 +27,7 @@ class CreateCandidatesTable extends Migration
             $table->string('refereal_method')->nullable();
             $table->string('Friends_Family_NZ_status')->nullable();
             $table->string('Friends_Family_NZ')->nullable();
-            $table->string('Cover_letter')->nullable();
+            $table->longText('Cover_letter')->nullable();
             $table->string('email');
             $table->string('phone');
             $table->text('street_address')->nullable();
